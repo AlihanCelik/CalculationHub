@@ -617,10 +617,10 @@ class DataTransferCalculatorActivity : AppCompatActivity() {
         )
 
         val conversionFactor = angleMap[fromUnit] ?: return -1.0
-        val convertedValue = value * conversionFactor
+        val convertedValue = value * conversionFactor.toDouble()
         val toConversionFactor = angleMap[toUnit] ?: return -1.0
 
-        return convertedValue / toConversionFactor
+        return convertedValue / toConversionFactor.toDouble()
     }
 }
 

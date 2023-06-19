@@ -139,6 +139,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),CookingCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.transfer_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),CookingCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 
