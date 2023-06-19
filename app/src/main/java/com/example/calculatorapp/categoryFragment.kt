@@ -149,6 +149,11 @@ class categoryFragment : Fragment() {
                 startActivity(intent)
             }
 
+            view.force_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),ForceCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
 
