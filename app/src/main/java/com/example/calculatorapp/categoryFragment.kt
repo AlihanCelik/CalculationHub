@@ -144,6 +144,11 @@ class categoryFragment : Fragment() {
                 startActivity(intent)
             }
 
+            view.energy_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),EnergyCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
 

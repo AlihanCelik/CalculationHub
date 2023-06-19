@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_bottomsheet"
+    android:id="@+id/bottomSheetEnergy">
+
+    <TextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Energy"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058">
+
+    </TextView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/BTU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="British Thermal Unit BTU"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/kcal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kilocalorie kcal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/kJ"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kilojoule kJ"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/kWh"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kilowatt Hour kWh"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/cal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Calorie cal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/eV"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Electronvolt eV"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/erg"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Erg erg"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/ft_lbf"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foot Pound ft-lbf"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/J"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Joule J"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/MJ"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Megajoule MJ"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Wh"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Watt Hour Wh"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_marginTop="300dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="272dp"
+        android:layout_height="30dp"
+        android:background="@drawable/cancel_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="276dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/font2"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
