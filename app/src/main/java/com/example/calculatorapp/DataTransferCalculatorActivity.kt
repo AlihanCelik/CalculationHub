@@ -560,6 +560,35 @@ class DataTransferCalculatorActivity : AppCompatActivity() {
             }
         }
     }
+    fun onEnterClick(view: View){
+
+        if(transtext){
+            var inputSize=0.0
+            if(transText.text.toString()==""){
+                inputSize=0.0
+            }else{
+                inputSize=transText.text.toString().toDouble()
+            }
+            var inputUnit=textTrans.text.toString()
+            var outputUnit=text2Trans.text.toString()
+            var outputSize=convertDataTransfer(inputSize,outputUnit,inputUnit).toString()
+            trans2Text.text=outputSize
+        }else{
+            var inputSize=0.0
+            if (trans2Text.text.toString()==""){
+                inputSize=0.0
+            }else{
+                inputSize=trans2Text.text.toString().toDouble()
+            }
+            var inputUnit=text2Trans.text.toString()
+            var outputUnit=textTrans.text.toString()
+            var outputArea=convertDataTransfer(inputSize,outputUnit,inputUnit).toString()
+            transText.text=outputArea
+        }
+
+
+
+    }
 
     fun convertDataTransfer(value: Double, fromUnit: String, toUnit: String): Double {
         val angleMap = mapOf(
@@ -594,3 +623,5 @@ class DataTransferCalculatorActivity : AppCompatActivity() {
         return convertedValue / toConversionFactor
     }
 }
+
+
