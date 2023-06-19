@@ -140,7 +140,7 @@ class categoryFragment : Fragment() {
                 startActivity(intent)
             }
             view.transfer_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),CookingCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(),DataTransferCalculatorActivity::class.java)
                 startActivity(intent)
             }
 
