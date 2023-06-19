@@ -10,6 +10,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_angle_calculator.*
 import kotlinx.android.synthetic.main.activity_angle_calculator.backButton
 import kotlinx.android.synthetic.main.activity_angle_calculator.btn_AC
+import kotlinx.android.synthetic.main.activity_cooking_calculator.*
 
 class AngleCalculatorActivity : AppCompatActivity() {
     var angletext = true

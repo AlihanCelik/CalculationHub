@@ -135,11 +135,96 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Inch Per Second ips"
+                android:text="US Ounce oz"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
+
+            <TextView
+                android:id="@+id/us_pint"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Pint pt"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_quart"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Quart qt"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_gallon"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Gallon gal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ımp_ounce"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Ounce oz"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ımp_pint"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Pint pt"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ımp_quart"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Quart gt"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ımp_gallon"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Gallon gal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
 
 
         </LinearLayout>
