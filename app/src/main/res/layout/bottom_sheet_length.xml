@@ -181,7 +181,8 @@
                 android:gravity="center"
                 android:text="Inch in"
                 android:textColor="@color/grey"
-                android:textSize="15sp">
+                android:textSize="15sp"
+                android:layout_marginBottom="30dp">
 
             </TextView>
 
