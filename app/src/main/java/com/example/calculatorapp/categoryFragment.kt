@@ -143,6 +143,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),DataTransferCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.pressure_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),PressureCalculaterActivity::class.java)
+                startActivity(intent)
+            }
 
             view.energy_calculate.setOnClickListener {
                 val intent=Intent(requireActivity(),EnergyCalculatorActivity::class.java)

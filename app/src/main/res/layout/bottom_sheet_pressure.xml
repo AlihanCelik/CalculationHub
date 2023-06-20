@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_bottomsheet"
-    android:id="@+id/bottomSheetCooking">
+    android:id="@+id/bottomSheetPressure">
 
     <TextView
         android:id="@+id/appCompatTextView"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Cooking"
+        android:text="Pressure"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -41,190 +41,155 @@
             android:orientation="vertical">
             <TextView
                 android:layout_marginTop="10dp"
-                android:id="@+id/mililiter"
+                android:id="@+id/atm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Mililiter ml"
+                android:text="Atmosphere atm"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/us_teaspoon"
+                android:id="@+id/bar"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Teaspoon tsp"
+                android:text="Bar bar"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/us_tablespoon"
+                android:id="@+id/pascal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Tablespoon tbsp"
+                android:text="Pascal N/m²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/us_cup"
+                android:id="@+id/psi"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Cup C"
+                android:text="Pound/Inch² psi"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/ımp_teaspoon"
+                android:id="@+id/kilopascal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="IMP Teaspoon tsp "
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/ımp_tablespoon"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="IMP Tablespoon tbsp "
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/ımp_cup"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="IMP Cup C "
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/liter"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Liter l"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/us_ounce"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="US Ounce oz"
+                android:text="Kilopascal kN/m²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/us_pint"
+                android:id="@+id/megapascal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Pint pt"
+                android:text="Megapascal MN/m²"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/millimetre_of_water"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Millimeter of Water mmH²O"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/millimetre_of_mercury"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Millimeter of Mercury mmHg"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/inch_of_water"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Inch of Water inH²O"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/inch_of_mercury"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Inch of Mercury inHg"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/us_quart"
+                android:id="@+id/kilogram_centimeter"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Quart qt"
+                android:text="Kilogram/Centimeter² kgf/cm²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/us_gallon"
+                android:id="@+id/psf"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="US Gallon gal"
+                android:text="Pound/Foot² psf"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/ımp_ounce"
+                android:id="@+id/torr"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="IMP Ounce oz"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/ımp_pint"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="IMP Pint pt"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/ımp_quart"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="IMP Quart gt"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/ımp_gallon"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="IMP Gallon gal"
+                android:text="Torr torr"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
                 android:layout_marginBottom="30dp">
 
             </TextView>
+
+
 
 
 
