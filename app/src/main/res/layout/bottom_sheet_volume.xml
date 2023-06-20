@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_bottomsheet"
+    android:id="@+id/bottomSheetVolume">
+
+    <TextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Volume"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058">
+
+    </TextView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/meter_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Meter³ m³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/liter"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Liter l"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/ft_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foot³ ft³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/us_gal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Gallon gal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/ımp_gal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Gallon gal"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/nm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nanometer³ nm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/μm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Micrometer³ μm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/mm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Millimeter³ mm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/cm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Centimeter³ cm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Decimeter³ dm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dkm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Dekameter³ dkm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/hm_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hectometer³ hm³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/km_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kilometer³ km³"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/nl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nanoliter nl"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/μl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Microliter μl"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ml"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Milliliter ml"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/cl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Centiliter cl"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/dl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Deciliter dl"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dkl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Dekaliter dkl"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/hl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hectoliter hl"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/kl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kiloliter kl"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/inch_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Inch³ in³"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/yard_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Yard³ yd³"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/mi_3"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mile³ mi³"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_tsp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Teaspoon tsp"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_tbsp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Tablespoon tbsp"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_oz"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Ounce oz"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_c"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Cup c"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_pt"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Pint pt"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+               >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_qt"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Quart qt"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_tsp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Teaspoon tsp"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_tbsp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Tablespoon tbsp"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_oz"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Ounce oz"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_c"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Cup c"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_pint"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Pint pt"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_qt"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Quart qt"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginBottom="30dp"
+                >
+
+            </TextView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_marginTop="300dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="272dp"
+        android:layout_height="30dp"
+        android:background="@drawable/cancel_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="276dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/font2"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

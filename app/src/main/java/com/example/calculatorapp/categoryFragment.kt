@@ -161,6 +161,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),PowerCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.torque_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),TorqueCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 
