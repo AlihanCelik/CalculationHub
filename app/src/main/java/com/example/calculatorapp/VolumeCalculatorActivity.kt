@@ -284,7 +284,7 @@ class VolumeCalculatorActivity : AppCompatActivity() {
                 dotPressed = false
                 bottomSheet.dismiss()
             }
-            bottomSheetView.findViewById<View>(R.id.us_pint).setOnClickListener {
+            bottomSheetView.findViewById<View>(R.id.us_pt).setOnClickListener {
                 textVolume.text = "pt"
                 volumeNameText.text = "US Pint"
                 volume2Text.text = "00"
@@ -624,7 +624,7 @@ class VolumeCalculatorActivity : AppCompatActivity() {
                 dotPressed = false
                 bottomSheet.dismiss()
             }
-            bottomSheetView.findViewById<View>(R.id.us_pint).setOnClickListener {
+            bottomSheetView.findViewById<View>(R.id.us_pt).setOnClickListener {
                 text2Volume.text = "pt"
                 volume2NameText.text = "US Pint"
                 volume2Text.text = "00"
@@ -832,9 +832,6 @@ class VolumeCalculatorActivity : AppCompatActivity() {
             var outputArea=convertVolume(inputSize,outputUnit,inputUnit).toString()
             volumeText.text=outputArea
         }
-
-
-
     }
     fun convertVolume(value: Double, fromUnit: String, toUnit: String): Double {
         val angleMap = mapOf(
