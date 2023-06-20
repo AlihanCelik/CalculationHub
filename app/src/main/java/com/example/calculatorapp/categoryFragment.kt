@@ -165,6 +165,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),TorqueCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.volume_Calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),VolumeCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 
