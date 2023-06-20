@@ -32,16 +32,17 @@
         android:layout_marginTop="64dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-16dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/kg"
             android:layout_width="match_parent"
-            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:text="Kilogram"
             android:textColor="@color/grey"
             android:textSize="15sp">
@@ -51,10 +52,10 @@
         <TextView
             android:id="@+id/pound"
             android:layout_width="match_parent"
-            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:gravity="center"
             android:text="Pound"
             android:textColor="@color/grey"
             android:textSize="15sp">
@@ -71,6 +72,7 @@
         android:gravity="center"
 
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,6 +91,16 @@
 
         </TextView>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
