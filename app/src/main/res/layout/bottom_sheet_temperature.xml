@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Mass"
+        android:text="Temperature"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -33,7 +33,8 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+        android:layout_marginBottom="15dp">
 
         <TextView
             android:id="@+id/celsius"
@@ -101,7 +102,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="272dp"
         android:layout_height="30dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="212dp"
         android:background="@drawable/cancel_button"
         android:gravity="center"
         android:orientation="horizontal"
