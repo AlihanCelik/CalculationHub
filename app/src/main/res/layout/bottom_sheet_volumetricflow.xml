@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_bottomsheet"
-    android:id="@+id/bottomSheetSpeed">
+    android:id="@+id/bottomSheetVolumetricFlow">
 
     <TextView
         android:id="@+id/appCompatTextView"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Speed"
+        android:text="Volumetric Flow"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -42,101 +42,232 @@
             android:orientation="vertical">
             <TextView
                 android:layout_marginTop="10dp"
-                android:id="@+id/speed_of_light"
+                android:id="@+id/m_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Speed-of-light c"
+                android:text="Meter³/Second m³/s"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/meter_per_second"
+                android:id="@+id/l_s"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Meter/Second m/s"
+                android:text="Liter/Second l/s"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/mach"
+                android:id="@+id/ft_s"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Mach Ma"
+                android:text="Foot³/Second ft³/s"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/km_per_hour"
+                android:id="@+id/us_gal_s"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Kilometer/Hour km/h"
+                android:text="US Gallon/Second gal/s"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/km_per_second"
+                android:id="@+id/imp_gal_s"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Kilometer/Second km/s"
+                android:text="IMP Gallon/Second gal/s"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/m_min"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Meter³/Minute m³/min"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/knot"
+                android:id="@+id/m_h"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Knot kn"
+                android:text="Meter³/Hour m³/h"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/mile_per_hour"
+                android:id="@+id/m_d"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Mile/Hour mph"
+                android:text="Meter³/Day m³/d"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/foot_pound_second"
+                android:id="@+id/l_m"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Foot Pound Second fps"
+                android:text="Liter/Minute l/min"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/inch_per_second"
+                android:id="@+id/l_h"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Inch/Second ips"
+                android:text="Liter/Hour l/h"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/l_d"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Liter/Day l/d"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ft_min"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foot³/Minute ft³/min"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/ft_h"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foot³/Hour ft³/h"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ft_d"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foot³/Day ft³/d"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_gal_min"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Gallon/Minute gal/min"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_gal_h"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Gallon/Hour gal/h"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/us_gal_d"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="US Gallopn/Day gal/d"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_gal_min"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Gallon/Minute gal/min"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/imp_gal_h"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Gallon/Hour gal/h"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/imp_gal_d"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="IMP Gallon/Day gal/d"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
                 android:layout_marginBottom="30dp">
@@ -175,7 +306,6 @@
 
         </TextView>
     </LinearLayout>
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

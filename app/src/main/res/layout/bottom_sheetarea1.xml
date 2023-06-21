@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Kilometers km²"
+                android:text="Kilometer² km²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Meters m²"
+                android:text="Meter² m²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -92,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Decimeter dm²"
+                android:text="Decimeter² dm²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Centimeter cm²"
+                android:text="Centimeter² cm²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -115,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Milimeter mm²"
+                android:text="Millimeter² mm²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square micron µm²"
+                android:text="Micron² µm²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -148,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Mile mile²"
+                android:text="Mile² mile²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -159,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Yard yd²"
+                android:text="Yard² yd²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Foot Square ft²"
+                android:text="Foot² ft²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -181,7 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Square Inch in²"
+                android:text="Inch² in²"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Rodsquare rd²"
+                android:text="Rod² rd²"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
                 android:layout_marginBottom="30dp">

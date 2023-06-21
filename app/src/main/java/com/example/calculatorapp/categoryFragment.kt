@@ -169,6 +169,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),VolumeCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.volumetric_flow_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),VolumetricFlowCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AreaCalculatorActivity"
+    android:background="@color/black"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/process">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Numeric Base"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.423"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/process"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/binary_code"
+            app:tint="@color/yellow">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+            <LinearLayout
+                android:id="@+id/numSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/textNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(2)"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp">
+
+                </TextView>
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_arrow_drop_down_24">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/num_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="00"
+                    android:background="@android:color/transparent"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:layout_gravity="end"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/cookNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Binary">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+            <LinearLayout
+                android:id="@+id/num2Select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/text2Num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(2)"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp">
+
+                </TextView>
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_arrow_drop_down_24">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/num_2value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="00"
+                    android:background="@android:color/transparent"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:layout_gravity="end"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/num2NameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Binary">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,7 +52,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.meter_per_second).setOnClickListener {
                 textspeed.text = "m/s"
-                speedNameText.text = "Meter Per Second"
+                speedNameText.text = "Meter/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -61,7 +61,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.km_per_hour).setOnClickListener {
                 textspeed.text = "km/h"
-                speedNameText.text = "Kilometer Per Hour"
+                speedNameText.text = "Kilometer/Hour"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -70,7 +70,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.km_per_second).setOnClickListener {
                 textspeed.text = "km/s"
-                speedNameText.text = "Kilometer Per Second"
+                speedNameText.text = "Kilometer/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -88,7 +88,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.mile_per_hour).setOnClickListener {
                 textspeed.text = "mph"
-                speedNameText.text = "Mile Per Hour"
+                speedNameText.text = "Mile/Hour"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -106,7 +106,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.inch_per_second).setOnClickListener {
                 textspeed.text = "ips"
-                speedNameText.text = "Inch Per Second"
+                speedNameText.text = "Inch/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -150,7 +150,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.meter_per_second).setOnClickListener {
                 text2speed.text = "m/s"
-                speed2NameText.text = "Meter Per Second"
+                speed2NameText.text = "Meter/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -159,7 +159,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.km_per_hour).setOnClickListener {
                 text2speed.text = "km/h"
-                speed2NameText.text = "Kilometer Per Hour"
+                speed2NameText.text = "Kilometer/Hour"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -168,7 +168,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.km_per_second).setOnClickListener {
                 text2speed.text = "km/s"
-                speed2NameText.text = "Kilometer Per Second"
+                speed2NameText.text = "Kilometer/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -186,7 +186,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.mile_per_hour).setOnClickListener {
                 text2speed.text = "mph"
-                speed2NameText.text = "Mile Per Hour"
+                speed2NameText.text = "Mile/Hour"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false
@@ -204,7 +204,7 @@ class SpeedCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.inch_per_second).setOnClickListener {
                 text2speed.text = "ips"
-                speed2NameText.text = "Inch Per Second"
+                speed2NameText.text = "Inch/Second"
                 speed2Text.text = "00"
                 speedText.text = "00"
                 dotPressed2 = false

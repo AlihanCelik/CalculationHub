@@ -36,7 +36,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             ) as ConstraintLayout
             bottomSheetView.findViewById<View>(R.id.squareKilometers).setOnClickListener {
                 textUnit.text="km²"
-                areaNameText.text="Square Kilometers"
+                areaNameText.text="Kilometer²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -68,7 +68,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMeters).setOnClickListener {
                 textUnit.text="m²"
-                areaNameText.text="Square Meters"
+                areaNameText.text="Meter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -77,7 +77,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareDecimeter).setOnClickListener {
                 textUnit.text="dm²"
-                areaNameText.text="Square Decimeter"
+                areaNameText.text="Decimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -86,7 +86,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareCentimeter).setOnClickListener {
                 textUnit.text="cm²"
-                areaNameText.text="Square Centimeter"
+                areaNameText.text="Centimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -95,7 +95,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMilimeter).setOnClickListener {
                 textUnit.text="mm²"
-                areaNameText.text="Square Millimeter"
+                areaNameText.text="Millimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -104,7 +104,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMicron).setOnClickListener {
                 textUnit.text="µm²"
-                areaNameText.text="Square Micron"
+                areaNameText.text="Micron²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -122,7 +122,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMile).setOnClickListener {
                 textUnit.text="mm²"
-                areaNameText.text="Square Mile"
+                areaNameText.text="Mile²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -131,7 +131,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareYard).setOnClickListener {
                 textUnit.text="yd²"
-                areaNameText.text="Square Yard"
+                areaNameText.text="Yard²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -140,7 +140,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.stepSquare).setOnClickListener {
                 textUnit.text="ft²"
-                areaNameText.text="Food Square"
+                areaNameText.text="Foot²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -149,7 +149,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareInch).setOnClickListener {
                 textUnit.text="in²"
-                areaNameText.text="Square Inch"
+                areaNameText.text="Inch²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -158,7 +158,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.rodSquare).setOnClickListener {
                 textUnit.text="rd²"
-                areaNameText.text="Rodsquare"
+                areaNameText.text="Rod²e"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -181,7 +181,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             ) as ConstraintLayout
             bottomSheetView.findViewById<View>(R.id.squareKilometers).setOnClickListener {
                 text2Unit.text="km²"
-                area2NameText.text="Square Kilometers"
+                area2NameText.text="Kilometer²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -212,7 +212,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMeters).setOnClickListener {
                 text2Unit.text="m²"
-                area2NameText.text="Square Meters"
+                area2NameText.text="Meter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -221,7 +221,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareDecimeter).setOnClickListener {
                 text2Unit.text="dm²"
-                area2NameText.text="Square Decimeter"
+                area2NameText.text="Decimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -230,7 +230,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareCentimeter).setOnClickListener {
                 text2Unit.text="cm²"
-                area2NameText.text="Square Centimeter"
+                area2NameText.text="Centimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -239,7 +239,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMilimeter).setOnClickListener {
                 text2Unit.text="mm²"
-                area2NameText.text="Square Millimeter"
+                area2NameText.text="Millimeter²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -248,7 +248,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMicron).setOnClickListener {
                 text2Unit.text="µm²"
-                area2NameText.text="Square Micron"
+                area2NameText.text="Micron²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -266,7 +266,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareMile).setOnClickListener {
                 text2Unit.text="mm²"
-                area2NameText.text="Square Mile"
+                area2NameText.text="Mile²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -275,7 +275,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareYard).setOnClickListener {
                 text2Unit.text="yd²"
-                area2NameText.text="Square Yard"
+                area2NameText.text="Yard²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -284,7 +284,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.stepSquare).setOnClickListener {
                 text2Unit.text="ft²"
-                area2NameText.text="Food Square"
+                area2NameText.text="Foot²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -293,7 +293,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.squareInch).setOnClickListener {
                 text2Unit.text="in²"
-                area2NameText.text="Square Inch"
+                area2NameText.text="Inch²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false
@@ -302,7 +302,7 @@ class AreaCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.rodSquare).setOnClickListener {
                 textUnit.text="rd²"
-                areaNameText.text="Rodsquare"
+                areaNameText.text="Rod²"
                 area2Text.text="00"
                 areaText.text="00"
                 dotPressed = false

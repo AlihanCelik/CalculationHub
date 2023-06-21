@@ -315,7 +315,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Numerical System"
+                            android:text="Numeric Base"
                             android:textSize="12sp"></TextView>
                     </LinearLayout>
 

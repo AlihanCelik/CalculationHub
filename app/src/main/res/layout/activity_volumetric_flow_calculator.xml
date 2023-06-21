@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Cooking"
+            android:text="Volumetric Flow"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/backButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,16 +72,16 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/cookSelect"
+                android:id="@+id/vfSelect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
                 <TextView
-                    android:id="@+id/textCook"
+                    android:id="@+id/textVf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ml"
+                    android:text="m³/s"
                     android:textColor="@color/yellow"
                     android:textSize="25sp">
 
@@ -106,7 +106,7 @@
 
                 <TextView
 
-                    android:id="@+id/CookText"
+                    android:id="@+id/vfText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -117,11 +117,11 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/cookNameText"
+                    android:id="@+id/vfNameText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Milliliter">
+                    android:text="Meter³/Second">
 
                 </TextView>
             </LinearLayout>
@@ -135,16 +135,16 @@
             android:layout_marginTop="20dp">
 
             <LinearLayout
-                android:id="@+id/cook2Select"
+                android:id="@+id/vf2Select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
                 <TextView
-                    android:id="@+id/text2Cook"
+                    android:id="@+id/text2Vf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ml"
+                    android:text="m³/s"
                     android:textColor="@color/yellow"
                     android:textSize="25sp">
 
@@ -167,7 +167,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/cook2Text"
+                    android:id="@+id/vf2Text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -177,11 +177,11 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/cook2NameText"
+                    android:id="@+id/vf2NameText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Milliliter">
+                    android:text="Meter³/Second">
 
                 </TextView>
             </LinearLayout>
