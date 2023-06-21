@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_bottomsheet"
-    android:id="@+id/bottomSheetArea">
+    android:id="@+id/bottomSheetNumeric">
 
     <TextView
         android:id="@+id/appCompatTextView"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Area"
+        android:text="Numeric Base"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -43,156 +43,171 @@
             >
             <TextView
                 android:layout_marginTop="10dp"
-                android:id="@+id/squareKilometers"
+                android:id="@+id/binary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Kilometer² km²"
+                android:text="(2) Binary"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/trinary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(3) Trinary"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/quaternary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(4) Quaternary"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/quinary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(5) Quinary"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/senary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(6) Senary"
+                android:textColor="@color/grey"
+                android:textSize="15sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/septenary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(7) Septenary"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/hectare"
+                android:id="@+id/Octal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Hectare ha"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/ar"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Ar a"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/squareMeters"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Meter² m²"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/squareDecimeter"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Decimeter² dm²"
+                android:text="(8) Octal"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/squareCentimeter"
+                android:id="@+id/nonary"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Centimeter² cm²"
+                android:text="(9) Nonary"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/squareMilimeter"
+                android:id="@+id/decimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Millimeter² mm²"
+                android:text="(10) Decimal"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/squareMicron"
+                android:id="@+id/undenary"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Micron² µm²"
+                android:text="(A) Undenary"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/acre"
+                android:id="@+id/duodecimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Acre ac"
+                android:text="(B) Duodecimal"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/squareMile"
+                android:id="@+id/Tridecimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Mile² mile²"
+                android:text="(C) Tridecimal"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/squareYard"
+                android:id="@+id/quattuordecimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Yard² yd²"
+                android:text="(D) Quattuordecimal"
                 android:textColor="@color/grey"
                 android:textSize="15sp">
 
             </TextView>
             <TextView
-                android:id="@+id/stepSquare"
+                android:id="@+id/quindecimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Foot² ft²"
+                android:text="(E) Quindecimal"
                 android:textColor="@color/grey"
-                android:textSize="15sp">
+                android:textSize="15sp"
+                >
 
             </TextView>
             <TextView
-                android:id="@+id/squareInch"
+                android:id="@+id/hexadecimal"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Inch² in²"
-                android:textColor="@color/grey"
-                android:textSize="15sp">
-
-            </TextView>
-            <TextView
-                android:id="@+id/rodSquare"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Rod² rd²"
+                android:text="(F) Hexadecimal"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
                 android:layout_marginBottom="30dp">
@@ -238,6 +253,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
