@@ -173,6 +173,10 @@ class categoryFragment : Fragment() {
                 val intent=Intent(requireActivity(),VolumetricFlowCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.numerical_calculate.setOnClickListener {
+                val intent=Intent(requireActivity(),NumericBaaseCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 
