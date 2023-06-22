@@ -106,7 +106,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
                     var cevap2=((a*b)/100).toDouble()
                     answer_=cevap2.toString()
                     answer=cevap.toString()
-                    solutions="$a - $b% = x\nx = $a - ($a x $b) / 100\n = $a - ${a*b}/100\n= $a - ${(a*b)/100}\n= $cevap"
+                    solutions="$a - $b% = x\nx = $a - ($a x $b) / 100\n= $a - ${a*b}/100\n= $a - ${(a*b)/100}\n= $cevap"
 
                 }
                 if(per_cal_name.text == "Increase"){
@@ -114,13 +114,13 @@ class PercentageCalculateActivity : AppCompatActivity() {
                     answer=cevap.toString()
                     var cevap2=((a*b)/100).toDouble()
                     answer_=cevap2.toString()
-                    solutions="$a + $b% = x\nx = $a + ($a x $b) / 100\n = $a + ${a*b}/100\n= $a + ${(a*b)/100}\n= $cevap"
+                    solutions="$a + $b% = x\nx = $a + ($a x $b) / 100\n= $a + ${a*b}/100\n= $a + ${(a*b)/100}\n= $cevap"
 
                 }
                 if(per_cal_name.text == "Simple Percentage"){
                     var cevap=((a*b)/100).toDouble()
                     answer=cevap.toString()
-                    solutions="$a x $b% = x\nx = ($a x $b) / 100\n = ${a*b}/100\n= ${(a*b)/100}\n= $cevap"
+                    solutions="$a x $b% = x\nx = ($a x $b) / 100\n= ${a*b}/100\n= ${(a*b)/100}\n= $cevap"
                 }
                 if(per_cal_name.text == "Increase/Discount"){
                     var cevap=((b*100)/a)-100.toDouble()
@@ -131,7 +131,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
                 if(per_cal_name.text == "Percentage of A from B"){
                     var cevap=((a*100)/b).toDouble()
                     answer=cevap.toString()
-                    solutions="$a ← $b% = x\nx = ($a x 100) / $b\n =${a*100}/$b\n= $cevap %"
+                    solutions="$a ← $b% = x\nx = ($a x 100) / $b\n= ${a*100}/$b\n= $cevap %"
 
                 }
                 val view = View.inflate(this, R.layout.dialog_percentage_solutions, null)
