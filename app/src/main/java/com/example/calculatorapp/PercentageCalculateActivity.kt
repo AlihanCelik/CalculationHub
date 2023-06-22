@@ -19,7 +19,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
         var answer=""
         var answer_=""
         var solutions=""
-        var vis=false
+        var vis=true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_percentage_calculate)
         backButton.setOnClickListener {

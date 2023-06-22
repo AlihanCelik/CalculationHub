@@ -104,7 +104,7 @@
 
             </ImageView>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
 
@@ -136,7 +136,6 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="200dp"
                 android:src="@drawable/baseline_arrow_drop_down_24"
                 app:tint="@color/grey">
 
@@ -188,7 +187,7 @@
                     android:hint="00"
                     android:background="@android:color/transparent"
                     android:inputType="numberDecimal"
-                    android:maxLength="4"
+                    android:maxLength="6"
                     android:textSize="30sp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp">
@@ -225,7 +224,7 @@
                     android:background="@android:color/transparent"
                     android:hint="00"
                     android:inputType="numberDecimal"
-                    android:maxLength="4"
+                    android:maxLength="6"
                     android:textSize="30sp">
 
                 </EditText>
