@@ -46,6 +46,10 @@ class categoryFragment : Fragment() {
             view.linearLayout2.setOnClickListener {
                 dialog.dismiss()
             }
+            view.percent_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),PercentageCalculateActivity::class.java)
+                startActivity(intent)
+            }
         }
         geo_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_geometry,null)

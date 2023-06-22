@@ -12,6 +12,9 @@
         android:theme="@style/Theme.CalculatorAPP"
         tools:targetApi="31">
         <activity
+            android:name=".PercentageCalculateActivity"
+            android:exported="false" />
+        <activity
             android:name=".NumericBaaseCalculatorActivity"
             android:exported="false" />
         <activity
