@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="352dp"
-        android:layout_height="390dp"
+        android:layout_height="587dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,24 +23,26 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="513dp"
+            android:layout_marginTop="45dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:background="@drawable/background_bmi"
                         android:orientation="horizontal">
 
@@ -51,11 +53,11 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
-                            android:text="X"
-                            android:textSize="15dp"></TextView>
+                            android:text="A"
+                            android:textSize="25dp"></TextView>
 
                         <TextView
-                            android:id="@+id/answer"
+                            android:id="@+id/a_answer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -64,13 +66,23 @@
                             android:textColor="@color/yellow"
                             android:textSize="30dp"></TextView>
                     </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
                     <LinearLayout
                         android:id="@+id/inc_dec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:visibility="gone"
                         android:background="@drawable/background_bmi"
                         android:orientation="horizontal">
 
@@ -82,11 +94,11 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
-                            android:text="↓"
+                            android:text="G"
                             android:textSize="25dp"></TextView>
 
                         <TextView
-                            android:id="@+id/answer_"
+                            android:id="@+id/g_answer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -95,6 +107,46 @@
                             android:textColor="@color/yellow"
                             android:textSize="30dp"></TextView>
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_bmi"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/background"
+                            android:gravity="center"
+                            android:text="H"
+                            android:textSize="25dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/h_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="20dp"
+                            android:text="100"
+                            android:textColor="@color/yellow"
+                            android:textSize="30dp"></TextView>
+                    </LinearLayout>
+
                 </LinearLayout>
 
 
@@ -107,17 +159,68 @@
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/font2"
                     android:gravity="start"
-                    android:text="Solutions"
+                    android:text="Arithmetic"
                     android:textSize="20dp">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/dialog_solutions"
+                    android:id="@+id/a_solutions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="100 - 25% =x\nx = 100 - (100 x 25) / 100\n = 100 - 2500/100\n= 100 - 25\n= 75"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="A = (x1 + x2 + ... + xn)/n \n= (45 + 54)/2 \n= 99/2\n= 49.5"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/font2"
+                    android:gravity="start"
+                    android:text="Geometric"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/g_solutions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="G = ⁿ√(x1 x x2 x ... x xn)\n= ²√(45 x 54)\n= ²√2430 \n= 49.3"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/font2"
+                    android:gravity="start"
+                    android:text="Harmonic"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/h_solutions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="H = n/((1/x1) + (1/x2) + .... + (1/xn))\n= 2/((1/45)+(1/54))\n= 2/0.04\n= 49.09"
                     android:textSize="20dp"></TextView>
 
 

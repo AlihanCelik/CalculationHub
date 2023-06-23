@@ -50,6 +50,14 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),PercentageCalculateActivity::class.java)
                 startActivity(intent)
             }
+            view.average_Calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),AverageCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+            view.proportion_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),ProportionCalculatorActivity::class.java)
+                startActivity(intent)
+            }
         }
         geo_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_geometry,null)

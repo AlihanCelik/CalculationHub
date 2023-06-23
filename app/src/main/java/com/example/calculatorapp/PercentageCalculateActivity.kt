@@ -55,7 +55,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
                 per_cal_name.text = "Simple Percentage"
                 per_procces.text="a x b% = x"
                 yuzde.text="%"
-                per_image.setImageResource(R.drawable.baseline_percent_24)
+                per_image.setImageResource(R.drawable.simple_percentage)
                 vis=false
                 bottomSheet.dismiss()
 
@@ -64,7 +64,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
                 per_cal_name.text = "Increase/Discount"
                 per_procces.text="a → b = x%"
                 yuzde.text=""
-                per_image.setImageResource(R.drawable.baseline_percent_24)
+                per_image.setImageResource(R.drawable.increase_discount)
                 vis=false
                 bottomSheet.dismiss()
 
@@ -73,7 +73,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
                 per_cal_name.text = "Percentage of A from B"
                 per_procces.text="a ← b = x%"
                 yuzde.text=""
-                per_image.setImageResource(R.drawable.baseline_percent_24)
+                per_image.setImageResource(R.drawable.percentage_of)
                 vis=false
                 bottomSheet.dismiss()
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_bottomsheet"
-    android:id="@+id/bottomSheetPer">
+    android:id="@+id/bottomSheetPro">
 
     <TextView
         android:id="@+id/appCompatTextView"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Percentage"
+        android:text="Proportion"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:id="@+id/discount"
+            android:id="@+id/directly"
             android:background="@drawable/background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/baseline_percent_24"
+                android:src="@drawable/proportion_"
                 android:layout_gravity="center"
                 app:tint="@color/yellow">
 
@@ -64,9 +64,9 @@
 
                 <TextView
                     android:textColor="@color/grey"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Discount     "
+                    android:text="Directly Proportion     "
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginBottom="2dp">
@@ -76,7 +76,7 @@
                     android:textColor="@color/grey"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="a - b% = x"
+                    android:text="(x * b) / a = y"
                     >
 
                 </TextView>
@@ -89,7 +89,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/increase"
+            android:id="@+id/indirectly"
             android:background="@drawable/background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/increase"
+                android:src="@drawable/proportion_"
                 android:layout_gravity="center"
                 app:tint="@color/yellow">
 
@@ -118,7 +118,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Increase    "
+                    android:text="Indirectly Proportion    "
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:textColor="@color/grey"
@@ -129,154 +129,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
-                    android:text="a + b% = x ">
-
-                </TextView>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/simple_percenatge"
-            android:background="@drawable/background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/simple_percentage"
-                android:layout_gravity="center"
-                app:tint="@color/yellow">
-
-            </ImageView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-
-                android:layout_margin="7dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Simple Percentage"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/grey"
-                    android:layout_marginBottom="2dp">
-
-                </TextView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey"
-                    android:text="a x b% = x"
-                    >
-
-                </TextView>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/increaseDiscount"
-            android:background="@drawable/background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/increase_discount"
-                android:layout_gravity="center"
-                app:tint="@color/yellow">
-
-            </ImageView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-
-                android:layout_margin="7dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Increase / Discount"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/grey"
-                    android:layout_marginBottom="2dp">
-
-                </TextView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="a → b = x%"
-                    android:textColor="@color/grey"
-                    >
-
-                </TextView>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/percentage_of"
-            android:background="@drawable/background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/percentage_of"
-                android:layout_gravity="center"
-                app:tint="@color/yellow">
-
-            </ImageView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-
-                android:layout_margin="7dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Percentage of A from B"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="2dp"
-                    android:textColor="@color/grey">
-
-                </TextView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey"
-                    android:text="a ← b = x%"
-                    >
+                    android:text="(a * b) / x = y">
 
                 </TextView>
 
