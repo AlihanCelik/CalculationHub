@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.bottom_sheet_equations.view.*
 
 import kotlinx.android.synthetic.main.dialog_algebra.view.*
+import kotlinx.android.synthetic.main.dialog_algebra.view.linearLayout2
 import kotlinx.android.synthetic.main.dialog_converter.view.*
 import kotlinx.android.synthetic.main.dialog_geometry.view.*
 import kotlinx.android.synthetic.main.dialog_health.view.*
@@ -60,6 +62,10 @@ class categoryFragment : Fragment() {
             }
             view.ratio_calculate.setOnClickListener {
                 val intent= Intent(requireActivity(),RatioCalculaorActivity::class.java)
+                startActivity(intent)
+            }
+            view.equation_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),EqiationsCalculatorActivity::class.java)
                 startActivity(intent)
             }
         }

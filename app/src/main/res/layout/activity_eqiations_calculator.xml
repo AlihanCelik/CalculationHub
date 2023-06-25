@@ -114,7 +114,7 @@
                     android:id="@+id/eq_cal_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Linear Equations"
+                    android:text="Linear Equation"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginBottom="2dp">
@@ -158,6 +158,7 @@
                 android:textSize="20dp"
                 android:layout_marginRight="20dp"
                 android:text="2x2 Array"
+                android:clickable="true"
                 android:textColor="@color/yellow">
 
         </TextView>
@@ -167,7 +168,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:text="3x3 Array"
+                android:clickable="true"
                 android:layout_marginLeft="20dp"
+                android:textColor="@color/grey"
                 >
 
             </TextView>
@@ -219,7 +222,7 @@
 
                     android:hint="00"
                     android:background="@android:color/transparent"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -253,7 +256,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -284,13 +287,13 @@
                     android:textSize="15dp"></TextView>
 
                 <EditText
-                    android:id="@+id/C_value"
+                    android:id="@+id/C1_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -327,7 +330,7 @@
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -365,13 +368,13 @@
                     android:gravity="center"
                     android:textSize="15dp"></TextView>
                 <EditText
-                    android:id="@+id/A_value"
+                    android:id="@+id/A2_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:hint="00"
                     android:background="@android:color/transparent"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -405,7 +408,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -431,7 +434,9 @@
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:textSize="15dp">
+
+                </TextView>
 
                 <EditText
                     android:id="@+id/C2_value"
@@ -440,7 +445,7 @@
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -476,7 +481,7 @@
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -512,7 +517,9 @@
                     android:text="A3"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:textSize="15dp">
+
+                </TextView>
                 <EditText
                     android:id="@+id/A3_value"
                     android:layout_width="wrap_content"
@@ -520,7 +527,7 @@
 
                     android:hint="00"
                     android:background="@android:color/transparent"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -546,7 +553,9 @@
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:textSize="15dp">
+
+                </TextView>
 
                 <EditText
                     android:id="@+id/B3_value"
@@ -554,7 +563,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -580,7 +589,9 @@
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:textSize="15dp">
+
+                </TextView>
 
                 <EditText
                     android:id="@+id/C3_value"
@@ -589,7 +600,7 @@
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
@@ -624,7 +635,7 @@
 
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 

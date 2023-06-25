@@ -186,7 +186,7 @@
 
                     android:hint="00"
                     android:background="@android:color/transparent"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp"
                     android:layout_marginLeft="30dp"
@@ -223,7 +223,7 @@
                     android:layout_marginRight="3dp"
                     android:background="@android:color/transparent"
                     android:hint="00"
-                    android:inputType="numberDecimal"
+                    android:inputType="numberSigned"
                     android:maxLength="6"
                     android:textSize="30sp">
 
