@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="352dp"
-        android:layout_height="334dp"
+        android:layout_width="354dp"
+        android:layout_height="411dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,19 +23,21 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="313dp">
+            android:layout_height="321dp"
+            android:layout_marginTop="55dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
+
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -43,6 +45,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
+
                         android:background="@drawable/background_bmi"
                         android:orientation="horizontal">
 
@@ -58,7 +61,7 @@
                             android:textSize="15dp"></TextView>
 
                         <TextView
-                            android:id="@+id/answer"
+                            android:id="@+id/cp_answer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -90,6 +93,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
                     android:text="5/7 = 6/y \ny = (7 x 6)/5\n= 42/5\n=8.4"
                     android:textSize="20dp"></TextView>
 
