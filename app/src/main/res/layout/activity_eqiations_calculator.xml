@@ -50,614 +50,624 @@
         </TextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
+    <ScrollView
         android:id="@+id/process"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/equation"
-            app:tint="@color/yellow">
-
-        </ImageView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:gravity="start"
-            android:text="CALCULATE"
-            android:textSize="20dp"
-            android:fontFamily="@font/font2">
-
-        </TextView>
-
-
         <LinearLayout
-            android:id="@+id/eqSelect"
-            android:background="@drawable/background"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/per_image"
-                android:layout_marginLeft="20dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/equaitons_"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/equation"
                 app:tint="@color/yellow">
 
             </ImageView>
-            <LinearLayout
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-
-                android:layout_margin="7dp">
-
-                <TextView
-                    android:id="@+id/eq_cal_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Linear Equation"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="2dp">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/eq_procces"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ax + b = 0"
-                    >
-
-                </TextView>
-
-            </LinearLayout>
-
-            <ImageView
-
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:src="@drawable/baseline_arrow_drop_down_24"
-                app:tint="@color/grey">
-
-            </ImageView>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/equation_system_vis"
-            android:layout_width="match_parent"
-            android:visibility="gone"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_margin="20dp">
             <TextView
-                android:id="@+id/array2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="start"
+                android:text="CALCULATE"
                 android:textSize="20dp"
-                android:layout_marginRight="20dp"
-                android:text="2x2 Array"
-                android:clickable="true"
-                android:textColor="@color/yellow">
-
-        </TextView>
-            <TextView
-                android:id="@+id/array3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="3x3 Array"
-                android:clickable="true"
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/grey"
-                >
+                android:fontFamily="@font/font2">
 
             </TextView>
 
 
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:gravity="start"
-            android:text="VALUES"
-            android:textSize="20dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/font2">
-
-        </TextView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:orientation="horizontal"
-                android:background="@drawable/background">
-                <TextView
-                    android:id="@+id/A1_string"
+                android:id="@+id/eqSelect"
+                android:background="@drawable/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/per_image"
+                    android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="A1"
+                    android:src="@drawable/equaitons_"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-                <EditText
-                    android:id="@+id/A1_value"
-                    android:layout_width="wrap_content"
+                    app:tint="@color/yellow">
+
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
 
-                    android:hint="00"
-                    android:background="@android:color/transparent"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
+                    android:layout_margin="7dp">
 
-                </EditText>
+                    <TextView
+                        android:id="@+id/eq_cal_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Linear Equation"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/eq_procces"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ax + b = 0"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_arrow_drop_down_24"
+                    app:tint="@color/grey">
+
+                </ImageView>
+
+
             </LinearLayout>
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
+                android:id="@+id/equation_system_vis"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
+                android:gravity="center"
+                android:layout_margin="20dp">
                 <TextView
-                    android:id="@+id/B1_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="B1"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-
-                <EditText
-                    android:id="@+id/B1_value"
+                    android:id="@+id/array2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
+                    android:onClick="Array2x2"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="2x2 Array"
+                    android:clickable="true"
+                    android:textColor="@color/yellow">
 
-                </EditText>
+                </TextView>
+                <TextView
+                    android:id="@+id/array3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Array3x3"
+                    android:textSize="20dp"
+                    android:text="3x3 Array"
+                    android:clickable="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/grey"
+                    >
+
+                </TextView>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="VALUES"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/font2">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/A1_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="A"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+                    <EditText
+                        android:id="@+id/A1_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:hint="00"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/B1_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="B"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/B1_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/c1_lienar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/C1_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="C1"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/C1_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/d1_linear"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/D1_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="D1"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/D1_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/visi2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/A2_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="A2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+                    <EditText
+                        android:id="@+id/A2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:hint="00"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/B2_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="B2"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/B2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/C2_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="C2"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/C2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/d2_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/D2_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="D2"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/D2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+
+
+
             </LinearLayout>
             <LinearLayout
                 android:visibility="gone"
-                android:id="@+id/c1_lienar"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/C1_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="C1"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
+                android:id="@+id/visi3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/A3_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="A3"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp">
 
-                <EditText
-                    android:id="@+id/C1_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    </TextView>
+                    <EditText
+                        android:id="@+id/A3_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
+                        android:hint="00"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
 
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/d1_linear"
-                android:visibility="gone"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/D1_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="D1"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
                     android:gravity="center"
-                    android:textSize="15dp"></TextView>
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
 
-                <EditText
-                    android:id="@+id/D1_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:background="@drawable/background">
 
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
+                    <TextView
+                        android:id="@+id/B3_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="B3"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp">
 
-                </EditText>
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/B3_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/C3_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="C3"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/C3_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:id="@+id/D3_string"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_bmi"
+                        android:text="D3"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/D3_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:hint="00"
+                        android:inputType="numberSigned"
+                        android:maxLength="6"
+                        android:textSize="30sp">
+
+                    </EditText>
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
-
+            <TextView
+                android:id="@+id/method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp"
+                android:text="ax + b = 0"
+                android:textSize="20dp"></TextView>
 
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/visi2"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:orientation="horizontal"
-                android:background="@drawable/background">
-                <TextView
-                    android:id="@+id/A2_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="A2"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-                <EditText
-                    android:id="@+id/A2_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:hint="00"
-                    android:background="@android:color/transparent"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/B2_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="B2"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-
-                <EditText
-                    android:id="@+id/B2_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/C2_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="C2"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp">
-
-                </TextView>
-
-                <EditText
-                    android:id="@+id/C2_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/d2_linear"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/D2_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="D2"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-
-                <EditText
-                    android:id="@+id/D2_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
+    </ScrollView>
 
 
-
-        </LinearLayout>
-        <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/visi3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:orientation="horizontal"
-                android:background="@drawable/background">
-                <TextView
-                    android:id="@+id/A3_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="A3"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp">
-
-                </TextView>
-                <EditText
-                    android:id="@+id/A3_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:hint="00"
-                    android:background="@android:color/transparent"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/B3_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="B3"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp">
-
-                </TextView>
-
-                <EditText
-                    android:id="@+id/B3_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/C3_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="C3"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp">
-
-                </TextView>
-
-                <EditText
-                    android:id="@+id/C3_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:orientation="horizontal"
-                android:layout_gravity="right"
-
-                android:background="@drawable/background">
-
-                <TextView
-                    android:id="@+id/D3_string"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_bmi"
-                    android:text="D3"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="15dp"></TextView>
-
-                <EditText
-                    android:id="@+id/D3_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
-
-                </EditText>
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/method"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="20dp"
-            android:text="ax + b = 0"
-            android:textSize="20dp"></TextView>
-
-    </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"

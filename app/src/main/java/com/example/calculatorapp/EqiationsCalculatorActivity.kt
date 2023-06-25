@@ -98,6 +98,13 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
                 equation_system_vis.visibility=View.VISIBLE
                 visi2.visibility=View.VISIBLE
                 visi3.visibility=View.GONE
+                array2.setTextColor(colorYellow)
+                array3.setTextColor(colorGrey)
+                visi3.visibility=View.GONE
+                d1_linear.visibility=View.GONE
+                d2_linear.visibility=View.GONE
+                select2x2 = true
+                select3x3 = false
                 bottomSheet.dismiss()
 
             }
@@ -109,32 +116,7 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
             bottomSheet.setContentView(bottomSheetView)
             bottomSheet.show()
         }
-        val array2: TextView = findViewById(R.id.array2)
-        val array3: TextView = findViewById(R.id.array3)
-        if(eq_cal_name.text == "Equation System"){
-            array2.setOnClickListener {
-                array2.setTextColor(colorYellow)
-                array3.setTextColor(colorGrey)
-                method.text="a1x + b1y = c1\na2x + b2y = c2"
-                visi3.visibility=View.GONE
-                d1_linear.visibility=View.GONE
-                d2_linear.visibility=View.GONE
-                select2x2 = true
-                select3x3 = false
 
-            }
-            array3.setOnClickListener {
-                array3.setTextColor(colorYellow)
-                array2.setTextColor(colorGrey)
-                method.text="a1x + b1y + c1z = d1\na2x + b2y + c2z = d2\na2x + b2y + c2z = d2"
-                visi3.visibility=View.VISIBLE
-                d1_linear.visibility=View.VISIBLE
-                d2_linear.visibility=View.VISIBLE
-                select2x2 = false
-                select3x3 = true
-
-            }
-        }
         linearLayout2.setOnClickListener {
             if(eq_cal_name.text == "Linear Equation"){
                 if(A1_value.text.toString()==""){
@@ -171,9 +153,9 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
                 }
                 val diskriminant = (b1 * b1 - 4 * a1 * c1)
                 if (diskriminant < 0) {
-                    answer="No real root"
-                    answer_="No real root"
-                    solutions=""
+                    answer="-"
+                    answer_="-"
+                    solutions="No real root"
                 } else if (diskriminant == 0.0) {
                     val x = -b1/ (2 * a1).toDouble()
                     answer=x.toString()
@@ -345,7 +327,7 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
             }
             if(eq_cal_name.text == "Quadratic Equation"){
                 view.x1_string.text="X"
-                view.x2_string.text="y"
+                view.x2_string.text="Y"
                 view.x2_value.visibility=View.VISIBLE
                 view.x3_value.visibility=View.GONE
                 view.x1_answer.text=answer
@@ -355,18 +337,52 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
             }
             if(eq_cal_name.text == "Equation System"){
                 view.x1_string.text="X"
-                view.x2_string.text="y"
+                view.x2_string.text="Y"
                 view.x3_string.text="Z"
                 view.x2_value.visibility=View.VISIBLE
                 view.x3_value.visibility=View.VISIBLE
                 view.x1_answer.text=answer
                 view.x2_answer.text=answer_
-                view.x3_string.text=answer_3
+                if(select2x2){
+                    view.x3_value.visibility=View.GONE
+                }
+                if(select3x3){
+                    view.x3_value.visibility=View.VISIBLE
+                    view.x3_answer.text=answer_3
+                }
+
                 view.solutions_string.visibility=View.GONE
                 view.a_solutions.visibility=View.GONE
             }
 
         }
+    }
+    fun Array2x2(view:View){
+
+        val colorYellow=resources.getColor(R.color.yellow)
+        val colorGrey=resources.getColor(R.color.grey)
+        array2.setTextColor(colorYellow)
+        array3.setTextColor(colorGrey)
+        method.text="a1x + b1y = c1\na2x + b2y = c2"
+        visi3.visibility=View.GONE
+        d1_linear.visibility=View.GONE
+        d2_linear.visibility=View.GONE
+        select2x2 = true
+        select3x3 = false
+    }
+    fun Array3x3(view:View){
+
+        val colorYellow=resources.getColor(R.color.yellow)
+        val colorGrey=resources.getColor(R.color.grey)
+        array3.setTextColor(colorYellow)
+        array2.setTextColor(colorGrey)
+        method.text="a1x + b1y + c1z = d1\na2x + b2y + c2z = d2\na3x + b3y + c3z = d3"
+        visi3.visibility=View.VISIBLE
+        d1_linear.visibility=View.VISIBLE
+        d2_linear.visibility=View.VISIBLE
+        select2x2 = false
+        select3x3 = true
+
     }
 
 }
