@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.bottom_sheet_equations.view.*
+import kotlinx.android.synthetic.main.dialog_algebra.*
 
 import kotlinx.android.synthetic.main.dialog_algebra.view.*
 import kotlinx.android.synthetic.main.dialog_algebra.view.linearLayout2
@@ -66,6 +67,14 @@ class categoryFragment : Fragment() {
             }
             view.equation_calculate.setOnClickListener {
                 val intent= Intent(requireActivity(),EqiationsCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+            view.fragtions_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),FractionsCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+            view.gcf_lcm_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),GcfLcmCalculatorActivity::class.java)
                 startActivity(intent)
             }
         }

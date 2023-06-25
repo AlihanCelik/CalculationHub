@@ -159,6 +159,7 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
                 } else if (diskriminant == 0.0) {
                     val x = -b1/ (2 * a1).toDouble()
                     answer=x.toString()
+                    answer_=x.toString()
                     solutions="($a1 )x² +( $b1 )x + ($c1) = 0\nDiscriminant = ($b1)² - (4 * ($a1) * ($c1)\nDiscriminant = $diskriminant\n" +
                             "x1 = (-($b1) + √($diskriminant)) / $a1 * $b1\nx1 = $x\n" +
                             "x2 = (-($b1) - √($diskriminant)) / $a1 * $b1\n" +
@@ -326,8 +327,8 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
 
             }
             if(eq_cal_name.text == "Quadratic Equation"){
-                view.x1_string.text="X"
-                view.x2_string.text="Y"
+                view.x1_string.text="X1"
+                view.x2_string.text="X2"
                 view.x2_value.visibility=View.VISIBLE
                 view.x3_value.visibility=View.GONE
                 view.x1_answer.text=answer

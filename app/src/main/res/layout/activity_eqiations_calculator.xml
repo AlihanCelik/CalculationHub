@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AreaCalculatorActivity"
+    tools:context=".EqiationsCalculatorActivity"
     android:background="@color/black"
     >
 
@@ -56,7 +56,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -228,7 +228,7 @@
 
                         android:hint="00"
                         android:background="@android:color/transparent"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -262,7 +262,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -299,7 +299,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -336,7 +336,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -380,7 +380,7 @@
 
                         android:hint="00"
                         android:background="@android:color/transparent"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -414,7 +414,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -451,7 +451,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -487,7 +487,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -533,7 +533,7 @@
 
                         android:hint="00"
                         android:background="@android:color/transparent"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -569,7 +569,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -606,7 +606,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -641,7 +641,7 @@
 
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberSigned"
+                        android:inputType="numberDecimal|numberSigned"
                         android:maxLength="6"
                         android:textSize="30sp">
 
@@ -663,38 +663,37 @@
                 android:layout_marginBottom="60dp"
                 android:text="ax + b = 0"
                 android:textSize="20dp"></TextView>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/calculate"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/font2"
+                    android:gravity="center"
+                    android:text="Calculate"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/calculate"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/process"
-        app:layout_constraintVertical_bias="0.462">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/font2"
-            android:gravity="center"
-            android:text="Calculate"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"></TextView>
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

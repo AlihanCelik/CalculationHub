@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PercentageCalculateActivity"
+    tools:context=".GcfLcmCalculatorActivity"
     android:background="@color/black"
     >
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Percentage"
+            android:text="GCF / LCM"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/backButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,87 +71,18 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/baseline_percent_24"
+                android:src="@drawable/gcf_lcm"
                 app:tint="@color/yellow">
 
             </ImageView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:gravity="start"
-                android:text="CALCULATE"
-                android:textSize="20dp"
-                android:fontFamily="@font/font2">
-
-            </TextView>
 
 
-            <LinearLayout
-                android:id="@+id/perSelect"
-                android:background="@drawable/background"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/per_image"
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/baseline_percent_24"
-                    android:layout_gravity="center"
-                    app:tint="@color/yellow">
-
-                </ImageView>
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-
-                    android:layout_margin="7dp">
-
-                    <TextView
-                        android:id="@+id/per_cal_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Discount"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="2dp">
-
-                    </TextView>
-                    <TextView
-                        android:id="@+id/per_procces"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="a - b% = x"
-                        >
-
-                    </TextView>
-
-                </LinearLayout>
-
-                <ImageView
-
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_arrow_drop_down_24"
-                    app:tint="@color/grey">
-
-                </ImageView>
-
-
-            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="70dp"
                 android:gravity="start"
                 android:text="VALUES"
                 android:textSize="20dp"
@@ -189,7 +120,7 @@
 
                         android:hint="00"
                         android:background="@android:color/transparent"
-                        android:inputType="numberDecimal|numberSigned"
+                        android:inputType="number"
                         android:maxLength="6"
                         android:textSize="30sp"
                         android:layout_marginLeft="30dp"
@@ -198,6 +129,7 @@
                     </EditText>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/B_linear"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -223,34 +155,27 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="30dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginRight="30dp"
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberDecimal|numberSigned"
+                        android:inputType="number"
                         android:maxLength="6"
                         android:textSize="30sp">
 
                     </EditText>
-                    <TextView
-                        android:id="@+id/yuzde"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="%"
-                        android:layout_marginLeft="3dp"
-                        android:textSize="30sp">
-
-                    </TextView>
                 </LinearLayout>
 
 
+
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="200dp"
                 android:layout_marginBottom="70dp"
                 android:background="@drawable/calculate"
                 android:gravity="center"
