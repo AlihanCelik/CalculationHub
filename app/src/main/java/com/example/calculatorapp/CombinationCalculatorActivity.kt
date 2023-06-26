@@ -63,8 +63,8 @@ class CombinationCalculatorActivity : AppCompatActivity() {
                         var cevap= ((calculateFactorial((n+r)-1))/(calculateFactorial(r)*calculateFactorial((n-1))))
                         answer=cevap.toString()
                         solution="n = $n\nr = $r\nCombinations = ($n + $r - 1)! / $r! x ($n -1)!\n= (${n+r-1})! / $r! x ${n-1}!\n" +
-                                "= ${calculateFactorial(n+r-1)}/ ${calculateFactorial(r)} x ${calculateFactorial(n-1)}\n" +
-                                "= ${calculateFactorial(n + r - 1)}/ ${calculateFactorial(r)*calculateFactorial(n - 1)}\n" +
+                                "= ${calculateFactorial(n+r-1)} / ${calculateFactorial(r)} x ${calculateFactorial(n-1)}\n" +
+                                "= ${calculateFactorial(n + r - 1)} / ${calculateFactorial(r)*calculateFactorial(n - 1)}\n" +
                                 "= $answer"
                     }else{
                         if(r>=n-1){
