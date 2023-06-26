@@ -4,13 +4,11 @@ import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_prime_checker_calculator.*
 import kotlinx.android.synthetic.main.activity_prime_checker_calculator.A_value
 import kotlinx.android.synthetic.main.activity_prime_checker_calculator.backButton
 import kotlinx.android.synthetic.main.activity_prime_checker_calculator.linearLayout2
 import kotlinx.android.synthetic.main.dialog_primechecker_solutions.view.*
 import kotlinx.android.synthetic.main.dialog_primechecker_solutions.view.cancel
-import kotlinx.android.synthetic.main.dialog_proportion_solutions.view.*
 
 class PrimeCheckerCalculatorActivity : AppCompatActivity() {
     var a=0
@@ -22,9 +20,7 @@ class PrimeCheckerCalculatorActivity : AppCompatActivity() {
             finish()
         }
         linearLayout2.setOnClickListener {
-
-
-            if (A_value.text.toString() == "") {
+             if (A_value.text.toString() == "") {
                 a = 0
             } else {
                 a = A_value.text.toString().toInt()
@@ -41,9 +37,9 @@ class PrimeCheckerCalculatorActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             if(isPrime(a)){
-                view.answer.text="Yes"
+                view.pc_answer.text="Yes"
             }else{
-                view.answer.text="No"
+                view.pc_answer.text="No"
             }
 
         }
