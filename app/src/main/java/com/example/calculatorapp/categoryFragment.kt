@@ -81,6 +81,10 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),CombinationCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.prime_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),PrimeCheckerCalculatorActivity::class.java)
+                startActivity(intent)
+            }
         }
         geo_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_geometry,null)
