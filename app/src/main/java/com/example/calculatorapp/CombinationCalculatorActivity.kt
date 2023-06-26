@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_combination_calculator.linearLayo
 import kotlinx.android.synthetic.main.activity_combination_calculator.method
 import kotlinx.android.synthetic.main.dialog_combination_solutions.view.*
 import java.lang.Math.pow
+import java.math.BigInteger
 
 
 class CombinationCalculatorActivity : AppCompatActivity() {
@@ -44,7 +45,7 @@ class CombinationCalculatorActivity : AppCompatActivity() {
             }else{
                 if(order){
                         if(repeatable){
-                            var cevap= pow(n.toDouble(),r.toDouble()).toInt()
+                            var cevap= pow(n.toDouble(),r.toDouble())
                             answer=cevap.toString()
                             solution="n = $n\nr = $r\nPermutations = $n to the power $r\n= $answer"
                         }else{
@@ -53,18 +54,18 @@ class CombinationCalculatorActivity : AppCompatActivity() {
                                 solution=""
 
                             }else{
-                                var cevap= ((calculateFactorial(n))/calculateFactorial(n-r))
+                                var cevap= ((calculateFactorial(n))/calculateFactorial((n-r)))
                                 answer=cevap.toString()
                             }
                         }
                 }else{
                     if(repeatable){
-                        var cevap= ((calculateFactorial(n+r-1))/(calculateFactorial(r)*calculateFactorial(n-1)))
+                        var cevap= ((calculateFactorial((n+r)-1))/(calculateFactorial(r)*calculateFactorial((n-1))))
                         answer=cevap.toString()
                         solution="n = $n\nr = $r\nCombinations = ($n + $r - 1)! / $r! x ($n -1)!\n= (${n+r-1})! / $r! x ${n-1}!\n" +
                                 "= ${calculateFactorial(n+r-1)}/ ${calculateFactorial(r)} x ${calculateFactorial(n-1)}\n" +
                                 "= ${calculateFactorial(n + r - 1)}/ ${calculateFactorial(r)*calculateFactorial(n - 1)}\n" +
-                                "\n= $answer"
+                                "= $answer"
                     }else{
                         if(r>=n-1){
                             answer="-"
@@ -101,17 +102,14 @@ class CombinationCalculatorActivity : AppCompatActivity() {
             view.solutions.text=solution
         }
     }
-    fun calculateFactorial(n: Int): Long {
+    fun calculateFactorial(n: Int): BigInteger {
 
-        return if (n == 0) {
-            1
-        } else {
-            var result = 1L
-            for (i in 1..n) {
-                result *= i
-            }
-            result
+
+        var result = BigInteger.ONE
+        for (i in 1..n) {
+            result = result.multiply(BigInteger.valueOf(i.toLong()))
         }
+        return result
     }
     fun YesOrderClick(view: View){
         val colorYellow=resources.getColor(R.color.yellow)
