@@ -7,6 +7,9 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_shapes_calculator.*
+import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
+import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
+import kotlinx.android.synthetic.main.activity_shapes_calculator.method
 
 class ShapesCalculatorActivity : AppCompatActivity() {
     var a=0.0
@@ -168,6 +171,69 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             bottomSheet.show()
         }
         linearLayout2.setOnClickListener {
+            if(A_value.text.toString()==""){
+                a=0.0
+            }else{
+                a=A_value.text.toString().toDouble()
+            }
+            if(B_value.text.toString()==""){
+                b=0.0
+            }else{
+                b=B_value.text.toString().toDouble()
+            }
+            if(x_value.text.toString()==""){
+                c=0.0
+            }else{
+                c=x_value.text.toString().toDouble()
+            }
+
+            if(shapes_cal_name.text=="Triangle"){
+
+            }
+
+            if(shapes_cal_name.text=="Right Triangle"){
+
+            }
+
+            if(shapes_cal_name.text=="Square"){
+
+            }
+
+            if(shapes_cal_name.text=="Rectangle"){
+
+            }
+
+            if(shapes_cal_name.text=="Trapezoid"){
+
+            }
+
+            if(shapes_cal_name.text=="Rhombus"){
+
+            }
+
+            if(shapes_cal_name.text=="Pentagon"){
+
+            }
+
+            if(shapes_cal_name.text=="Hexagon"){
+
+            }
+
+            if(shapes_cal_name.text=="Circle"){
+
+            }
+
+            if(shapes_cal_name.text=="Circle Arc"){
+
+            }
+
+            if(shapes_cal_name.text=="Ellipse"){
+
+            }
+
+
+
+
 
         }
     }
