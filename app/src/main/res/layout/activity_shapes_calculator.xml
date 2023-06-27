@@ -192,6 +192,7 @@
                     </EditText>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/B_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.activity_ratio_calculaor.view.*
 import kotlinx.android.synthetic.main.activity_shapes_calculator.*
 
 class ShapesCalculatorActivity : AppCompatActivity() {
@@ -34,6 +33,125 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.triangle)
                 method.setImageResource(R.drawable.triangle)
                 visi.visibility=View.VISIBLE
+                B_layout.visibility=View.VISIBLE
+                A_string.text="Side A"
+                B_string.text="Side B"
+                x_string.text="Side C"
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.rightTriengle).setOnClickListener {
+                shapes_cal_name.text="Right Triangle"
+                shapes_image.setImageResource(R.drawable.righttriangle)
+                method.setImageResource(R.drawable.righttriangle)
+                visi.visibility=View.GONE
+                A_string.text="Side A"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Side B"
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.square).setOnClickListener {
+                shapes_cal_name.text="Square"
+                shapes_image.setImageResource(R.drawable.square)
+                method.setImageResource(R.drawable.square)
+                visi.visibility=View.GONE
+                A_string.text="Side"
+                B_layout.visibility=View.GONE
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.rectangle).setOnClickListener {
+                shapes_cal_name.text="Rectangle"
+                shapes_image.setImageResource(R.drawable.rectangle)
+                method.setImageResource(R.drawable.rectangle)
+                visi.visibility=View.GONE
+                A_string.text="Side A"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Side B"
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.trapezoid).setOnClickListener {
+                shapes_cal_name.text="Trapezoid"
+                shapes_image.setImageResource(R.drawable.trapezoid)
+                method.setImageResource(R.drawable.trapezoid)
+                visi.visibility=View.VISIBLE
+                A_string.text="Side A"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Side B"
+                x_string.text="Height"
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.rhombus).setOnClickListener {
+                shapes_cal_name.text="Rhombus"
+                shapes_image.setImageResource(R.drawable.rhombus)
+                method.setImageResource(R.drawable.rhombus)
+                visi.visibility=View.GONE
+                A_string.text="Side A"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Side B"
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.pentagon).setOnClickListener {
+                shapes_cal_name.text="Pentagon"
+                shapes_image.setImageResource(R.drawable.pentagon)
+                method.setImageResource(R.drawable.pentagon)
+                visi.visibility= View.GONE
+                A_string.text="Side A"
+                B_layout.visibility=View.GONE
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.hexagon).setOnClickListener {
+                shapes_cal_name.text="Hexagon"
+                shapes_image.setImageResource(R.drawable.hexagon)
+                method.setImageResource(R.drawable.hexagon)
+                visi.visibility=View.GONE
+                A_string.text="Side A"
+                B_layout.visibility=View.GONE
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.circle).setOnClickListener {
+                shapes_cal_name.text="Circle"
+                shapes_image.setImageResource(R.drawable.circle)
+                method.setImageResource(R.drawable.circle)
+                visi.visibility=View.GONE
+                A_string.text="Radius"
+                B_layout.visibility=View.GONE
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.circleArc).setOnClickListener {
+                shapes_cal_name.text="Circle Arc"
+                shapes_image.setImageResource(R.drawable.arc)
+                method.setImageResource(R.drawable.arc)
+                visi.visibility=View.GONE
+                A_string.text="Angle"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Radius"
+
+                bottomSheet.dismiss()
+
+            }
+            bottomSheetView.findViewById<View>(R.id.ellipse).setOnClickListener {
+                shapes_cal_name.text="Ellipse"
+                shapes_image.setImageResource(R.drawable.ellipse)
+                method.setImageResource(R.drawable.ellipse)
+                visi.visibility=View.GONE
+                A_string.text="Radius A"
+                B_layout.visibility=View.VISIBLE
+                B_string.text="Radius B"
 
                 bottomSheet.dismiss()
 
@@ -48,6 +166,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             bottomSheet.setCancelable(false)
             bottomSheet.setCanceledOnTouchOutside(true)
             bottomSheet.show()
+        }
+        linearLayout2.setOnClickListener {
+
         }
     }
 }
