@@ -29,6 +29,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
     var answer_6=""
     var answer_7=""
     var answer_8=""
+    var solution=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shapes_calculator)
@@ -217,6 +218,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 answer_6=heightA.toString()
                 answer_7=heightB.toString()
                 answer_8=heightC.toString()
+                solution="Side A = $a\nSide B = $b\nSide C = $c\nS = (A + B + C) / 2 \n= ($a + $b + $c) / 2 \n${a + b +c } / 2\nS = ${(a+b+c)/2}\n" +
+                        "Area = √(S(S - A)(S - B)(S - C))\n= √(${(a+b+c)/2}(${(a+b+c)/2} - $a)(${(a+b+c)/2} - $b)(${(a+b+c)/2} - $c))\n= √(${(a+b+c)/2} x ${((a+b+c)/2) - a} x ${((a+b+c)/2) - b} x ${((a+b+c)/2) - c})\n= ${(s * (s - a) * (s - b) * (s - c))}\n= $answer\n" +
+                        "Perimeter = A + B + C\n= $a + $b + $c\n= $answer_\n"
 
 
 
