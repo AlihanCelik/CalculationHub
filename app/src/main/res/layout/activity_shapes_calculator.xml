@@ -88,7 +88,7 @@
 
 
             <LinearLayout
-                android:id="@+id/raSelect"
+                android:id="@+id/shapesSelect"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/per_image"
+                    android:id="@+id/shapes_image"
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -114,7 +114,7 @@
                     android:layout_margin="12dp">
 
                     <TextView
-                        android:id="@+id/ra_cal_name"
+                        android:id="@+id/shapes_cal_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Triangle"
@@ -275,6 +275,7 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/method"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
