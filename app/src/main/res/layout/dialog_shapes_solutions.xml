@@ -177,7 +177,7 @@
                             android:fontFamily="@font/font2"
                             android:layout_gravity="center"
                             android:gravity="start"
-                            android:text="Angle A"
+                            android:text="Angle BC"
                             android:textSize="15dp">
 
                         </TextView>
@@ -206,7 +206,7 @@
                             android:fontFamily="@font/font2"
                             android:layout_gravity="center"
                             android:gravity="start"
-                            android:text="Angle B"
+                            android:text="Angle AC"
                             android:textSize="15dp">
 
                         </TextView>
@@ -236,7 +236,7 @@
                             android:fontFamily="@font/font2"
                             android:layout_gravity="center"
                             android:gravity="start"
-                            android:text="Angle C"
+                            android:text="Angle AB"
                             android:textSize="15dp">
 
                         </TextView>

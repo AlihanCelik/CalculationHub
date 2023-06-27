@@ -169,7 +169,7 @@
                     android:background="@drawable/background">
                     <TextView
                         android:id="@+id/A_string"
-                        android:layout_width="60dp"
+                        android:layout_width="75dp"
                         android:layout_height="30dp"
                         android:background="@drawable/background_bmi"
                         android:text="Side A "
@@ -205,7 +205,7 @@
 
                     <TextView
                         android:id="@+id/B_string"
-                        android:layout_width="60dp"
+                        android:layout_width="75dp"
                         android:layout_height="30dp"
                         android:background="@drawable/background_bmi"
                         android:text="Side B"
@@ -249,7 +249,7 @@
                     android:background="@drawable/background">
                     <TextView
                         android:id="@+id/x_string"
-                        android:layout_width="60dp"
+                        android:layout_width="75dp"
                         android:layout_height="30dp"
                         android:background="@drawable/background_bmi"
                         android:text="Side C"

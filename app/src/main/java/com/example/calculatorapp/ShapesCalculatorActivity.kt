@@ -11,8 +11,7 @@ import kotlinx.android.synthetic.main.activity_shapes_calculator.*
 import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
 import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
 import kotlinx.android.synthetic.main.activity_shapes_calculator.method
-import kotlinx.android.synthetic.main.dialog_equations_solutions.view.*
-import kotlinx.android.synthetic.main.dialog_shapes_solutions.*
+import kotlinx.android.synthetic.main.dialog_shapes_solutions.view.*
 import kotlin.math.acos
 import kotlin.math.atan
 import kotlin.math.pow
@@ -212,9 +211,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 val heightC = 2 * area / c
                 answer=area.toString()
                 answer_=perimeter.toString()
-                answer_3=angleA.toString()
-                answer_4=angleB.toString()
-                answer_5=angleC.toString()
+                answer_3= "$angleA˚"
+                answer_4= "$angleB˚"
+                answer_5= "$angleC˚"
                 answer_6=heightA.toString()
                 answer_7=heightB.toString()
                 answer_8=heightC.toString()
@@ -232,8 +231,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 answer=area.toString()
                 answer_=perimeter.toString()
                 answer_3=hypotenuse.toString()
-                answer_4=angleA.toString()
-                answer_4=angleB.toString()
+                answer_4= "$angleA˚"
+                answer_5= "$angleB˚"
 
             }
 
@@ -320,117 +319,116 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             if(shapes_cal_name.text=="Triangle"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                angleA_answer.text=answer_3
-                angleB_answer.text=answer_4
-                angleC_answer.text=answer_5
-                heightA_answer.text=answer_6
-                heightB_answer.text=answer_7
-                heightC_answer.text=answer_8
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.VISIBLE
-                height_layout.visibility=View.VISIBLE
-                heightB_layout.visibility=View.VISIBLE
-                heightC_layout.visibility=View.VISIBLE
-                angleC_layout.visibility=View.VISIBLE
-                heightA_string.text="Height A"
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.angleA_answer.text=answer_3
+                view.angleB_answer.text=answer_4
+                view.angleC_answer.text=answer_5
+                view.heightA_answer.text=answer_6
+                view.heightB_answer.text=answer_7
+                view.heightC_answer.text=answer_8
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.VISIBLE
+                view.height_layout.visibility=View.VISIBLE
+                view.heightB_layout.visibility=View.VISIBLE
+                view.heightC_layout.visibility=View.VISIBLE
+                view.angleC_layout.visibility=View.VISIBLE
+                view.heightA_string.text="Height A"
 
 
             }
 
             if(shapes_cal_name.text=="Right Triangle"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                angleA_answer.text=answer_3
-                angleB_answer.text=answer_4
-                heightC_answer.text=answer_8
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.VISIBLE
-                height_layout.visibility=View.VISIBLE
-                heightB_layout.visibility=View.GONE
-                heightC_layout.visibility=View.GONE
-                angleC_layout.visibility=View.GONE
-                heightA_string.text="Hypotenuse"
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.angleA_answer.text=answer_4
+                view.angleB_answer.text=answer_5
+                view.heightA_answer.text=answer_3
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.VISIBLE
+                view.height_layout.visibility=View.VISIBLE
+                view.heightB_layout.visibility=View.GONE
+                view.heightC_layout.visibility=View.GONE
+                view.angleC_layout.visibility=View.GONE
+                view.heightA_string.text="Hypotenuse"
 
             }
 
             if(shapes_cal_name.text=="Square"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
             }
 
             if(shapes_cal_name.text=="Rectangle"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
             }
 
             if(shapes_cal_name.text=="Trapezoid"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
             }
 
             if(shapes_cal_name.text=="Rhombus"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
             }
 
             if(shapes_cal_name.text=="Pentagon"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
             }
 
             if(shapes_cal_name.text=="Hexagon"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
             }
 
             if(shapes_cal_name.text=="Circle"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_answer.text=answer_3
-                diameter_layout.visibility=View.VISIBLE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
 
             }
 
             if(shapes_cal_name.text=="Circle Arc"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
             }
             if(shapes_cal_name.text=="Ellipse"){
-                area_answer.text=answer
-                perimeter_answer.text=answer_
-                diameter_layout.visibility=View.GONE
-                angle_layout.visibility=View.GONE
-                height_layout.visibility=View.GONE
+                view.area_answer.text=answer
+                view.perimeter_answer.text=answer_
+                view.diameter_layout.visibility=View.GONE
+                view.angle_layout.visibility=View.GONE
+                view.height_layout.visibility=View.GONE
 
             }
 
