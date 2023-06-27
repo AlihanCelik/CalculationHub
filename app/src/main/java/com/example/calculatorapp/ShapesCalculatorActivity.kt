@@ -10,6 +10,10 @@ import kotlinx.android.synthetic.main.activity_shapes_calculator.*
 import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
 import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
 import kotlinx.android.synthetic.main.activity_shapes_calculator.method
+import kotlin.math.acos
+import kotlin.math.atan
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 class ShapesCalculatorActivity : AppCompatActivity() {
     var a=0.0
@@ -17,6 +21,12 @@ class ShapesCalculatorActivity : AppCompatActivity() {
     var c=0.0
     var answer=""
     var answer_=""
+    var answer_3=""
+    var answer_4=""
+    var answer_5=""
+    var answer_6=""
+    var answer_7=""
+    var answer_8=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shapes_calculator)
@@ -95,9 +105,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.rhombus)
                 method.setImageResource(R.drawable.rhombus)
                 visi.visibility=View.GONE
-                A_string.text="Side A"
+                A_string.text="Height A"
                 B_layout.visibility=View.VISIBLE
-                B_string.text="Side B"
+                B_string.text="Height B"
 
                 bottomSheet.dismiss()
 
@@ -188,46 +198,113 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
 
             if(shapes_cal_name.text=="Triangle"){
+                val s = (a + b + c) / 2
+                val area = sqrt(s * (s - a) * (s - b) * (s - c))
+                val perimeter = a + b + c
+                val angleA = Math.toDegrees(acos((b * b + c * c - a * a) / (2 * b * c)))
+                val angleB = Math.toDegrees(acos((a * a + c * c - b * b) / (2 * a * c)))
+                val angleC = 180 - angleA - angleB
+                val heightA = 2 * area / a
+                val heightB = 2 * area / b
+                val heightC = 2 * area / c
+                answer=area.toString()
+                answer_=perimeter.toString()
+                answer_3=angleA.toString()
+                answer_4=angleB.toString()
+                answer_5=angleC.toString()
+                answer_6=heightA.toString()
+                answer_7=heightB.toString()
+                answer_8=heightC.toString()
+
+
 
             }
 
             if(shapes_cal_name.text=="Right Triangle"){
+                val area = 0.5 * a * b
+                val hypotenuse = sqrt(a * a + b * b)
+                val perimeter = a + b + hypotenuse
+                val angleA = Math.toDegrees(atan(b / a))
+                val angleB = 90.0 - angleA
+                answer=area.toString()
+                answer_=perimeter.toString()
+                answer_3=hypotenuse.toString()
+                answer_4=angleA.toString()
+                answer_4=angleB.toString()
 
             }
 
             if(shapes_cal_name.text=="Square"){
-
+                val area = a * a
+                val perimeter = 4 * a
+                answer=area.toString()
+                answer_=perimeter.toString()
             }
 
             if(shapes_cal_name.text=="Rectangle"){
+                val area = a * b
+                val perimeter = 2 * (a+b)
+                answer=area.toString()
+                answer_=perimeter.toString()
 
             }
 
             if(shapes_cal_name.text=="Trapezoid"){
-
+                val area = 0.5 * (a + b) * c
+                val perimeter = a + b + 2 * sqrt(((a - b) / 2).pow(2) + c.pow(2))
+                answer=area.toString()
+                answer_=perimeter.toString()
             }
 
             if(shapes_cal_name.text=="Rhombus"){
-
+                val d = Math.abs(a - b)
+                val x = Math.sqrt(a * b + d * d)
+                val area = a * x
+                val perimeter = 4 * x
+                answer=area.toString()
+                answer_=perimeter.toString()
             }
 
             if(shapes_cal_name.text=="Pentagon"){
-
+                val area = 0.25 * Math.sqrt(5 * (5 + 2 * sqrt(5.0))) * a * a
+                val perimeter = 5 * a
+                answer=area.toString()
+                answer_=perimeter.toString()
             }
 
             if(shapes_cal_name.text=="Hexagon"){
+                val area = (3 * sqrt(3.0) * a * a) / 2
+                val perimeter = 6 * a
+                answer=area.toString()
+                answer_=perimeter.toString()
 
             }
 
             if(shapes_cal_name.text=="Circle"){
+                val area = Math.PI * a * a
+                val circumference = Math.PI * 2*a
+                val diameter = 2*a
+
+                answer=area.toString()
+                answer_=circumference.toString()
+                answer_3=diameter.toString()
+
 
             }
 
             if(shapes_cal_name.text=="Circle Arc"){
+                val area = (a / 360) * Math.PI * b * b
+                val perimeter = (a / 360) * (2 * Math.PI * b)
+                answer=area.toString()
+                answer_=perimeter.toString()
 
             }
 
             if(shapes_cal_name.text=="Ellipse"){
+                val area = Math.PI * a * b
+                val perimeter = Math.PI * (3 * (a + b) - Math.sqrt((3 * a + b) * (a + 3 * b)))
+                answer=area.toString()
+                answer_=perimeter.toString()
 
             }
 
