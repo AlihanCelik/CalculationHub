@@ -85,6 +85,7 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),PrimeCheckerCalculatorActivity::class.java)
                 startActivity(intent)
             }
+
         }
         geo_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_geometry,null)
@@ -95,6 +96,10 @@ class categoryFragment : Fragment() {
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
             view.cancel_geo.setOnClickListener {
                 dialog.dismiss()
+            }
+            view.shapes_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),ShapesCalculatorActivity::class.java)
+                startActivity(intent)
             }
         }
         health_calculate.setOnClickListener {

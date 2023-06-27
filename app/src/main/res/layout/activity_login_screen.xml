@@ -8,7 +8,6 @@
     android:background="@color/black">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,24 +19,24 @@
             android:id="@+id/animationView"
             android:layout_width="167dp"
             android:layout_height="139dp"
-            app:lottie_rawRes="@raw/splash_calculator"
+            android:layout_marginBottom="40dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="false"
-            android:layout_marginBottom="40dp"/>
+            app:lottie_rawRes="@raw/splash_calculator" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/font1"
             android:gravity="center"
-            android:text="Calculator"
+            android:text="Calculation Hub"
             android:textColor="@color/white"
             android:textSize="40dp">
 
         </TextView>
-
-
 
 
     </LinearLayout>
