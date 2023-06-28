@@ -167,15 +167,34 @@
                     android:layout_marginRight="5dp"
                     android:orientation="horizontal"
                     android:background="@drawable/background">
-                    <TextView
-                        android:id="@+id/A_string"
-                        android:layout_width="75dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/background_bmi"
-                        android:text="Side A "
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="15dp"></TextView>
+                    <LinearLayout
+                        android:id="@+id/selectSideA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_bmi">
+                        <TextView
+                            android:id="@+id/A_string"
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+
+                            android:text="Side A "
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="15dp"></TextView>
+                        <ImageView
+                            android:id="@+id/selectSideAButton"
+                            android:visibility="gone"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_arrow_drop_down_24"
+                            app:tint="@color/grey">
+
+                        </ImageView>
+                    </LinearLayout>
+
                     <EditText
                         android:id="@+id/A_value"
                         android:layout_width="wrap_content"
@@ -186,8 +205,8 @@
                         android:inputType="numberDecimal"
                         android:maxLength="6"
                         android:textSize="30sp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp">
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
 
                     </EditText>
                 </LinearLayout>
@@ -203,23 +222,42 @@
 
                     android:background="@drawable/background">
 
-                    <TextView
-                        android:id="@+id/B_string"
-                        android:layout_width="75dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/background_bmi"
-                        android:text="Side B"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="15dp"></TextView>
+                    <LinearLayout
+                        android:id="@+id/selectSideB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_bmi">
+                        <TextView
+                            android:id="@+id/B_string"
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/background_bmi"
+                            android:text="Side B"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="15dp"></TextView>
+                        <ImageView
+                            android:id="@+id/selectSideBButton"
+                            android:visibility="gone"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_arrow_drop_down_24"
+                            app:tint="@color/grey">
+
+                        </ImageView>
+                    </LinearLayout>
+
 
                     <EditText
                         android:id="@+id/B_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:background="@android:color/transparent"
                         android:hint="00"
                         android:inputType="numberDecimal"
@@ -247,15 +285,33 @@
                     android:layout_gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/background">
-                    <TextView
-                        android:id="@+id/x_string"
-                        android:layout_width="75dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/background_bmi"
-                        android:text="Side C"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="15dp"></TextView>
+                    <LinearLayout
+                        android:id="@+id/selectSideC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_bmi">
+                        <TextView
+                            android:id="@+id/x_string"
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+                            android:text="Side C"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="15dp"></TextView>
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/selectSideCButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_arrow_drop_down_24"
+                            app:tint="@color/grey">
+
+                        </ImageView>
+                    </LinearLayout>
+
                     <EditText
                         android:id="@+id/x_value"
                         android:layout_width="wrap_content"
@@ -266,8 +322,8 @@
                         android:inputType="numberDecimal"
                         android:maxLength="6"
                         android:textSize="30sp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp">
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
 
                     </EditText>
                 </LinearLayout>
