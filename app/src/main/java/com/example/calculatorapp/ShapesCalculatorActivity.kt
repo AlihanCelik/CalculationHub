@@ -50,6 +50,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 method.setImageResource(R.drawable.triangle)
                 visi.visibility=View.VISIBLE
                 B_layout.visibility=View.VISIBLE
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 A_string.text="Side A"
                 B_string.text="Side B"
                 x_string.text="Side C"
@@ -61,6 +64,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.righttriangle)
                 method.setImageResource(R.drawable.righttriangle)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.VISIBLE
+                selectSideBButton.visibility=View.VISIBLE
                 A_string.text="Side A"
                 B_layout.visibility=View.VISIBLE
                 B_string.text="Side B"
@@ -73,6 +78,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.square)
                 method.setImageResource(R.drawable.square)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.VISIBLE
+                selectSideBButton.visibility=View.VISIBLE
                 A_string.text="Side"
                 B_layout.visibility=View.GONE
                 bottomSheet.dismiss()
@@ -82,6 +89,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_cal_name.text="Rectangle"
                 shapes_image.setImageResource(R.drawable.rectangle)
                 method.setImageResource(R.drawable.rectangle)
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 visi.visibility=View.GONE
                 A_string.text="Side A"
                 B_layout.visibility=View.VISIBLE
@@ -95,6 +105,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.trapezoid)
                 method.setImageResource(R.drawable.trapezoid)
                 visi.visibility=View.VISIBLE
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 A_string.text="Side A"
                 B_layout.visibility=View.VISIBLE
                 B_string.text="Side B"
@@ -108,6 +121,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.rhombus)
                 method.setImageResource(R.drawable.rhombus)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 A_string.text="Height A"
                 B_layout.visibility=View.VISIBLE
                 B_string.text="Height B"
@@ -120,6 +136,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.pentagon)
                 method.setImageResource(R.drawable.pentagon)
                 visi.visibility= View.GONE
+                selectSideAButton.visibility=View.VISIBLE
                 A_string.text="Side A"
                 B_layout.visibility=View.GONE
 
@@ -131,6 +148,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.hexagon)
                 method.setImageResource(R.drawable.hexagon)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.VISIBLE
                 A_string.text="Side A"
                 B_layout.visibility=View.GONE
 
@@ -141,6 +159,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_cal_name.text="Circle"
                 shapes_image.setImageResource(R.drawable.circle)
                 method.setImageResource(R.drawable.circle)
+                selectSideAButton.visibility=View.VISIBLE
                 visi.visibility=View.GONE
                 A_string.text="Radius"
                 B_layout.visibility=View.GONE
@@ -153,6 +172,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.arc)
                 method.setImageResource(R.drawable.arc)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 A_string.text="Angle"
                 B_layout.visibility=View.VISIBLE
                 B_string.text="Radius"
@@ -165,6 +187,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 shapes_image.setImageResource(R.drawable.ellipse)
                 method.setImageResource(R.drawable.ellipse)
                 visi.visibility=View.GONE
+                selectSideAButton.visibility=View.GONE
+                selectSideBButton.visibility=View.GONE
+                selectSideCButton.visibility=View.GONE
                 A_string.text="Radius A"
                 B_layout.visibility=View.VISIBLE
                 B_string.text="Radius B"
