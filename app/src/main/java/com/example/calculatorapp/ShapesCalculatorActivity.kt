@@ -30,6 +30,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
     var answer_7=""
     var answer_8=""
     var solution=""
+    var shape="Triangle"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shapes_calculator)
@@ -46,6 +47,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             ) as ConstraintLayout
             bottomSheetView.findViewById<View>(R.id.triangle).setOnClickListener {
                 shapes_cal_name.text="Triangle"
+                shape="Triangle"
                 shapes_image.setImageResource(R.drawable.triangle)
                 method.setImageResource(R.drawable.triangle)
                 visi.visibility=View.VISIBLE
@@ -61,6 +63,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.rightTriengle).setOnClickListener {
                 shapes_cal_name.text="Right Triangle"
+                shape="Right Triangle"
                 shapes_image.setImageResource(R.drawable.righttriangle)
                 method.setImageResource(R.drawable.righttriangle)
                 visi.visibility=View.GONE
@@ -75,6 +78,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.square).setOnClickListener {
                 shapes_cal_name.text="Square"
+                shape="Square"
                 shapes_image.setImageResource(R.drawable.square)
                 method.setImageResource(R.drawable.square)
                 visi.visibility=View.GONE
@@ -87,6 +91,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.rectangle).setOnClickListener {
                 shapes_cal_name.text="Rectangle"
+                shape="Rectangle"
                 shapes_image.setImageResource(R.drawable.rectangle)
                 method.setImageResource(R.drawable.rectangle)
                 selectSideAButton.visibility=View.GONE
@@ -102,6 +107,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.trapezoid).setOnClickListener {
                 shapes_cal_name.text="Trapezoid"
+                shape="Trapezoid"
                 shapes_image.setImageResource(R.drawable.trapezoid)
                 method.setImageResource(R.drawable.trapezoid)
                 visi.visibility=View.VISIBLE
@@ -118,6 +124,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.rhombus).setOnClickListener {
                 shapes_cal_name.text="Rhombus"
+                shape="Rhombus"
                 shapes_image.setImageResource(R.drawable.rhombus)
                 method.setImageResource(R.drawable.rhombus)
                 visi.visibility=View.GONE
@@ -133,6 +140,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.pentagon).setOnClickListener {
                 shapes_cal_name.text="Pentagon"
+                shape="Pentagon"
                 shapes_image.setImageResource(R.drawable.pentagon)
                 method.setImageResource(R.drawable.pentagon)
                 visi.visibility= View.GONE
@@ -145,6 +153,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.hexagon).setOnClickListener {
                 shapes_cal_name.text="Hexagon"
+                shape="Hexagon"
                 shapes_image.setImageResource(R.drawable.hexagon)
                 method.setImageResource(R.drawable.hexagon)
                 visi.visibility=View.GONE
@@ -157,6 +166,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.circle).setOnClickListener {
                 shapes_cal_name.text="Circle"
+                shape="Circle"
                 shapes_image.setImageResource(R.drawable.circle)
                 method.setImageResource(R.drawable.circle)
                 selectSideAButton.visibility=View.VISIBLE
@@ -169,6 +179,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.circleArc).setOnClickListener {
                 shapes_cal_name.text="Circle Arc"
+                shape="Circle Arc"
                 shapes_image.setImageResource(R.drawable.arc)
                 method.setImageResource(R.drawable.arc)
                 visi.visibility=View.GONE
@@ -184,6 +195,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.ellipse).setOnClickListener {
                 shapes_cal_name.text="Ellipse"
+                shape="Ellipse"
                 shapes_image.setImageResource(R.drawable.ellipse)
                 method.setImageResource(R.drawable.ellipse)
                 visi.visibility=View.GONE
@@ -208,7 +220,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             bottomSheet.setCanceledOnTouchOutside(true)
             bottomSheet.show()
         }
-        if(shapes_cal_name.text == "Right Triangle"){
+        if(shape== "Right Triangle"){
             selectSideA.setOnClickListener {
 
                 val bottomSheet =
@@ -286,7 +298,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
 
         }
 
-        if(shapes_cal_name.text=="Square"){
+        if(shape=="Square"){
             selectSideA.setOnClickListener {
 
                 val bottomSheet =
@@ -320,7 +332,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
         }
 
 
-        if(shapes_cal_name.text == "Pentagon"){
+        if(shape== "Pentagon"){
             selectSideA.setOnClickListener {
 
                 val bottomSheet =
@@ -353,7 +365,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             }
         }
 
-        if(shapes_cal_name.text=="Hexagon"){
+        if(shape=="Hexagon"){
             selectSideA.setOnClickListener {
 
                 val bottomSheet =
@@ -387,7 +399,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
 
         }
 
-        if(shapes_cal_name.text=="Circle"){
+        if(shape=="Circle"){
             selectSideA.setOnClickListener {
 
                 val bottomSheet =
