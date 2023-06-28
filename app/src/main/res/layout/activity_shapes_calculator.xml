@@ -160,6 +160,7 @@
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal">
                 <LinearLayout
+
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -172,13 +173,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
+                        android:clickable="true"
                         android:background="@drawable/background_bmi">
                         <TextView
                             android:id="@+id/A_string"
                             android:layout_width="75dp"
                             android:layout_height="30dp"
 
-                            android:text="Side A "
+                            android:text="Side A"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15dp"></TextView>
