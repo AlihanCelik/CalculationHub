@@ -183,7 +183,7 @@
                             android:text="Side A"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textSize="15dp"></TextView>
+                            android:textSize="11dp"></TextView>
                         <ImageView
                             android:id="@+id/selectSideAButton"
                             android:visibility="gone"
@@ -238,7 +238,7 @@
                             android:text="Side B"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textSize="15dp"></TextView>
+                            android:textSize="11dp"></TextView>
                         <ImageView
                             android:id="@+id/selectSideBButton"
                             android:visibility="gone"
@@ -300,7 +300,7 @@
                             android:text="Side C"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textSize="15dp"></TextView>
+                            android:textSize="11dp"></TextView>
                         <ImageView
                             android:visibility="gone"
                             android:id="@+id/selectSideCButton"
