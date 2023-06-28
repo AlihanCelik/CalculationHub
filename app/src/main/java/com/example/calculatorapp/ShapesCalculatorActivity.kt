@@ -208,6 +208,227 @@ class ShapesCalculatorActivity : AppCompatActivity() {
             bottomSheet.setCanceledOnTouchOutside(true)
             bottomSheet.show()
         }
+        if(shapes_cal_name.text == "Right Triangle"){
+            selectSideA.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_righttiangle,
+                    findViewById(R.id.bottomSheetRightTriangle)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.sideR).setOnClickListener {
+                    A_string.text="Side A"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.hypotenuseR).setOnClickListener {
+                    A_string.text="Hypotenuse"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.angleA).setOnClickListener {
+                    A_string.text="Angle A"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.angleB).setOnClickListener {
+                    A_string.text="Angle B"
+                    bottomSheet.dismiss()
+
+                }
+
+
+
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+            selectSideB.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_righttiangle,
+                    findViewById(R.id.bottomSheetRightTriangle)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.sideR).setOnClickListener {
+                    B_string.text="Side A"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.hypotenuseR).setOnClickListener {
+                    B_string.text="Hypotenuse"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.angleA).setOnClickListener {
+                    B_string.text="Angle A"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.angleB).setOnClickListener {
+                    B_string.text="Angle B"
+                    bottomSheet.dismiss()
+
+                }
+
+
+
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+
+        }
+
+        if(shapes_cal_name.text=="Square"){
+            selectSideA.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_value,
+                    findViewById(R.id.bottomSheetValue)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.sideV).setOnClickListener {
+                    A_string.text="Side"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.areaV).setOnClickListener {
+                    A_string.text="Area"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.perimeterV).setOnClickListener {
+                    A_string.text="Perimeter"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+        }
+
+
+        if(shapes_cal_name.text=="Pentagon"){
+            selectSideA.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_value,
+                    findViewById(R.id.bottomSheetValue)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.sideV).setOnClickListener {
+                    A_string.text="Side"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.areaV).setOnClickListener {
+                    A_string.text="Area"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.perimeterV).setOnClickListener {
+                    A_string.text="Perimeter"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+        }
+
+        if(shapes_cal_name.text=="Hexagon"){
+            selectSideA.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_value,
+                    findViewById(R.id.bottomSheetValue)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.sideV).setOnClickListener {
+                    A_string.text="Side"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.areaV).setOnClickListener {
+                    A_string.text="Area"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.perimeterV).setOnClickListener {
+                    A_string.text="Perimeter"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+
+        }
+
+        if(shapes_cal_name.text=="Circle"){
+            selectSideA.setOnClickListener {
+
+                val bottomSheet =
+                    BottomSheetDialog(this@ShapesCalculatorActivity, R.style.BottomSheetDialogTheme)
+                val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                    R.layout.bottom_sheet_shapes_circle,
+                    findViewById(R.id.bottomSheetCircleValue)
+                ) as ConstraintLayout
+                bottomSheetView.findViewById<View>(R.id.radiusC).setOnClickListener {
+                    A_string.text="Radius"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.DiameterC).setOnClickListener {
+                    A_string.text="Diameter"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.areaC).setOnClickListener {
+                    A_string.text="Area"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.circumferenceC).setOnClickListener {
+                    A_string.text="Circumference"
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
+                    bottomSheet.dismiss()
+
+                }
+                bottomSheet.setContentView(bottomSheetView)
+                bottomSheet.show()
+            }
+
+
+        }
+
         linearLayout2.setOnClickListener {
             if(A_value.text.toString()==""){
                 a=0.0
