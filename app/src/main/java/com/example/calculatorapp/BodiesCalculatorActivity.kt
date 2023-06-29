@@ -1,5 +1,6 @@
 package com.example.calculatorapp
 
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,6 +19,8 @@ import kotlinx.android.synthetic.main.activity_bodies_calculator.method
 import kotlinx.android.synthetic.main.activity_bodies_calculator.visi
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_string
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_value
+import kotlinx.android.synthetic.main.dialog_bodies_solutions.view.*
+import kotlinx.android.synthetic.main.dialog_shapes_solutions.*
 import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -360,6 +363,28 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                         "Volume = (4π * r1 * r2 * r3) / 3\n" +
                         "= (4π * $a * $b * $c) / 3\n" +
                         "= $volume"
+            }
+            val view = View.inflate(this, R.layout.dialog_bodies_solutions, null)
+            val builder = AlertDialog.Builder(this)
+            builder.setView(view)
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            view.cancel.setOnClickListener {
+                dialog.dismiss()
+            }
+            if (bodies_cal_name.text == "Sphere") {
+                view.lateral_area_answer.visibility=View.GONE
+                view.total_area_answer.text=answer
+                view.volume_answer.text=answer_3
+                view.a_solutions.text=solutions
+            }else{
+                view.lateral_area_answer.visibility=View.VISIBLE
+                view.total_area_answer.text=answer
+                view.lateral_area_answer.text=answer_
+                view.volume_answer.text=answer_3
+                view.a_solutions.text=solutions
+
             }
         }
 
