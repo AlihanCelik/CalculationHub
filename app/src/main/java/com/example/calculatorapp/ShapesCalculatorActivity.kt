@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.WindowInsets.Side
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_shapes_calculator.*
 import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
 import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
 import kotlinx.android.synthetic.main.activity_shapes_calculator.method
-import kotlinx.android.synthetic.main.dialog_shapes_solutions.*
 import kotlinx.android.synthetic.main.dialog_shapes_solutions.view.*
 import kotlin.math.*
 
@@ -823,6 +821,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 if (shapes_cal_name.text == "Triangle") {
                     view.area_string.text="Area"
                     view.perimeter_string.text="Perimeter"
+                    view.heightA_answer.text = "Height A"
+                    view.heightB_answer.text = "Height B"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.angleA_answer.text = answer_3
@@ -845,6 +845,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 if (shapes_cal_name.text == "Right Triangle") {
                     view.area_string.text="Area"
                     view.perimeter_string.text="Perimeter"
+                    view.heightA_answer.text = "Side A"
+                    view.heightB_answer.text = "Side B"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.angleA_answer.text = answer_3
