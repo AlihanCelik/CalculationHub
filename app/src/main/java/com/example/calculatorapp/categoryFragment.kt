@@ -101,6 +101,10 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),ShapesCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.bodies_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),BodiesCalculatorActivity::class.java)
+                startActivity(intent)
+            }
         }
         health_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_health,null)
