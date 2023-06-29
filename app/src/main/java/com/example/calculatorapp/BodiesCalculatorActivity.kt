@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_bodies_calculator.method
 import kotlinx.android.synthetic.main.activity_bodies_calculator.visi
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_string
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_value
+import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -234,30 +235,131 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=surfaceArea.toString()
                 answer_3=volume.toString()
+                solutions="Side A = $a\nHeight H = $b\nLateral Area = 2A x √(H² +(A / 2))\n= 2 x $a x √($b² + ($a / 2))\n= ${2*a} x √(${b.pow(2)} + ${(a/2).pow(2)})\n= ${2*a} x √(${b.pow(2) + (a/2).pow(2)})\n= $surfaceArea\n\n" +
+                        "Total Area = Lateral Area + A²\n= $surfaceArea + ${a.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = A² x (H / 3)\n=$a² x ($b / 3)\n= ${a.pow(2)} x ${b/3}\n= $volume"
             }
             if (bodies_cal_name.text == "Pyramid Frustum") {
+                val surfaceArea = (2*(a+b))* sqrt(c.pow(2)+((b-a)/2).pow(2))
+                val totalArea = surfaceArea + a.pow(2)+ b.pow(2)
+                val volume = (a.pow(2) + a *b + b.pow(2))* (c/3)
+                answer=totalArea.toString()
+                answer_=surfaceArea.toString()
+                answer_3=volume.toString()
+                solutions="Side A = $a\nSide B = $b\nHeight H = $c\nLateral Area = 2(A + B) x √(H² +((B - A) / 2))\n= 2($a + $b) x √($c² + (($b - $a)/ 2))\n= ${2*(a+b)} x √(${c.pow(2)} + ${((b-a)/2).pow(2)})\n= ${2*(a+b)} x √(${c.pow(2) + ((b-a)/2).pow(2)})\n= $surfaceArea\n\n" +
+                        "Total Area = Lateral Area + A² + B²\n= $surfaceArea + ${a.pow(2)} + ${b.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = (A² + A x B + B²) x (H / 3)\n=$a² + $a x $b + $b² x ($c / 3)\n= ${a.pow(2)} + $a x $b + ${b.pow(2)} x ${b/3}\n= $volume"
 
             }
             if (bodies_cal_name.text == "Cone") {
-
+                val totalArea = 2 * Math.PI * a * (a + b) // Toplam alan = 2πrh + 2πr^2
+                val lateralArea = 2 * Math.PI * a * b // Yan yüzey alanı = 2πrh
+                val volume = Math.PI * a * a * b // Hacim = πr^2h
+                answer=totalArea.toString()
+                answer_=lateralArea.toString()
+                answer_3=volume.toString()
+                solutions = "Radius r = $a\nHeight h = $b\n" +
+                        "Lateral Area = π * r * √(r² + h²)\n" +
+                        "= π * $a * √(${a.pow(2)} + ${b.pow(2)})\n" +
+                        "= π * $a * √(${a.pow(2) + b.pow(2)})\n" +
+                        "= $lateralArea\n\n" +
+                        "Total Area = Lateral Area + π * r²\n" +
+                        "= $lateralArea + π * ${a.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = (π * r² * h) / 3\n" +
+                        "= (π * ${a.pow(2)} * $b) / 3\n" +
+                        "= $volume"
             }
             if (bodies_cal_name.text == "Cone Frustum") {
-
+                val slantHeight1 = sqrt(a.pow(2) + c.pow(2))
+                val slantHeight2 = sqrt(b.pow(2) + c.pow(2))
+                val lateralArea = Math.PI * (a + b) * (slantHeight1 + slantHeight2)
+                val totalArea = lateralArea + Math.PI * (a.pow(2) + b.pow(2))
+                val volume = (Math.PI * c / 3) * (a.pow(2) + a * b + b.pow(2))
+                answer=totalArea.toString()
+                answer_=lateralArea.toString()
+                answer_3=volume.toString()
+                solutions = "Inner Radius r1 = $a\nOuter Radius r2 = $b\nHeight h = $c\n" +
+                        "Lateral Area = π * (r1 + r2) * (slantHeight1 + slantHeight2)\n" +
+                        "= π * ($a + $b) * (${sqrt(a.pow(2) + c.pow(2))} + ${sqrt(b.pow(2) + c.pow(2))})\n" +
+                        "= $lateralArea\n\n" +
+                        "Total Area = Lateral Area + π * (r1² + r2²)\n" +
+                        "= $lateralArea + π * (${a.pow(2)} + ${b.pow(2)})\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = (π * h / 3) * (r1² + r1 * r2 + r2²)\n" +
+                        "= (π * $c / 3) * (${a.pow(2)} + $a * $b + ${b.pow(2)})\n" +
+                        "= $volume"
             }
             if (bodies_cal_name.text == "Cylinder") {
+                val lateralArea = 2 * Math.PI * a * b
+                val totalArea = lateralArea + 2 * Math.PI * a.pow(2)
+                val volume = Math.PI * a.pow(2) * b
+                answer=totalArea.toString()
+                answer_=lateralArea.toString()
+                answer_3=volume.toString()
+                solutions = "Radius r = $a\nHeight h = $b\n" +
+                        "Lateral Area = 2πrh\n" +
+                        "= 2π * $a * $b\n" +
+                        "= $lateralArea\n\n" +
+                        "Total Area = Lateral Area + 2πr²\n" +
+                        "= $lateralArea + 2π * ${a.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = πr²h\n" +
+                        "= π * ${a.pow(2)} * $b\n" +
+                        "= $volume"
 
             }
             if (bodies_cal_name.text == "Sphere") {
-
+                val totalArea = 4 * Math.PI * a.pow(2)
+                val volume = (4/3) * Math.PI * a.pow(3)
+                answer=totalArea.toString()
+                answer_3=volume.toString()
+                solutions = "Radius r = $a\n" +
+                        "Total Area = 4πr²\n" +
+                        "= 4π * ${a.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = (4/3)πr³\n" +
+                        "= (4/3)π * ${a.pow(3)}\n" +
+                        "= $volume"
             }
             if (bodies_cal_name.text == "Sphere Cap") {
-
+                val lateralArea=PI*(a.pow(2)+b.pow(2))
+                val totalArea= lateralArea+(PI*a.pow(2))
+                val volume=(3*PI*b*(a.pow(2)+b.pow(3)))/6
+                answer=totalArea.toString()
+                answer_=lateralArea.toString()
+                answer_3=volume.toString()
+                solutions = "Radius A= $a\nHeight H= $b\n" +
+                        "Lateral Area = π(A² + H²)\n" +
+                        "= π(${a.pow(2)} + ${b.pow(2)})\n" +
+                        "= $lateralArea\n\n" +
+                        "Total Area = Lateral Area + πA²\n" +
+                        "= $lateralArea + π${a.pow(2)}\n" +
+                        "= $totalArea\n\n" +
+                        "Volume = (3πb(A² + H³)) / 6\n" +
+                        "= (3π($b)(${a.pow(2)} + ${b.pow(3)})) / 6\n" +
+                        "= $volume"
             }
             if (bodies_cal_name.text == "Sphere Segment") {
-
+                val volume = (3* PI*c *(3*a*a + 3*b*b + c*c))/6
+                answer_3=volume.toString()
+                solutions="Radius A =$a\nRadius B = $b\nHeight H = $c\nVolume = (3π x H x (3A² + 3B² + H²)) / 6\n= (3π x $c x (3$a² + 3$b² + $c²)) / 6\n= (${3* PI} x $c x (${3*a*a} + ${b*b*3} + ${c*c})) / 6\n" +
+                        "=${(3* PI*c *(3*a*a + 3*b*b + c*c))} / 6 \n= $volume"
             }
             if (bodies_cal_name.text == "Ellipsoid") {
-
+                val area = 4 * PI * ((a * b).pow(1.6) + (a * c).pow(1.6) + (b * c).pow(1.6)) / 3
+                val volume = (4 * PI * a * b * c) / 3
+                answer=area.toString()
+                answer_3=volume.toString()
+                solutions = "Radius r1 = $a\nRadius r2 = $b\nRadius r3 = $c\n" +
+                        "Area = 4π * ((r1 * r2)^1.6 + (r1 * r3)^1.6 + (r2 * r3)^1.6) / 3\n" +
+                        "= 4π * (($a * $b)^1.6 + ($a * $c)^1.6 + ($b * $c)^1.6) / 3\n" +
+                        "= $area\n\n" +
+                        "Volume = (4π * r1 * r2 * r3) / 3\n" +
+                        "= (4π * $a * $b * $c) / 3\n" +
+                        "= $volume"
             }
         }
 
