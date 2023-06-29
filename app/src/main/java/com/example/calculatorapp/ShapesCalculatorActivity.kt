@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.WindowInsets.Side
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_shapes_calculator.*
@@ -12,10 +13,7 @@ import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
 import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
 import kotlinx.android.synthetic.main.activity_shapes_calculator.method
 import kotlinx.android.synthetic.main.dialog_shapes_solutions.view.*
-import kotlin.math.acos
-import kotlin.math.atan
-import kotlin.math.pow
-import kotlin.math.sqrt
+import kotlin.math.*
 
 class ShapesCalculatorActivity : AppCompatActivity() {
     var a=0.0
@@ -469,16 +467,195 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Right Triangle") {
-                    val area = 0.5 * a * b
-                    val hypotenuse = sqrt(a * a + b * b)
-                    val perimeter = a + b + hypotenuse
-                    val angleA = Math.toDegrees(atan(b / a))
-                    val angleB = 90.0 - angleA
-                    answer = area.toString()
-                    answer_ = perimeter.toString()
-                    answer_3 = hypotenuse.toString()
-                    answer_4 = "$angleA˚"
-                    answer_5 = "$angleB˚"
+                    if(A_string.text== "Side A" && B_string.text=="Side B"){
+                        val area = 0.5 * a * b
+                        val hypotenuse = sqrt(a * a + b * b)
+                        val perimeter = a + b + hypotenuse
+                        val angleA = Math.toDegrees(atan(b / a))
+                        val angleB = 90.0 - angleA
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = b.toString()
+                        answer_8 = hypotenuse.toString()
+                    }
+                    if(A_string.text== "Angle A" && B_string.text=="Angle B" || A_string.text== "Angle A" && B_string.text=="Angle A"|| A_string.text== "Angle B" && B_string.text=="Angle B" || A_string.text== "Angle B" && B_string.text=="Angle A" || A_string.text == "Hypotenuse" &&B_string.text == "Hypotenuse" ){
+                        answer = "-"
+                        answer_ = "-"
+                        answer_3 = "-"
+                        answer_4 = "$a˚"
+                        answer_5 = "$b˚"
+                        answer_6 = "-"
+                        answer_7 = "-"
+                        answer_8 = "-"
+                    }
+                    if(A_string.text== "Side A" && B_string.text=="Angle A"){
+                        val angleB = 90.0 - b
+                        val sideB =a * tan(Math.toRadians(b))
+                        val sideC = sqrt(a.pow(2) + sideB.pow(2))
+                        val perimeter = a + sideB + sideC
+                        val area = 0.5 *a * sideB
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$b˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = b.toString()
+                        answer_8 = sideC.toString()
+
+
+                    }
+                    if(A_string.text== "Angle B" && B_string.text=="Side B"){
+                        val angleA = 90.0 - a
+                        val sideA =b * tan(Math.toRadians(a))
+                        val sideC = sqrt(b.pow(2) + sideA.pow(2))
+                        val perimeter = b + sideA + sideC
+                        val area = 0.5 *b * sideA
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$a˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = b.toString()
+                        answer_8 = sideC.toString()
+
+
+                    }
+                    if(A_string.text == "Hypotenuse" && B_string.text == "Side B"){
+                        val sideA = sqrt(a.pow(2) - b.pow(2))
+                        val angleA = Math.toDegrees(atan(b / sideA))
+                        val angleB = Math.toDegrees(atan(sideA / b))
+                        val area = 0.5 * b * sideA
+                        val perimeter = b + sideA + a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = sideA.toString()
+                        answer_7 = b.toString()
+                        answer_8 = a.toString()
+
+                    }
+                    if(A_string.text == "Side A" && B_string.text == "Hypotenuse"){
+                        val sideB = sqrt(b.pow(2) - a.pow(2))
+                        val angleB = Math.toDegrees(atan(a / sideB))
+                        val angleA = Math.toDegrees(atan(sideB / a))
+                        val area = 0.5 * b * sideB
+                        val perimeter = b + sideB + a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = b.toString()
+
+                    }
+                    if(A_string.text == "Angle A" && B_string.text == "Hypotenuse"){
+                        val angleB = 90 - Math.toDegrees(a)
+                        val sideA =  b * sin(Math.toRadians(a)) // Kenar A = c * sin(a
+                        val sideB = sqrt(b.pow(2) - a.pow(2))
+                        val area = 0.5 * sideA * sideB
+                        val perimeter = sideA + sideB + b
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$a˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = sideA.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = b.toString()
+
+                    }
+                    if(A_string.text == "Hypotenuse" && B_string.text == "Angle A"){
+                        val angleB = 90 - Math.toDegrees(b)
+                        val sideA =  a * sin(Math.toRadians(b))
+                        val sideB = sqrt(a.pow(2) - b.pow(2))
+                        val area = 0.5 * sideA * sideB
+                        val perimeter = sideA + sideB + a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$b˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = sideA.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = a.toString()
+
+                    }
+                    if(A_string.text == "Angle B" && B_string.text == "Hypotenuse"){
+                        val angleA = 90 - Math.toDegrees(a)
+                        val sideB =  b * sin(Math.toRadians(a)) // Kenar A = c * sin(a
+                        val sideA = sqrt(b.pow(2) - a.pow(2))
+                        val area = 0.5 * sideA * sideB
+                        val perimeter = sideA + sideB + b
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$a˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = b.toString()
+
+                    }
+                    if(A_string.text == "Hypotenuse" && B_string.text == "Angle B"){
+                        val angleA = 90 - Math.toDegrees(b)
+                        val sideB =  a * sin(Math.toRadians(b))
+                        val sideA = sqrt(a.pow(2) - b.pow(2))
+                        val area = 0.5 * sideA * sideB
+                        val perimeter = sideA + sideB + a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$b˚"
+                        answer_5 = "90˚"
+                        answer_6 = sideA.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = a.toString()
+
+                    }
+                    if(A_string.text== "Angle A" && B_string.text=="Side B"){
+                        val sideA = b / tan(Math.toRadians(a)) // Kenar A = b / tan(a)
+                        val sideC = sqrt(sideA.pow(2) + b.pow(2)) // Hipotenüs C = √(a^2 + b^2)
+                        val area = 0.5 * sideA * b // Alan = 0.5 * a * b
+                        val perimeter = sideA + b + sideC // Çevre = a + b + c
+                        val angleB = Math.toDegrees(atan(sideA / b))
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$a˚"
+                        answer_4 = "$angleB˚"
+                        answer_5 = "90˚"
+                        answer_6 = sideA.toString()
+                        answer_7 = b.toString()
+                        answer_8 = sideC.toString()
+                    }
+                    if(A_string.text== "Side A" && B_string.text=="Angle B"){
+                        val sideC = a / sin(Math.toRadians(b)) // Hipotenüs C = a / sin(b)
+                        val sideB = sqrt(sideC.pow(2) - a.pow(2)) // Kenar B = √(c^2 - a^2)
+                        val area = 0.5 * a * sideB // Alan = 0.5 * a * b
+                        val perimeter = a+ sideB + sideC // Çevre = a + b + c
+                        val angleA = 180 - b - Math.toDegrees(asin(sideB / sideC)) // Açı A = 180 - Açı B - arcsin(b / c)
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                        answer_3 = "$angleA˚"
+                        answer_4 = "$b˚"
+                        answer_5 = "90˚"
+                        answer_6 = a.toString()
+                        answer_7 = sideB.toString()
+                        answer_8 = sideC.toString()
+                    }
+
+
+
+
 
                 }
 
@@ -579,7 +756,7 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                     view.heightB_layout.visibility = View.VISIBLE
                     view.heightC_layout.visibility = View.VISIBLE
                     view.angleC_layout.visibility = View.VISIBLE
-                    view.heightA_string.text = "Height A"
+                    view.heightC_string.text = "Height C"
 
 
                 }
@@ -587,16 +764,19 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 if (shapes_cal_name.text == "Right Triangle") {
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
-                    view.angleA_answer.text = answer_4
-                    view.angleB_answer.text = answer_5
-                    view.heightA_answer.text = answer_3
+                    view.angleA_answer.text = answer_3
+                    view.angleB_answer.text = answer_4
+                    view.angleC_answer.text = answer_5
+                    view.heightA_answer.text = answer_6
+                    view.heightB_answer.text = answer_7
+                    view.heightC_answer.text = answer_8
                     view.diameter_layout.visibility = View.GONE
                     view.angle_layout.visibility = View.VISIBLE
                     view.height_layout.visibility = View.VISIBLE
-                    view.heightB_layout.visibility = View.GONE
-                    view.heightC_layout.visibility = View.GONE
-                    view.angleC_layout.visibility = View.GONE
-                    view.heightA_string.text = "Hypotenuse"
+                    view.heightB_layout.visibility = View.VISIBLE
+                    view.heightC_layout.visibility = View.VISIBLE
+                    view.angleC_layout.visibility = View.VISIBLE
+                    view.heightC_string.text = "Hypotenuse"
 
                 }
 
