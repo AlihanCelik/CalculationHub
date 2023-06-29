@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Shapes"
+        android:text="Bodies"
         android:textColor="@color/yellow"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
-                android:id="@+id/triangle"
+                android:id="@+id/cube"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/triangle"
+                    android:src="@drawable/cube"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -70,7 +70,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Trieangle          "
+                        android:text="Cube          "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -85,7 +85,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/rightTriengle"
+                android:id="@+id/prism"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/righttriangle"
+                    android:src="@drawable/prism"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -114,7 +114,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Right Triangle     "
+                        android:text="Prism     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -128,7 +128,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/square"
+                android:id="@+id/pyramid"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/square"
+                    android:src="@drawable/pyramid"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -157,7 +157,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Square    "
+                        android:text="Pyramid    "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -173,7 +173,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/rectangle"
+                android:id="@+id/pyramid_frustum"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/rectangle"
+                    android:src="@drawable/pyramidfrustum"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -202,7 +202,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rectangle     "
+                        android:text="Pyramid Frustum     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -216,7 +216,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/trapezoid"
+                android:id="@+id/cone"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/trapezoid"
+                    android:src="@drawable/cone"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -245,7 +245,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Trapezoid     "
+                        android:text="Cone     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -272,7 +272,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/rhombus"
+                    android:src="@drawable/conefrustum"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -288,7 +288,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rhombus     "
+                        android:text="Cone Frustum     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -302,7 +302,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/pentagon"
+                android:id="@+id/cylinder"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -315,7 +315,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/pentagon"
+                    android:src="@drawable/cylinder"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -331,7 +331,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Pentagon     "
+                        android:text="Cylinder     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -346,7 +346,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/hexagon"
+                android:id="@+id/sphere"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -359,7 +359,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/hexagon"
+                    android:src="@drawable/sphere"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -375,7 +375,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Hexagon     "
+                        android:text="Sphere     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
@@ -389,48 +389,48 @@
 
             </LinearLayout>
             <LinearLayout
-            android:id="@+id/circle"
-            android:background="@drawable/background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/circle"
-                android:layout_gravity="center"
-                app:tint="@color/yellow">
-
-            </ImageView>
-            <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/sphereCap"
+                android:background="@drawable/background"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
 
-                android:layout_margin="7dp">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/spherecap"
+                    android:layout_gravity="center"
+                    app:tint="@color/yellow">
 
-                <TextView
-                    android:textColor="@color/grey"
-                    android:layout_width="match_parent"
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Circle     "
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:layout_margin="10dp">
+                    android:orientation="vertical"
 
-                </TextView>
+                    android:layout_margin="7dp">
+
+                    <TextView
+                        android:textColor="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sphere Cap     "
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
 
             </LinearLayout>
-
-
-
-
-        </LinearLayout>
             <LinearLayout
                 android:id="@+id/circleArc"
                 android:background="@drawable/background"
@@ -475,7 +475,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/ellipse"
+                android:id="@+id/ellipsoid"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -489,7 +489,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ellipse"
+                    android:src="@drawable/ellipsoid"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -505,7 +505,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ellipse     "
+                        android:text="Ellipsoid     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">
