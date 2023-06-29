@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_shapes_calculator.*
 import kotlinx.android.synthetic.main.activity_shapes_calculator.backButton
 import kotlinx.android.synthetic.main.activity_shapes_calculator.linearLayout2
 import kotlinx.android.synthetic.main.activity_shapes_calculator.method
+import kotlinx.android.synthetic.main.dialog_shapes_solutions.*
 import kotlinx.android.synthetic.main.dialog_shapes_solutions.view.*
 import kotlin.math.*
 
@@ -660,10 +661,27 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Square") {
-                    val area = a * a
-                    val perimeter = 4 * a
-                    answer = area.toString()
-                    answer_ = perimeter.toString()
+                    if(A_string.text== "Side"){
+                        val area = a * a
+                        val perimeter = 4 * a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Area"){
+                        val side = Math.sqrt(a)
+                        val perimeter = 4 * side
+                        answer = side.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Perimeter"){
+                        val side = a / 4
+                        val area = side * side
+                        answer = area.toString()
+                        answer_ = side.toString()
+                    }
+
+
+
                 }
 
                 if (shapes_cal_name.text == "Rectangle") {
@@ -691,28 +709,89 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Pentagon") {
-                    val area = 0.25 * Math.sqrt(5 * (5 + 2 * sqrt(5.0))) * a * a
-                    val perimeter = 5 * a
-                    answer = area.toString()
-                    answer_ = perimeter.toString()
+                    if(A_string.text== "Side"){
+                        val area = 0.25 * Math.sqrt(5 * (5 + 2 * sqrt(5.0))) * a * a
+                        val perimeter = 5 * a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Area"){
+                        val side = Math.sqrt(a * 4 / (Math.sqrt(5.0) * (5 + Math.sqrt(5.0)))) // Kenar uzunluğu = √(alan * 4 / (√5 * (5 + √5)))
+                        val perimeter = 5 * side
+                        answer = side.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Perimeter"){
+                        val side = a / 5
+                        val area = 0.25 * Math.sqrt(5 * (5 + 2 * Math.sqrt(5.0))) * side.pow(2)
+                        answer = area.toString()
+                        answer_ = side.toString()
+                    }
+
                 }
 
                 if (shapes_cal_name.text == "Hexagon") {
-                    val area = (3 * sqrt(3.0) * a * a) / 2
-                    val perimeter = 6 * a
-                    answer = area.toString()
-                    answer_ = perimeter.toString()
+                    if(A_string.text== "Side"){
+                        val area = (3 * sqrt(3.0) * a * a) / 2
+                        val perimeter = 6 * a
+                        answer = area.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Area"){
+                        val side = Math.sqrt(a * 2 / (3 * Math.sqrt(3.0)))
+                        val perimeter = 6 * side
+                        answer = side.toString()
+                        answer_ = perimeter.toString()
+                    }
+                    if(A_string.text== "Perimeter"){
+                        val side = a / 6 // Kenar uzunluğu = Çevre / 6
+                        val area = (3 * Math.sqrt(3.0) * side.pow(2)) / 2
+                        answer = area.toString()
+                        answer_ = side.toString()
+                    }
+
 
                 }
 
                 if (shapes_cal_name.text == "Circle") {
-                    val area = Math.PI * a * a
-                    val circumference = Math.PI * 2 * a
-                    val diameter = 2 * a
+                    if(A_string.text== "Radius"){
+                        val area = Math.PI * a * a
+                        val circumference = Math.PI * 2 * a
+                        val diameter = 2 * a
 
-                    answer = area.toString()
-                    answer_ = circumference.toString()
-                    answer_3 = diameter.toString()
+                        answer = area.toString()
+                        answer_ = circumference.toString()
+                        answer_3 = diameter.toString()
+                    }
+                    if(A_string.text== "Diameter"){
+                        val radius = a / 2
+                        val area = Math.PI * radius.pow(2)
+                        val circumference = Math.PI * a
+                        answer = area.toString()
+                        answer_ = circumference.toString()
+                        answer_3 = radius.toString()
+
+                    }
+                    if(A_string.text== "Area"){
+                        val radius = Math.sqrt(a / Math.PI)
+                        val diameter = 2 * radius
+                        val circumference = 2 * Math.PI * radius
+                        answer = radius.toString()
+                        answer_ = circumference.toString()
+                        answer_3 = diameter.toString()
+
+                    }
+
+                    if(A_string.text== "Circumference"){
+                        val radius = a / (2 * Math.PI)
+                        val diameter = 2 * radius
+                        val area = Math.PI * radius * radius
+                        answer = area.toString()
+                        answer_ = radius.toString()
+                        answer_3 = diameter.toString()
+
+                    }
+
 
 
                 }
@@ -742,6 +821,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
                 if (shapes_cal_name.text == "Triangle") {
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.angleA_answer.text = answer_3
@@ -762,6 +843,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Right Triangle") {
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.angleA_answer.text = answer_3
@@ -781,14 +864,39 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Square") {
-                    view.area_answer.text = answer
-                    view.perimeter_answer.text = answer_
-                    view.diameter_layout.visibility = View.GONE
-                    view.angle_layout.visibility = View.GONE
-                    view.height_layout.visibility = View.GONE
+                    if(A_string.text== "Side"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Area"){
+                        view.area_string.text="Side"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Perimeter"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Side"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+
                 }
 
                 if (shapes_cal_name.text == "Rectangle") {
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.diameter_layout.visibility = View.GONE
@@ -798,6 +906,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Trapezoid") {
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.diameter_layout.visibility = View.GONE
@@ -806,6 +916,8 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Rhombus") {
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.diameter_layout.visibility = View.GONE
@@ -814,34 +926,124 @@ class ShapesCalculatorActivity : AppCompatActivity() {
                 }
 
                 if (shapes_cal_name.text == "Pentagon") {
-                    view.area_answer.text = answer
-                    view.perimeter_answer.text = answer_
-                    view.diameter_layout.visibility = View.GONE
-                    view.angle_layout.visibility = View.GONE
-                    view.height_layout.visibility = View.GONE
+                    if(A_string.text== "Side"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Area"){
+                        view.area_string.text="Side"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Perimeter"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Side"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
 
                 }
 
                 if (shapes_cal_name.text == "Hexagon") {
-                    view.area_answer.text = answer
-                    view.perimeter_answer.text = answer_
-                    view.diameter_layout.visibility = View.GONE
-                    view.angle_layout.visibility = View.GONE
-                    view.height_layout.visibility = View.GONE
+                    if(A_string.text== "Side"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Area"){
+                        view.area_string.text="Side"
+                        view.perimeter_string.text="Perimeter"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Perimeter"){
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Side"
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.GONE
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
 
                 }
 
                 if (shapes_cal_name.text == "Circle") {
-                    view.area_answer.text = answer
-                    view.perimeter_answer.text = answer_
-                    view.diameter_layout.visibility = View.GONE
-                    view.angle_layout.visibility = View.GONE
-                    view.height_layout.visibility = View.GONE
+                    if(A_string.text== "Radius"){
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_answer.text=answer_3
+                        view.diameter_layout.visibility = View.VISIBLE
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Circumference"
+                        view.diameter_string.text="Diameter"
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
+                    if(A_string.text== "Diameter"){
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_layout.visibility = View.VISIBLE
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Circumference"
+                        view.diameter_string.text="Radius"
+                        view.diameter_answer.text=answer_3
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+
+                    }
+                    if(A_string.text== "Area"){
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_answer.text=answer_3
+                        view.diameter_layout.visibility = View.VISIBLE
+                        view.area_string.text="Radius"
+                        view.perimeter_string.text="Circumference"
+                        view.diameter_string.text="Diameter"
+
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+
+                    }
+
+                    if(A_string.text== "Circumference"){
+                        view.area_answer.text = answer
+                        view.perimeter_answer.text = answer_
+                        view.diameter_answer.text=answer_3
+                        view.diameter_layout.visibility = View.VISIBLE
+                        view.area_string.text="Area"
+                        view.perimeter_string.text="Radius"
+                        view.diameter_string.text="Diameter"
+                        view.angle_layout.visibility = View.GONE
+                        view.height_layout.visibility = View.GONE
+                    }
 
 
                 }
 
                 if (shapes_cal_name.text == "Circle Arc") {
+
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.diameter_layout.visibility = View.GONE
@@ -850,6 +1052,9 @@ class ShapesCalculatorActivity : AppCompatActivity() {
 
                 }
                 if (shapes_cal_name.text == "Ellipse") {
+
+                    view.area_string.text="Area"
+                    view.perimeter_string.text="Perimeter"
                     view.area_answer.text = answer
                     view.perimeter_answer.text = answer_
                     view.diameter_layout.visibility = View.GONE

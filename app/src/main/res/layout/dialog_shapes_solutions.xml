@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="354dp"
-        android:layout_height="492dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -49,14 +49,14 @@
 
                         <TextView
                             android:id="@+id/area_string"
-                            android:layout_width="90dp"
+                            android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
                             android:text="Area"
-                            android:textSize="17dp"></TextView>
+                            android:textSize="12dp"></TextView>
 
                         <TextView
                             android:id="@+id/area_answer"
@@ -91,14 +91,14 @@
 
                         <TextView
                             android:id="@+id/perimeter_string"
-                            android:layout_width="90dp"
+                            android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
                             android:text="Perimeter"
-                            android:textSize="17dp"></TextView>
+                            android:textSize="12dp"></TextView>
 
                         <TextView
                             android:id="@+id/perimeter_answer"
@@ -129,14 +129,15 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="90dp"
+                            android:id="@+id/diameter_string"
+                            android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
-                            android:text="Diameter"
-                            android:textSize="17dp"></TextView>
+                            android:text="Circumference"
+                            android:textSize="12dp"></TextView>
 
                         <TextView
                             android:id="@+id/diameter_answer"
@@ -257,7 +258,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-
+                    android:layout_marginBottom="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
                     android:gravity="center"
@@ -355,32 +356,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/solutions_string"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="@font/font2"
-                    android:gravity="start"
-                    android:text="Solutions"
-                    android:textSize="20dp">
-
-                </TextView>
-
-                <TextView
-                    android:id="@+id/a_solutions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:text="A = (x1 + x2 + ... + xn)/n \n= (45 + 54)/2 \n= 99/2\n= 49.5"
-                    android:textSize="20dp"></TextView>
 
 
             </LinearLayout>
