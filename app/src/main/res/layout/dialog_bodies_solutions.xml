@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="462dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,8 +23,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:layout_marginTop="45dp">
+            android:layout_height="398dp"
+            android:layout_marginTop="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,12 +35,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/total_area_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -111,6 +112,7 @@
                             android:textSize="30dp"></TextView>
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/diameter_layout"
                     android:layout_width="match_parent"
@@ -151,6 +153,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -175,8 +178,6 @@
                     android:layout_marginBottom="60dp"
                     android:text="A = (x1 + x2 + ... + xn)/n \n= (45 + 54)/2 \n= 99/2\n= 49.5"
                     android:textSize="20dp"></TextView>
-
-
 
 
             </LinearLayout>

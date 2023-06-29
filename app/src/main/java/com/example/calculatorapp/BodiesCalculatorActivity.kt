@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_bodies_calculator.visi
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_string
 import kotlinx.android.synthetic.main.activity_bodies_calculator.x_value
 import kotlinx.android.synthetic.main.dialog_bodies_solutions.view.*
-import kotlinx.android.synthetic.main.dialog_shapes_solutions.*
 import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -108,8 +107,8 @@ class BodiesCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.conefrustum).setOnClickListener {
                 bodies_cal_name.text = "Cone Frustum"
-                bodies_image.setImageResource(R.drawable.rhombus)
-                method.setImageResource(R.drawable.rhombus)
+                bodies_image.setImageResource(R.drawable.conefrustum)
+                method.setImageResource(R.drawable.conefrustum)
                 visi.visibility = View.VISIBLE
                 A_string.text = "Radius"
                 B_layout.visibility = View.VISIBLE
@@ -158,7 +157,7 @@ class BodiesCalculatorActivity : AppCompatActivity() {
             bottomSheetView.findViewById<View>(R.id.sphereSegment).setOnClickListener {
                 bodies_cal_name.text = "Sphere Segment"
                 bodies_image.setImageResource(R.drawable.spheresegment)
-                method.setImageResource(R.drawable.arc)
+                method.setImageResource(R.drawable.spheresegment)
                 visi.visibility = View.VISIBLE
                 A_string.text = "Radius"
                 B_layout.visibility = View.VISIBLE
@@ -215,7 +214,7 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=surfaceArea.toString()
                 answer_3=volume.toString()
-                solutions="Side = $a\nTotal Area = 6 x $a x $a\n= 6 x ${a*a}\n= $totalArea\n\nLateral Area = 4 x $a x $a\n= 4 x ${a*a}\n= $surfaceArea\n\n" +
+                solutions="Side = $a\n\nTotal Area = 6 x $a x $a\n= 6 x ${a*a}\n= $totalArea\n\nLateral Area = 4 x $a x $a\n= 4 x ${a*a}\n= $surfaceArea\n\n" +
                         "Volume = $a x $a x $a\n= $volume"
             }
             if (bodies_cal_name.text == "Prism") {
@@ -225,7 +224,7 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=surfaceArea.toString()
                 answer_3=volume.toString()
-                solutions="Side A = $a\nSide B = $b\nSide C = $c\nTotal Area = 2AB + 2BC + 2AC\n= (2 x $a x $b) + (2 x $b x $c) + (2 x $a x $c)\n= ${2*a*b} + ${2*b*c} + ${2*a*c}\n= $totalArea\n\n" +
+                solutions="Side A = $a\nSide B = $b\nSide C = $c\n\nTotal Area = 2AB + 2BC + 2AC\n= (2 x $a x $b) + (2 x $b x $c) + (2 x $a x $c)\n= ${2*a*b} + ${2*b*c} + ${2*a*c}\n= $totalArea\n\n" +
                         "Lateral Area = 2AB + 2AC\n" +
                         "= (2 x $a x $b) + (2 x $a x $c)\n" +
                         "= ${2 * a * b} + ${2 * a * c}\n= $surfaceArea\n\n" +
@@ -238,7 +237,7 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=surfaceArea.toString()
                 answer_3=volume.toString()
-                solutions="Side A = $a\nHeight H = $b\nLateral Area = 2A x √(H² +(A / 2))\n= 2 x $a x √($b² + ($a / 2))\n= ${2*a} x √(${b.pow(2)} + ${(a/2).pow(2)})\n= ${2*a} x √(${b.pow(2) + (a/2).pow(2)})\n= $surfaceArea\n\n" +
+                solutions="Side A = $a\nHeight H = $b\n\nLateral Area = 2A x √(H² +(A / 2))\n= 2 x $a x √($b² + ($a / 2))\n= ${2*a} x √(${b.pow(2)} + ${(a/2).pow(2)})\n= ${2*a} x √(${b.pow(2) + (a/2).pow(2)})\n= $surfaceArea\n\n" +
                         "Total Area = Lateral Area + A²\n= $surfaceArea + ${a.pow(2)}\n" +
                         "= $totalArea\n\n" +
                         "Volume = A² x (H / 3)\n=$a² x ($b / 3)\n= ${a.pow(2)} x ${b/3}\n= $volume"
@@ -250,43 +249,41 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=surfaceArea.toString()
                 answer_3=volume.toString()
-                solutions="Side A = $a\nSide B = $b\nHeight H = $c\nLateral Area = 2(A + B) x √(H² +((B - A) / 2))\n= 2($a + $b) x √($c² + (($b - $a)/ 2))\n= ${2*(a+b)} x √(${c.pow(2)} + ${((b-a)/2).pow(2)})\n= ${2*(a+b)} x √(${c.pow(2) + ((b-a)/2).pow(2)})\n= $surfaceArea\n\n" +
+                solutions="Side A = $a\nSide B = $b\nHeight H = $c\n\nLateral Area = 2(A + B) x √(H² +((B - A) / 2))\n= 2($a + $b) x √($c² + (($b - $a)/ 2))\n= ${2*(a+b)} x √(${c.pow(2)} + ${((b-a)/2).pow(2)})\n= ${2*(a+b)} x √(${c.pow(2) + ((b-a)/2).pow(2)})\n= $surfaceArea\n\n" +
                         "Total Area = Lateral Area + A² + B²\n= $surfaceArea + ${a.pow(2)} + ${b.pow(2)}\n" +
                         "= $totalArea\n\n" +
                         "Volume = (A² + A x B + B²) x (H / 3)\n=$a² + $a x $b + $b² x ($c / 3)\n= ${a.pow(2)} + $a x $b + ${b.pow(2)} x ${b/3}\n= $volume"
 
             }
             if (bodies_cal_name.text == "Cone") {
-                val totalArea = 2 * Math.PI * a * (a + b) // Toplam alan = 2πrh + 2πr^2
-                val lateralArea = 2 * Math.PI * a * b // Yan yüzey alanı = 2πrh
-                val volume = Math.PI * a * a * b // Hacim = πr^2h
+                val lateralArea =PI*a* sqrt(a.pow(2) + b.pow(2))
+                val totalArea = lateralArea+  Math.PI * a * a
+                val volume = Math.PI * a * a * b / 3 // Hacim = πr^2h
                 answer=totalArea.toString()
                 answer_=lateralArea.toString()
                 answer_3=volume.toString()
-                solutions = "Radius r = $a\nHeight h = $b\n" +
-                        "Lateral Area = π * r * √(r² + h²)\n" +
-                        "= π * $a * √(${a.pow(2)} + ${b.pow(2)})\n" +
-                        "= π * $a * √(${a.pow(2) + b.pow(2)})\n" +
+                solutions = "Radius a = $a\nHeight b = $b\n\n" +
+                        "Lateral Area = πa√(a² + b²)\n" +
+                        "= π($a)√(${a.pow(2)} + ${b.pow(2)})\n" +
                         "= $lateralArea\n\n" +
-                        "Total Area = Lateral Area + π * r²\n" +
-                        "= $lateralArea + π * ${a.pow(2)}\n" +
+                        "Total Area = Lateral Area + πa²\n" +
+                        "= $lateralArea + π${a.pow(2)}\n" +
                         "= $totalArea\n\n" +
-                        "Volume = (π * r² * h) / 3\n" +
-                        "= (π * ${a.pow(2)} * $b) / 3\n" +
+                        "Volume = πa²b / 3\n" +
+                        "= π($a)²($b) / 3\n" +
                         "= $volume"
             }
             if (bodies_cal_name.text == "Cone Frustum") {
-                val slantHeight1 = sqrt(a.pow(2) + c.pow(2))
-                val slantHeight2 = sqrt(b.pow(2) + c.pow(2))
-                val lateralArea = Math.PI * (a + b) * (slantHeight1 + slantHeight2)
-                val totalArea = lateralArea + Math.PI * (a.pow(2) + b.pow(2))
-                val volume = (Math.PI * c / 3) * (a.pow(2) + a * b + b.pow(2))
+                val slantHeight = sqrt((b - a).pow(2) + c.pow(2))
+                val lateralArea = PI * (a + b) * slantHeight
+                val totalArea = lateralArea + PI * (a.pow(2) + b.pow(2))
+                val volume = (PI * c / 3) * (a.pow(2) + a * b + b.pow(2))
                 answer=totalArea.toString()
                 answer_=lateralArea.toString()
                 answer_3=volume.toString()
-                solutions = "Inner Radius r1 = $a\nOuter Radius r2 = $b\nHeight h = $c\n" +
-                        "Lateral Area = π * (r1 + r2) * (slantHeight1 + slantHeight2)\n" +
-                        "= π * ($a + $b) * (${sqrt(a.pow(2) + c.pow(2))} + ${sqrt(b.pow(2) + c.pow(2))})\n" +
+                solutions = "Radius r1 = $a\nRadius r2 = $b\nHeight h = $c\n\nS = √((r2 - r1)² + h²)\n= √(($b - $a)² + $c²)\n= √(${b -a}² + $c²)\n= √(${(b-a).pow(2)} + ${c.pow(2)})\n= $slantHeight\n\n" +
+                        "Lateral Area = π * (r1 + r2) * S\n" +
+                        "= π * ($a + $b) * ${sqrt((b - a).pow(2) + c.pow(2))}\n" +
                         "= $lateralArea\n\n" +
                         "Total Area = Lateral Area + π * (r1² + r2²)\n" +
                         "= $lateralArea + π * (${a.pow(2)} + ${b.pow(2)})\n" +
@@ -302,7 +299,7 @@ class BodiesCalculatorActivity : AppCompatActivity() {
                 answer=totalArea.toString()
                 answer_=lateralArea.toString()
                 answer_3=volume.toString()
-                solutions = "Radius r = $a\nHeight h = $b\n" +
+                solutions = "Radius r = $a\nHeight h = $b\n\n" +
                         "Lateral Area = 2πrh\n" +
                         "= 2π * $a * $b\n" +
                         "= $lateralArea\n\n" +
@@ -316,10 +313,10 @@ class BodiesCalculatorActivity : AppCompatActivity() {
             }
             if (bodies_cal_name.text == "Sphere") {
                 val totalArea = 4 * Math.PI * a.pow(2)
-                val volume = (4/3) * Math.PI * a.pow(3)
+                val volume = (4 * Math.PI * a.pow(3))/3
                 answer=totalArea.toString()
                 answer_3=volume.toString()
-                solutions = "Radius r = $a\n" +
+                solutions = "Radius r = $a\n\n" +
                         "Total Area = 4πr²\n" +
                         "= 4π * ${a.pow(2)}\n" +
                         "= $totalArea\n\n" +
@@ -330,35 +327,35 @@ class BodiesCalculatorActivity : AppCompatActivity() {
             if (bodies_cal_name.text == "Sphere Cap") {
                 val lateralArea=PI*(a.pow(2)+b.pow(2))
                 val totalArea= lateralArea+(PI*a.pow(2))
-                val volume=(3*PI*b*(a.pow(2)+b.pow(3)))/6
+                val volume=((3*PI)*b*(a.pow(2)+(b.pow(2)/3)))/6
                 answer=totalArea.toString()
                 answer_=lateralArea.toString()
                 answer_3=volume.toString()
-                solutions = "Radius A= $a\nHeight H= $b\n" +
+                solutions = "Radius A= $a\nHeight H= $b\n\n" +
                         "Lateral Area = π(A² + H²)\n" +
                         "= π(${a.pow(2)} + ${b.pow(2)})\n" +
                         "= $lateralArea\n\n" +
                         "Total Area = Lateral Area + πA²\n" +
                         "= $lateralArea + π${a.pow(2)}\n" +
                         "= $totalArea\n\n" +
-                        "Volume = (3πb(A² + H³)) / 6\n" +
-                        "= (3π($b)(${a.pow(2)} + ${b.pow(3)})) / 6\n" +
+                        "Volume = (3πb(A² + (H² / 3))) / 6\n" +
+                        "= (3π($b)(${a.pow(2)} + ${b.pow(2) / 3})) / 6\n" +
                         "= $volume"
             }
             if (bodies_cal_name.text == "Sphere Segment") {
-                val volume = (3* PI*c *(3*a*a + 3*b*b + c*c))/6
+                val volume = (3* PI*c *((3*a*a) + (3*b*b) + (c*c)))/6
                 answer_3=volume.toString()
-                solutions="Radius A =$a\nRadius B = $b\nHeight H = $c\nVolume = (3π x H x (3A² + 3B² + H²)) / 6\n= (3π x $c x (3$a² + 3$b² + $c²)) / 6\n= (${3* PI} x $c x (${3*a*a} + ${b*b*3} + ${c*c})) / 6\n" +
+                solutions="Radius A =$a\nRadius B = $b\nHeight H = $c\n\nVolume = (3π x H x (3A² + 3B² + H²)) / 6\n= (3π x $c x (3$a² + 3$b² + $c²)) / 6\n= (${3* PI} x $c x (${3*a*a} + ${b*b*3} + ${c*c})) / 6\n" +
                         "=${(3* PI*c *(3*a*a + 3*b*b + c*c))} / 6 \n= $volume"
             }
             if (bodies_cal_name.text == "Ellipsoid") {
-                val area = 4 * PI * ((a * b).pow(1.6) + (a * c).pow(1.6) + (b * c).pow(1.6)) / 3
+                val area = 4 * PI * (((a * b).pow(1.6) + (a * c).pow(1.6) + (b * c).pow(1.6)) / 3).pow(1/1.6)
                 val volume = (4 * PI * a * b * c) / 3
                 answer=area.toString()
                 answer_3=volume.toString()
-                solutions = "Radius r1 = $a\nRadius r2 = $b\nRadius r3 = $c\n" +
-                        "Area = 4π * ((r1 * r2)^1.6 + (r1 * r3)^1.6 + (r2 * r3)^1.6) / 3\n" +
-                        "= 4π * (($a * $b)^1.6 + ($a * $c)^1.6 + ($b * $c)^1.6) / 3\n" +
+                solutions = "Radius r1 = $a\nRadius r2 = $b\nRadius r3 = $c\n\n" +
+                        "Area = 4π * (((r1 * r2)^1.6 + (r1 * r3)^1.6 + (r2 * r3)^1.6) / 3)^(1/1.6)\n" +
+                        "= 4π * ((($a * $b)^1.6 + ($a * $c)^1.6 + ($b * $c)^1.6) / 3)^(1/1.6)\n" +
                         "= $area\n\n" +
                         "Volume = (4π * r1 * r2 * r3) / 3\n" +
                         "= (4π * $a * $b * $c) / 3\n" +
@@ -373,13 +370,22 @@ class BodiesCalculatorActivity : AppCompatActivity() {
             view.cancel.setOnClickListener {
                 dialog.dismiss()
             }
-            if (bodies_cal_name.text == "Sphere") {
-                view.lateral_area_answer.visibility=View.GONE
+            if (bodies_cal_name.text == "Sphere"||bodies_cal_name.text == "Ellipsoid") {
+                view.lateral_area_layout.visibility=View.GONE
+                view.total_area_layout.visibility=View.VISIBLE
                 view.total_area_answer.text=answer
                 view.volume_answer.text=answer_3
                 view.a_solutions.text=solutions
-            }else{
-                view.lateral_area_answer.visibility=View.VISIBLE
+            }else if(bodies_cal_name.text == "Sphere Segment"){
+                view.lateral_area_layout.visibility=View.GONE
+                view.total_area_layout.visibility=View.GONE
+                view.total_area_answer.text=answer
+                view.volume_answer.text=answer_3
+                view.a_solutions.text=solutions
+            }
+            else{
+                view.lateral_area_layout.visibility=View.VISIBLE
+                view.total_area_layout.visibility=View.VISIBLE
                 view.total_area_answer.text=answer
                 view.lateral_area_answer.text=answer_
                 view.volume_answer.text=answer_3
