@@ -56,6 +56,7 @@ class CombinationCalculatorActivity : AppCompatActivity() {
                             }else{
                                 var cevap= ((calculateFactorial(n))/calculateFactorial((n-r)))
                                 answer=cevap.toString()
+                                solution="n = $n\nr = $r\nPermutations = $n! / ($n - $r)!\n= ${calculateFactorial(n)} / ${calculateFactorial(n-r)}\n= $answer"
                             }
                         }
                 }else{

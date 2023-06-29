@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_bottomsheet"
-    android:id="@+id/bottomSheetShapes">
+    android:id="@+id/bottomSheetBodies">
 
     <TextView
         android:id="@+id/appCompatTextView"
@@ -259,7 +259,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/rhombus"
+                android:id="@+id/conefrustum"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -432,7 +432,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/circleArc"
+                android:id="@+id/sphereSegment"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -445,7 +445,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/arc"
+                    android:src="@drawable/spheresegment"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -461,7 +461,7 @@
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Circle Arc     "
+                        android:text="Sphere Segment     "
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_margin="10dp">

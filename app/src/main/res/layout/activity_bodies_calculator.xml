@@ -180,21 +180,11 @@
                             android:layout_width="75dp"
                             android:layout_height="30dp"
 
-                            android:text="Side A"
+                            android:text="Side"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="11dp"></TextView>
-                        <ImageView
-                            android:id="@+id/selectSideAButton"
-                            android:visibility="gone"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/baseline_arrow_drop_down_24"
-                            app:tint="@color/grey">
 
-                        </ImageView>
                     </LinearLayout>
 
                     <EditText
@@ -221,7 +211,7 @@
                     android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-
+                    android:visibility="gone"
                     android:background="@drawable/background">
 
                     <LinearLayout
@@ -239,17 +229,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="11dp"></TextView>
-                        <ImageView
-                            android:id="@+id/selectSideBButton"
-                            android:visibility="gone"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/baseline_arrow_drop_down_24"
-                            app:tint="@color/grey">
 
-                        </ImageView>
                     </LinearLayout>
 
 
@@ -279,6 +259,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:visibility="gone"
                 android:layout_marginTop="20dp">
                 <LinearLayout
                     android:layout_width="180dp"
@@ -301,17 +282,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="11dp"></TextView>
-                        <ImageView
-                            android:visibility="gone"
-                            android:id="@+id/selectSideCButton"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/baseline_arrow_drop_down_24"
-                            app:tint="@color/grey">
 
-                        </ImageView>
                     </LinearLayout>
 
                     <EditText
