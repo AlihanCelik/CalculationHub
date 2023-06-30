@@ -12,6 +12,12 @@
         android:theme="@style/Theme.CalculatorAPP"
         tools:targetApi="31">
         <activity
+            android:name=".BodyFatPercentageCalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DailyCalorieBurnCalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".BodiesCalculatorActivity"
             android:exported="false" />
         <activity

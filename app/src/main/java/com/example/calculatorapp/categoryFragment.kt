@@ -120,6 +120,14 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),BmiCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.calories_Calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),DailyCalorieBurnCalculatorActivity::class.java)
+                startActivity(intent)
+            }
+            view.bfp_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),BodyFatPercentageCalculatorActivity::class.java)
+                startActivity(intent)
+            }
         }
         time_calculate.setOnClickListener {
             val view=View.inflate(requireContext(),R.layout.dialog_time,null)
