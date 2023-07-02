@@ -53,11 +53,12 @@ class AgeCalculatorActivity : AppCompatActivity() {
 
             month.maxValue = 12
             month.minValue = 1
+            month.value=birth_month_value
 
             val currentYear = Calendar.getInstance().get(Calendar.YEAR)
             year.maxValue = currentYear
             year.minValue = 1900
-            year.value=2000
+            year.value=birth_year_value
 
             year.setOnValueChangedListener { _, _, yearValue ->
                 val isLeapYear = yearValue % 4 == 0
@@ -76,6 +77,7 @@ class AgeCalculatorActivity : AppCompatActivity() {
                     else -> 31
                 }
                 date.maxValue = maxDay
+                date.value=birth_day_value
             }
 
             val isLeapYear = year.value % 4 == 0
@@ -119,13 +121,13 @@ class AgeCalculatorActivity : AppCompatActivity() {
 
             month.maxValue = 12
             month.minValue = 1
-            month.value= Calendar.getInstance().get(Calendar.MONTH)
+            month.value= current_month_value
 
 
             val currentYear = Calendar.getInstance().get(Calendar.YEAR)
             year.maxValue = 2100
             year.minValue = 1900
-            year.value=currentYear
+            year.value=current_year_value
 
             year.setOnValueChangedListener { _, _, yearValue ->
                 val isLeapYear = yearValue % 4 == 0
@@ -155,7 +157,7 @@ class AgeCalculatorActivity : AppCompatActivity() {
             }
             date.maxValue = maxDay
             date.minValue = 1
-            date.value=Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+            date.value=current_day_value
 
             bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
                 bottomSheet.dismiss()
