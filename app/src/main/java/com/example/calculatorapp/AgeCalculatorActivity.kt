@@ -77,7 +77,7 @@ class AgeCalculatorActivity : AppCompatActivity() {
                     else -> 31
                 }
                 date.maxValue = maxDay
-                date.value=birth_day_value
+
             }
 
             val isLeapYear = year.value % 4 == 0
@@ -89,6 +89,7 @@ class AgeCalculatorActivity : AppCompatActivity() {
             }
             date.maxValue = maxDay
             date.minValue = 1
+            date.value=birth_day_value
 
             bottomSheetView.findViewById<View>(R.id.linearLayout2).setOnClickListener {
                 bottomSheet.dismiss()
