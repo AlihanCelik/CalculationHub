@@ -88,7 +88,7 @@
 
 
             <LinearLayout
-                android:id="@+id/bodiesSelect"
+                android:id="@+id/dateSelect"
                 android:background="@drawable/background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/cube"
+                    android:src="@drawable/baseline_date_range_24"
                     android:layout_gravity="center"
                     app:tint="@color/yellow">
 
@@ -117,7 +117,7 @@
                         android:id="@+id/bodies_cal_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cube"
+                        android:text="Date Difference"
                         android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_marginBottom="2dp">
@@ -195,6 +195,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/endDateLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -247,6 +248,63 @@
                     </ImageView>
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_subDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:id="@+id/add_subDateteSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="60dp"
+                    android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/add_subDateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="end"
+                        android:textColor="@color/yellow"
+                        android:text="Days"
+                        android:textSize="20dp">
+
+                    </TextView>
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/baseline_arrow_drop_down_24"
+                        app:tint="@color/grey">
+
+                    </ImageView>
+                </LinearLayout>
+                <EditText
+                    android:layout_marginLeft="60dp"
+                    android:id="@+id/B1_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="00"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLength="6"
+                    android:textSize="30sp">
+
+                </EditText>
+            </LinearLayout>
+
 
 
 
