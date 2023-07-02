@@ -168,9 +168,6 @@ class AgeCalculatorActivity : AppCompatActivity() {
             val currentDateStr = "$current_day_value/$current_month_value/$current_year_value"
             val currentDate = dateFormat.parse(currentDateStr)
             val age = currentDate.time - birthDate.time
-            val ageInSeconds = age / 1000 % 60
-            val ageInMinutes = age / (1000 * 60) % 60
-            val ageInHours = age / (1000 * 60 * 60) % 24
             val ageInDays = age / (1000 * 60 * 60 * 24)
             val ageInMonths = ageInDays / 30
             val ageInYears = ageInDays / 365
