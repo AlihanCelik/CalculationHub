@@ -161,16 +161,19 @@
 
                 </TextView>
                 <LinearLayout
-                    android:id="@+id/birth_dateSelect"
+                    android:id="@+id/start_dateSelect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@drawable/background">
                     <TextView
-                        android:id="@+id/birth_date"
+                        android:id="@+id/start_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="2dp"
                         android:gravity="end"
 
                         android:text="1 / January / 2000"
@@ -196,7 +199,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_margin="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -211,16 +216,19 @@
 
                 </TextView>
                 <LinearLayout
-                    android:id="@+id/current_dateSelect"
+                    android:id="@+id/end_dateSelect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@drawable/background">
                     <TextView
-                        android:id="@+id/current_date"
+                        android:id="@+id/end_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="2dp"
                         android:gravity="end"
 
                         android:text="1 / January / 2000"
