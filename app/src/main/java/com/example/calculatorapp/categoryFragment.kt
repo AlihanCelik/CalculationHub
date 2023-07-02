@@ -139,6 +139,10 @@ class categoryFragment : Fragment() {
             view.cancel_time.setOnClickListener {
                 dialog.dismiss()
             }
+            view.age_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),AgeCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
         converter_calculate.setOnClickListener {

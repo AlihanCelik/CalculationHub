@@ -51,7 +51,9 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:theme="@style/WhiteNumberPicker"
+            >
 
         </NumberPicker>
 
@@ -60,7 +62,8 @@
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:theme="@style/WhiteNumberPicker">
 
         </NumberPicker>
 
@@ -68,7 +71,8 @@
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:theme="@style/WhiteNumberPicker">
 
         </NumberPicker>
 
