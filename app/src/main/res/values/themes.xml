@@ -22,7 +22,7 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
     <style name="WhiteNumberPicker">
-        <item name="android:textColor">@color/grey</item> <!-- Sayıların beyaz renkte görüntülenmesi -->
+        <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:colorControlActivated">#FFFFFF</item> <!-- Seçili çizginin beyaz renkte görüntülenmesi -->
         <item name="android:colorControlHighlight">#FFFFFF</item> <!-- Seçim arka planının beyaz renkte görüntülenmesi -->
         <item name="android:colorControlNormal">#FFFFFF</item> <!-- Seçilmemiş çizginin beyaz renkte görüntülenmesi -->

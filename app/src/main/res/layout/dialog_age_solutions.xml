@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="346dp"
-        android:layout_height="248dp"
+        android:layout_width="352dp"
+        android:layout_height="348dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,7 +23,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="159dp"
+            android:layout_height="261dp"
             android:layout_marginTop="55dp">
 
             <LinearLayout
@@ -73,16 +73,104 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/ageMonth_Day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/background"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="10 month / 16 day"
-                    android:textSize="15dp"></TextView>
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/font2"
+                            android:text="Year"
+                            android:textColor="@color/yellow"
+                            android:textSize="18dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/year_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:text="Year"
+                            android:textColor="@color/grey"
+                            android:textSize="18dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/font2"
+                            android:text="Month"
+                            android:textColor="@color/yellow"
+                            android:textSize="18dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/month_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:text="Year"
+                            android:textColor="@color/grey"
+                            android:textSize="18dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/font2"
+                            android:text="Day"
+                            android:textColor="@color/yellow"
+                            android:textSize="18dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/day_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:text="Year"
+                            android:textColor="@color/grey"
+                            android:textSize="18dp">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
 
 
             </LinearLayout>

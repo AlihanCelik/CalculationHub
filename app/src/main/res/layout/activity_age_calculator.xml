@@ -90,7 +90,7 @@
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="20dp"
                     android:gravity="start"
-                    android:text="Bırth Date       "
+                    android:text="Bırth Date"
                     android:textSize="18dp"
                     android:textColor="@color/yellow"
                     android:fontFamily="@font/font2">
@@ -104,7 +104,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="end"
-                    android:text="16 / January / 2003"
+                    android:text="1 / January / 2000"
                     android:textSize="20dp">
 
                 </TextView>
