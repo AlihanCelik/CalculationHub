@@ -114,7 +114,7 @@
                     android:layout_margin="12dp">
 
                     <TextView
-                        android:id="@+id/bodies_cal_name"
+                        android:id="@+id/date_cal_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date Difference"
@@ -148,6 +148,7 @@
                 android:gravity="center"
                 android:layout_margin="20dp">
                 <TextView
+                    android:id="@+id/startDateText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -211,7 +212,7 @@
                     android:layout_marginRight="20dp"
                     android:textColor="@color/yellow"
                     android:gravity="start"
-                    android:text="End Date"
+                    android:text="End Date   "
                     android:textSize="18dp"
                     android:fontFamily="@font/font2">
 
@@ -250,64 +251,107 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/add_subDateLayout"
+                android:id="@+id/procesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background">
+                    <LinearLayout
+                        android:id="@+id/selectSideA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:background="@drawable/background_bmi">
+                        <TextView
+                            android:id="@+id/A_string"
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+                            android:textColor="@color/yellow"
+                            android:text="Days"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="11dp"></TextView>
+                        <ImageView
+                            android:id="@+id/selectSideAButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_arrow_drop_down_24"
+                            app:tint="@color/grey">
+
+                        </ImageView>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/A_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:hint="00"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:textSize="30sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="20dp">
+
+                    </EditText>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_subButtonVisi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="25dp">
-
-                <LinearLayout
-                    android:id="@+id/add_subDateteSelect"
+                android:layout_margin="20dp">
+                <TextView
+                    android:id="@+id/arrayAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="60dp"
-                    android:background="@drawable/background">
-                    <TextView
-                        android:id="@+id/add_subDateText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="2dp"
-                        android:gravity="end"
-                        android:textColor="@color/yellow"
-                        android:text="Days"
-                        android:textSize="20dp">
+                    android:onClick="AddOnCLick"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Add"
+                    android:clickable="true"
+                    android:textColor="@color/yellow">
 
-                    </TextView>
-                    <ImageView
-
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:src="@drawable/baseline_arrow_drop_down_24"
-                        app:tint="@color/grey">
-
-                    </ImageView>
-                </LinearLayout>
-                <EditText
-                    android:layout_marginLeft="60dp"
-                    android:id="@+id/B1_value"
+                </TextView>
+                <TextView
+                    android:id="@+id/array3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="00"
-                    android:inputType="numberDecimal|numberSigned"
-                    android:maxLength="6"
-                    android:textSize="30sp">
+                    android:onClick="SubstractOnClick"
+                    android:textSize="20dp"
+                    android:text="Substract"
+                    android:clickable="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/grey"
+                    >
 
-                </EditText>
+                </TextView>
+
+
             </LinearLayout>
-
-
-
-
 
 
             <LinearLayout
