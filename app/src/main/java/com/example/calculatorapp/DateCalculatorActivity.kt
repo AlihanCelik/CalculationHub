@@ -55,6 +55,7 @@ class DateCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility=View.GONE
                 add_subButtonVisi.visibility=View.GONE
                 date_cal_name.text="Date Difference"
+                bottomSheet.show()
             }
             bottomSheetView.findViewById<View>(R.id.add_subDate).setOnClickListener {
                 endDateLayout.visibility=View.GONE
@@ -63,6 +64,7 @@ class DateCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility=View.VISIBLE
                 add_subButtonVisi.visibility=View.VISIBLE
                 date_cal_name.text="Add / Subtract Date"
+                bottomSheet.show()
             }
 
 
@@ -261,99 +263,62 @@ class DateCalculatorActivity : AppCompatActivity() {
 
                 }
 
-            }else{
-                if(A_value.text.toString()==""){
-                    value=0
-                }else{
-                    value=A_value.text.toString().toInt()
+            }else {
+                if (A_value.text.toString() == "") {
+                    value = 0
+                } else {
+                    value = A_value.text.toString().toInt()
                 }
-                if(add){
-                    if(select=="day"){
+                if (select == "day") {
+                    val startDate = Calendar.getInstance()
+                    startDate.set(start_year_value, start_month_value - 1, start_day_value)
 
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val daySelect = Calendar.getInstance()
-                        daySelect.set(0, 0, value)
-
-                        val differenceInMillis =  startDate.timeInMillis + daySelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
-                    }
-                    if(select=="month"){
-
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val monthSelect = Calendar.getInstance()
-                        monthSelect.set(0, value-1, 0)
-
-                        val differenceInMillis =  startDate.timeInMillis + monthSelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
-                    }
-                    if(select=="year"){
-
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val yearSelect = Calendar.getInstance()
-                        yearSelect.set(value, 0, 0)
-
-                        val differenceInMillis =  startDate.timeInMillis + yearSelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
-                    }
-                }else{
-                    if(select=="day"){
-
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val calendar = Calendar.getInstance()
-                        calendar.time = startDate.time
+                    val calendar = Calendar.getInstance()
+                    calendar.time = startDate.time
+                    if (add) {
                         calendar.add(Calendar.DAY_OF_MONTH, value)
-
-                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
-                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
-                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
+                    } else {
+                        calendar.add(Calendar.DAY_OF_MONTH, -value)
                     }
-                    if(select=="month"){
 
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val calendar = Calendar.getInstance()
-                        calendar.time = startDate.time
-                        calendar.add(Calendar.MONTH, value)
-
-                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
-                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
-                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
-
-                    }
-                    if(select=="year"){
-
-                        val startDate = Calendar.getInstance()
-                        startDate.set(start_year_value, start_month_value - 1, start_day_value)
-
-                        val calendar = Calendar.getInstance()
-                        calendar.time = startDate.time
-                        calendar.add(Calendar.YEAR, value)
-
-                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
-                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
-                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
-                    }
+                    years = calendar.get(Calendar.YEAR)
+                    months = calendar.get(Calendar.MONTH)+1
+                    remainingDays = calendar.get(Calendar.DAY_OF_MONTH)
                 }
+                if (select == "month") {
+                    val startDate = Calendar.getInstance()
+                    startDate.set(start_year_value, start_month_value - 1, start_day_value)
+
+                    val calendar = Calendar.getInstance()
+                    calendar.time = startDate.time
+                    if (add) {
+                        calendar.add(Calendar.MONTH, value)
+                    } else {
+                        calendar.add(Calendar.MONTH, -value)
+                    }
+
+                    years = calendar.get(Calendar.YEAR)
+                    months = calendar.get(Calendar.MONTH)+1
+                    remainingDays = calendar.get(Calendar.DAY_OF_MONTH)
+                }
+                if (select == "year") {
+                    val startDate = Calendar.getInstance()
+                    startDate.set(start_year_value, start_month_value - 1, start_day_value)
+
+                    val calendar = Calendar.getInstance()
+                    calendar.time = startDate.time
+                    if (add) {
+                        calendar.add(Calendar.YEAR, value)
+                    } else {
+                        calendar.add(Calendar.YEAR, -value)
+                    }
+
+                    years = calendar.get(Calendar.YEAR)
+                    months = calendar.get(Calendar.MONTH)+1
+                    remainingDays = calendar.get(Calendar.DAY_OF_MONTH)
 
 
+                }
             }
             val view = View.inflate(this, R.layout.dialog_date_solutions, null)
             val builder = AlertDialog.Builder(this)
