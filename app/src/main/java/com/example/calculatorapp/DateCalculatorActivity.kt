@@ -316,42 +316,40 @@ class DateCalculatorActivity : AppCompatActivity() {
                         val startDate = Calendar.getInstance()
                         startDate.set(start_year_value, start_month_value - 1, start_day_value)
 
-                        val daySelect = Calendar.getInstance()
-                        daySelect.set(0, 0, value)
+                        val calendar = Calendar.getInstance()
+                        calendar.time = startDate.time
+                        calendar.add(Calendar.DAY_OF_MONTH, value)
 
-                        val differenceInMillis =  startDate.timeInMillis - daySelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
+                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
+                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
+                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
                     }
                     if(select=="month"){
 
                         val startDate = Calendar.getInstance()
                         startDate.set(start_year_value, start_month_value - 1, start_day_value)
 
-                        val monthSelect = Calendar.getInstance()
-                        monthSelect.set(0, value-1, 0)
+                        val calendar = Calendar.getInstance()
+                        calendar.time = startDate.time
+                        calendar.add(Calendar.MONTH, value)
 
-                        val differenceInMillis =  startDate.timeInMillis - monthSelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
+                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
+                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
+                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
+
                     }
                     if(select=="year"){
 
                         val startDate = Calendar.getInstance()
                         startDate.set(start_year_value, start_month_value - 1, start_day_value)
 
-                        val yearSelect = Calendar.getInstance()
-                        yearSelect.set(value, 0, 0)
+                        val calendar = Calendar.getInstance()
+                        calendar.time = startDate.time
+                        calendar.add(Calendar.YEAR, value)
 
-                        val differenceInMillis =  startDate.timeInMillis - yearSelect.timeInMillis
-                        val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
-                        years = (differenceInDays / 365).toInt()
-                        months = (differenceInDays / 30).toInt()
-                        remainingDays = (differenceInDays % 365 % 30).toInt()
+                        years = calendar.get(Calendar.YEAR) + startDate.get(Calendar.YEAR)
+                        months = calendar.get(Calendar.MONTH) + startDate.get(Calendar.MONTH)
+                        remainingDays = calendar.get(Calendar.DAY_OF_MONTH) + startDate.get(Calendar.DAY_OF_MONTH)
                     }
                 }
 

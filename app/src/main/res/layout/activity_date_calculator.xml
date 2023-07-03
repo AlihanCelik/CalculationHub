@@ -281,7 +281,7 @@
                             android:layout_width="75dp"
                             android:layout_height="30dp"
                             android:textColor="@color/yellow"
-                            android:text="Days"
+                            android:text="Day"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="11dp"></TextView>
