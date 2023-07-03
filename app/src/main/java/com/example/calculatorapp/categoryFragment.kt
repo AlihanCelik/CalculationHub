@@ -143,6 +143,10 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),AgeCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.date_Calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),DateCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
         converter_calculate.setOnClickListener {

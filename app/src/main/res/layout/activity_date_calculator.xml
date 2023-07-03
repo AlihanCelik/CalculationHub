@@ -252,6 +252,7 @@
 
             <LinearLayout
                 android:id="@+id/procesLayout"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -303,7 +304,7 @@
 
                         android:hint="00"
                         android:background="@android:color/transparent"
-                        android:inputType="numberDecimal"
+                        android:inputType="number"
                         android:maxLength="6"
                         android:textSize="30sp"
                         android:layout_marginLeft="30dp"
@@ -319,6 +320,7 @@
 
             <LinearLayout
                 android:id="@+id/add_subButtonVisi"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -337,7 +339,7 @@
 
                 </TextView>
                 <TextView
-                    android:id="@+id/array3"
+                    android:id="@+id/arraySub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="SubstractOnClick"
