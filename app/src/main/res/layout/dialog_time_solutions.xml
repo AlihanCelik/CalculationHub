@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginRight="30dp"
@@ -53,14 +52,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             android:fontFamily="@font/font2"
-                            android:text="Year"
+                            android:text="Hours"
                             android:textColor="@color/yellow"
                             android:textSize="18dp">
 
                         </TextView>
 
                         <TextView
-                            android:id="@+id/year_answer"
+                            android:id="@+id/hours_answer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
@@ -84,14 +83,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             android:fontFamily="@font/font2"
-                            android:text="Month"
+                            android:text="Minutes"
                             android:textColor="@color/yellow"
                             android:textSize="18dp">
 
                         </TextView>
 
                         <TextView
-                            android:id="@+id/month_answer"
+                            android:id="@+id/minutes_answer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
@@ -102,36 +101,6 @@
                         </TextView>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/dayText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
-                            android:fontFamily="@font/font2"
-                            android:text="Day"
-                            android:textColor="@color/yellow"
-                            android:textSize="18dp">
-
-                        </TextView>
-
-                        <TextView
-                            android:id="@+id/day_answer"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
-                            android:text="Year"
-                            android:textColor="@color/grey"
-                            android:textSize="18dp">
-
-                        </TextView>
-                    </LinearLayout>
                 </LinearLayout>
 
 
