@@ -250,17 +250,14 @@ class DateCalculatorActivity : AppCompatActivity() {
                     val differenceInMillis = endDate.timeInMillis - startDate.timeInMillis
                     val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
                     years = (differenceInDays / 365).toInt()
-                    months = (differenceInDays / 30).toInt()
-                    remainingDays = (differenceInDays % 365 % 30).toInt()
-
-
+                    months = ((differenceInDays % 365) / 30).toInt()
+                    remainingDays = ((differenceInDays % 365) % 30).toInt()
                 } else {
-                    val differenceInMillis =  startDate.timeInMillis - endDate.timeInMillis
+                    val differenceInMillis = startDate.timeInMillis - endDate.timeInMillis
                     val differenceInDays = differenceInMillis / (1000 * 60 * 60 * 24)
                     years = (differenceInDays / 365).toInt()
-                    months = (differenceInDays / 30).toInt()
-                    remainingDays = (differenceInDays % 365 % 30).toInt()
-
+                    months = ((differenceInDays % 365) / 30).toInt()
+                    remainingDays = ((differenceInDays % 365) % 30).toInt()
                 }
 
             }else {
