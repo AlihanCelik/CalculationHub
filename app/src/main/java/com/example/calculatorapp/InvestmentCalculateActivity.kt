@@ -9,6 +9,9 @@ import android.widget.NumberPicker
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_investment_calculate.*
+import kotlinx.android.synthetic.main.activity_investment_calculate.A_value
+import kotlinx.android.synthetic.main.activity_investment_calculate.backButton
+import kotlinx.android.synthetic.main.activity_investment_calculate.linearLayout2
 import kotlinx.android.synthetic.main.dialog_investment_solutions.view.*
 
 class InvestmentCalculateActivity : AppCompatActivity() {
@@ -24,6 +27,9 @@ class InvestmentCalculateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_investment_calculate)
+        backButton.setOnClickListener {
+            finish()
+        }
         periodLayout.setOnClickListener {
             val bottomSheet = BottomSheetDialog(this@InvestmentCalculateActivity,
                 R.style.BottomSheetDialogTheme
@@ -82,7 +88,7 @@ class InvestmentCalculateActivity : AppCompatActivity() {
                 interestEarned = totalInvestment - principal
             } else{
                 totalInvestment = principal
-                repeat(months) {
+                repeat(totalTimeInMonths) {
                     totalInvestment += totalInvestment * (rate / 100 / 12)
                 }
                 interestEarned = totalInvestment - principal
