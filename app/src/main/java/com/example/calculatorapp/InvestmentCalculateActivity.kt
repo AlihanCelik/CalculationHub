@@ -81,19 +81,35 @@ class InvestmentCalculateActivity : AppCompatActivity() {
                 rate=B_value.text.toString().toDouble()
             }
 
-            val totalTimeInMonths = years * 12 + months
+            val totalMonths = years * 12 + months
 
             if (oneTime) {
-                totalInvestment = principal * (1 + (rate / 100) * (totalTimeInMonths / 12))
-                interestEarned = totalInvestment - principal
-            } else{
+                val monthlyInterestRate = (rate / 100.0) / 12
                 totalInvestment = principal
-                repeat(totalTimeInMonths) {
-                    totalInvestment += totalInvestment * (rate / 100 / 12)
+
+                for (i in 1..totalMonths) {
+                    val monthlyInterest = totalInvestment * monthlyInterestRate
+                    totalInvestment += monthlyInterest
                 }
                 interestEarned = totalInvestment - principal
-            }
+            } else {
+                totalInvestment = principal
 
+                for (i in 1..years) {
+                    val yearlyInterest = totalInvestment * (rate / 100.0)
+                    totalInvestment += yearlyInterest
+
+                    for (j in 1..12) {
+                        val monthlyInterest = totalInvestment * (rate / 100.0) / 12
+                        totalInvestment += monthlyInterest
+                    }
+                }
+
+                val remainingMonthsInterest = totalInvestment * (rate / 100.0) / 12 * months
+                totalInvestment += remainingMonthsInterest
+
+                interestEarned = totalInvestment - principal
+            }
             val view = View.inflate(this, R.layout.dialog_investment_solutions, null)
             val builder = AlertDialog.Builder(this)
             builder.setView(view)

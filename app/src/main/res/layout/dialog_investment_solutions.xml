@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="343dp"
-        android:layout_height="319dp"
+        android:layout_width="340dp"
+        android:layout_height="368dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,12 +23,12 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="289dp">
+            android:layout_height="298dp"
+            android:layout_marginTop="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -119,9 +119,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="50dp"
                     android:fontFamily="@font/font2"
                     android:gravity="center"
+
                     android:text="3 Year , 2 Month"
                     android:textSize="20dp">
 
