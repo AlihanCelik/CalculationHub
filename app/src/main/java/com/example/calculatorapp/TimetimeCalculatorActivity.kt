@@ -255,11 +255,12 @@ class TimetimeCalculatorActivity : AppCompatActivity() {
                         val differenceInMillis = endTime.timeInMillis - startTime.timeInMillis
                         val differenceInMinutes = differenceInMillis / (1000 * 60)
                         hours = (differenceInMinutes / 60).toInt().toString()
-                        minutes= (differenceInMinutes % 60).toInt().toString()
-                    }
-                    else{
-                        hours="-"
-                        minutes="-"
+                        minutes = (differenceInMinutes % 60).toInt().toString()
+                    } else {
+                        val differenceInMillis = startTime.timeInMillis - endTime.timeInMillis
+                        val differenceInMinutes = differenceInMillis / (1000 * 60)
+                        hours = ((24 * 60 - differenceInMinutes) / 60).toInt().toString()
+                        minutes = ((24 * 60 - differenceInMinutes) % 60).toInt().toString()
                     }
                 }
                 else {
