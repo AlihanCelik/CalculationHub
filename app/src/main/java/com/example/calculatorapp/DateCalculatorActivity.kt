@@ -55,7 +55,7 @@ class DateCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility=View.GONE
                 add_subButtonVisi.visibility=View.GONE
                 date_cal_name.text="Date Difference"
-                bottomSheet.show()
+                bottomSheet.dismiss()
             }
             bottomSheetView.findViewById<View>(R.id.add_subDate).setOnClickListener {
                 endDateLayout.visibility=View.GONE
@@ -64,7 +64,7 @@ class DateCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility=View.VISIBLE
                 add_subButtonVisi.visibility=View.VISIBLE
                 date_cal_name.text="Add / Subtract Date"
-                bottomSheet.show()
+                bottomSheet.dismiss()
             }
 
 

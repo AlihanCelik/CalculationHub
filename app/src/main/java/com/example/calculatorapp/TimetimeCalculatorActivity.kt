@@ -61,7 +61,7 @@ class TimetimeCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility= View.GONE
                 add_subButtonVisi.visibility= View.GONE
                 time_cal_name.text="Time Difference"
-                bottomSheet.show()
+                bottomSheet.dismiss()
             }
             bottomSheetView.findViewById<View>(R.id.add_subTime).setOnClickListener {
                 endTimeLayout.visibility= View.GONE
@@ -71,7 +71,7 @@ class TimetimeCalculatorActivity : AppCompatActivity() {
                 procesLayout.visibility= View.VISIBLE
                 add_subButtonVisi.visibility= View.VISIBLE
                 time_cal_name.text="Add / Subtract Tİme"
-                bottomSheet.show()
+                bottomSheet.dismiss()
             }
 
 
