@@ -147,6 +147,10 @@ class categoryFragment : Fragment() {
                 val intent= Intent(requireActivity(),DateCalculatorActivity::class.java)
                 startActivity(intent)
             }
+            view.timetime_calculate.setOnClickListener {
+                val intent= Intent(requireActivity(),TimetimeCalculatorActivity::class.java)
+                startActivity(intent)
+            }
 
         }
         converter_calculate.setOnClickListener {
