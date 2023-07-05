@@ -8,8 +8,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.bottom_sheet_equations.view.*
-import kotlinx.android.synthetic.main.dialog_algebra.*
+import com.example.calculatorapp.algebraCalculator.*
+import com.example.calculatorapp.geometryCalculator.BodiesCalculatorActivity
+import com.example.calculatorapp.geometryCalculator.ShapesCalculatorActivity
+import com.example.calculatorapp.healthCalculator.BmiCalculatorActivity
+import com.example.calculatorapp.healthCalculator.BodyFatPercentageCalculatorActivity
+import com.example.calculatorapp.healthCalculator.DailyCalorieBurnCalculatorActivity
+import com.example.calculatorapp.timeCalculator.AgeCalculatorActivity
+import com.example.calculatorapp.timeCalculator.DateCalculatorActivity
+import com.example.calculatorapp.timeCalculator.TimetimeCalculatorActivity
+import com.example.calculatorapp.unitConverter.*
 
 import kotlinx.android.synthetic.main.dialog_algebra.view.*
 import kotlinx.android.synthetic.main.dialog_algebra.view.linearLayout2
@@ -50,39 +58,39 @@ class categoryFragment : Fragment() {
                 dialog.dismiss()
             }
             view.percent_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),PercentageCalculateActivity::class.java)
+                val intent= Intent(requireActivity(), PercentageCalculateActivity::class.java)
                 startActivity(intent)
             }
             view.average_Calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),AverageCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), AverageCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.proportion_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),ProportionCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), ProportionCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.ratio_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),RatioCalculaorActivity::class.java)
+                val intent= Intent(requireActivity(), RatioCalculaorActivity::class.java)
                 startActivity(intent)
             }
             view.equation_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),EqiationsCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), EqiationsCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.fragtions_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),FractionsCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), FractionsCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.gcf_lcm_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),GcfLcmCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), GcfLcmCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.combination_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),CombinationCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), CombinationCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.prime_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),PrimeCheckerCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), PrimeCheckerCalculatorActivity::class.java)
                 startActivity(intent)
             }
 
@@ -98,11 +106,11 @@ class categoryFragment : Fragment() {
                 dialog.dismiss()
             }
             view.shapes_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),ShapesCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), ShapesCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.bodies_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),BodiesCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), BodiesCalculatorActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -117,15 +125,15 @@ class categoryFragment : Fragment() {
                 dialog.dismiss()
             }
             view.bmi_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),BmiCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), BmiCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.calories_Calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),DailyCalorieBurnCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), DailyCalorieBurnCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.bfp_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),BodyFatPercentageCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), BodyFatPercentageCalculatorActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -140,15 +148,15 @@ class categoryFragment : Fragment() {
                 dialog.dismiss()
             }
             view.age_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),AgeCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), AgeCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.date_Calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),DateCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), DateCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.timetime_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),TimetimeCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), TimetimeCalculatorActivity::class.java)
                 startActivity(intent)
             }
 
@@ -164,85 +172,85 @@ class categoryFragment : Fragment() {
                 dialog.dismiss()
             }
             view.Area_calculate.setOnClickListener {
-                val intent= Intent(requireActivity(),AreaCalculatorActivity::class.java)
+                val intent= Intent(requireActivity(), AreaCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.dataStorage_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),DataCalcualatorActivity::class.java)
+                val intent=Intent(requireActivity(), DataCalcualatorActivity::class.java)
                 startActivity(intent)
             }
             view.length_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),LengthCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), LengthCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.mass_Calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),MassCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), MassCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.speed_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),SpeedCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), SpeedCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.temperature_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),TemparatureCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), TemparatureCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.timee_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),TimeCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), TimeCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.acceleration_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),AccelerationCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), AccelerationCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.angle_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),AngleCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), AngleCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.fuel_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),FuelCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), FuelCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.cooking_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),CookingCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), CookingCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.transfer_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),DataTransferCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), DataTransferCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.pressure_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),PressureCalculaterActivity::class.java)
+                val intent=Intent(requireActivity(), PressureCalculaterActivity::class.java)
                 startActivity(intent)
             }
 
             view.energy_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),EnergyCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), EnergyCalculatorActivity::class.java)
                 startActivity(intent)
             }
 
             view.force_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),ForceCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), ForceCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.power_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),PowerCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), PowerCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.torque_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),TorqueCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), TorqueCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.volume_Calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),VolumeCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), VolumeCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.volumetric_flow_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),VolumetricFlowCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), VolumetricFlowCalculatorActivity::class.java)
                 startActivity(intent)
             }
             view.numerical_calculate.setOnClickListener {
-                val intent=Intent(requireActivity(),NumericBaaseCalculatorActivity::class.java)
+                val intent=Intent(requireActivity(), NumericBaaseCalculatorActivity::class.java)
                 startActivity(intent)
             }
 

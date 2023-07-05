@@ -12,132 +12,135 @@
         android:theme="@style/Theme.CalculatorAPP"
         tools:targetApi="31">
         <activity
-            android:name=".TimetimeCalculatorActivity"
+            android:name=".InvestmentCalculateActivity"
             android:exported="false" />
         <activity
-            android:name=".DateCalculatorActivity"
+            android:name=".timeCalculator.TimetimeCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".AgeCalculatorActivity"
+            android:name=".timeCalculator.DateCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".BodyFatPercentageCalculatorActivity"
+            android:name=".timeCalculator.AgeCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".DailyCalorieBurnCalculatorActivity"
+            android:name=".healthCalculator.BodyFatPercentageCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".BodiesCalculatorActivity"
+            android:name=".healthCalculator.DailyCalorieBurnCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".ShapesCalculatorActivity"
+            android:name=".geometryCalculator.BodiesCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".PrimeCheckerCalculatorActivity"
+            android:name=".geometryCalculator.ShapesCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".CombinationCalculatorActivity"
+            android:name=".algebraCalculator.PrimeCheckerCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".GcfLcmCalculatorActivity"
+            android:name=".algebraCalculator.CombinationCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".FractionsCalculatorActivity"
+            android:name=".algebraCalculator.GcfLcmCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".EqiationsCalculatorActivity"
+            android:name=".algebraCalculator.FractionsCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".RatioCalculaorActivity"
+            android:name=".algebraCalculator.EqiationsCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".ProportionCalculatorActivity"
+            android:name=".algebraCalculator.RatioCalculaorActivity"
             android:exported="false" />
         <activity
-            android:name=".AverageCalculatorActivity"
+            android:name=".algebraCalculator.ProportionCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".PercentageCalculateActivity"
+            android:name=".algebraCalculator.AverageCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".NumericBaaseCalculatorActivity"
+            android:name=".algebraCalculator.PercentageCalculateActivity"
             android:exported="false" />
         <activity
-            android:name=".VolumetricFlowCalculatorActivity"
+            android:name=".unitConverter.NumericBaaseCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".VolumeCalculatorActivity"
+            android:name=".unitConverter.VolumetricFlowCalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".unitConverter.VolumeCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TorqueCalculatorActivity"
+            android:name=".unitConverter.TorqueCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PressureCalculaterActivity"
+            android:name=".unitConverter.PressureCalculaterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PowerCalculatorActivity"
+            android:name=".unitConverter.PowerCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ForceCalculatorActivity"
+            android:name=".unitConverter.ForceCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".EnergyCalculatorActivity"
+            android:name=".unitConverter.EnergyCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DataTransferCalculatorActivity"
+            android:name=".unitConverter.DataTransferCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".CookingCalculatorActivity"
+            android:name=".unitConverter.CookingCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FuelCalculatorActivity"
+            android:name=".unitConverter.FuelCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AngleCalculatorActivity"
+            android:name=".unitConverter.AngleCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AccelerationCalculatorActivity"
+            android:name=".unitConverter.AccelerationCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TimeCalculatorActivity"
+            android:name=".unitConverter.TimeCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TemparatureCalculatorActivity"
+            android:name=".unitConverter.TemparatureCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SpeedCalculatorActivity"
+            android:name=".unitConverter.SpeedCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MassCalculatorActivity"
+            android:name=".unitConverter.MassCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LengthCalculatorActivity"
+            android:name=".unitConverter.LengthCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DataCalcualatorActivity"
+            android:name=".unitConverter.DataCalcualatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AreaCalculatorActivity"
+            android:name=".unitConverter.AreaCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BmiCalculatorActivity"
+            android:name=".healthCalculator.BmiCalculatorActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
