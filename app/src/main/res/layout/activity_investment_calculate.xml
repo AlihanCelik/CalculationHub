@@ -162,7 +162,7 @@
                         android:maxLength="6"
                         android:textSize="30sp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="30dp">
+                        android:layout_marginRight="5dp">
 
                     </EditText>
                 </LinearLayout>
@@ -193,7 +193,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="5dp"
                         android:background="@android:color/transparent"
                         android:hint="00"
                         android:inputType="numberDecimal"
