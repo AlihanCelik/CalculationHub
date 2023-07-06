@@ -915,7 +915,7 @@ class NumericBaaseCalculatorActivity : AppCompatActivity() {
             "undenary" to 11,
             "duodecimal" to 12,
             "tridecimal" to 13,
-            "quayyuodecimal" to 14,
+            "quattuordecimal" to 14,
             "quindecimal" to 15
         )
 
