@@ -100,7 +100,7 @@ class NumericBaaseCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.duodecimal).setOnClickListener {
                 textNum.text = "(B)"
-                numNameText.text = "Duodecinmal"
+                numNameText.text = "Duodecimal"
                 numText.text = "00"
                 num2Text.text = "00"
                 bottomSheet.dismiss()
@@ -226,7 +226,7 @@ class NumericBaaseCalculatorActivity : AppCompatActivity() {
             }
             bottomSheetView.findViewById<View>(R.id.duodecimal).setOnClickListener {
                 text2Num.text = "(B)"
-                num2NameText.text = "Duodecinmal"
+                num2NameText.text = "Duodecimal"
                 numText.text = "00"
                 num2Text.text = "00"
                 bottomSheet.dismiss()
