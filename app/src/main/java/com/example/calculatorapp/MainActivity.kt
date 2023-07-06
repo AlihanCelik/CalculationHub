@@ -69,7 +69,26 @@ class MainActivity : AppCompatActivity() {
             process.text=(view as Button).text
             stateEror=false
         }else{
-            process.append((view as Button).text)
+            val buttonText = (view as Button).text
+            val currentText = process.text.toString()
+
+            // Sayıdan önce girilen noktanın engellenmesi
+            if (currentText.isEmpty() && buttonText == ".") {
+                process.text = "0."
+                lastDot = true
+                lastNumeric = true
+                return
+            }
+
+            // İki noktanın ardışık olarak eklenmesinin engellenmesi
+            if (buttonText == "." && (lastDot || !lastNumeric)) {
+                return
+            }
+
+            process.append(buttonText)
+            if (buttonText == ".") {
+                lastDot = true
+            }
 
         }
         lastNumeric=true
