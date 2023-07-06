@@ -12,6 +12,12 @@
         android:theme="@style/Theme.CalculatorAPP"
         tools:targetApi="31">
         <activity
+            android:name=".TipCalculateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnitPriceCalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".SalesTaxCalculateActivity"
             android:exported="false" />
         <activity

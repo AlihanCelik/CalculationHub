@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Investment"
+            android:text="Unit Price"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/backButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,47 +70,11 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
-                android:src="@drawable/invest"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/unitprice"
                 app:tint="@color/yellow">
 
             </ImageView>
-
-            <LinearLayout
-                android:id="@+id/equation_system_vis"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_margin="20dp">
-                <TextView
-                    android:id="@+id/one_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="oneTimeOnClick"
-                    android:textSize="20dp"
-                    android:layout_marginRight="20dp"
-                    android:text="One-Time"
-                    android:clickable="true"
-                    android:textColor="@color/yellow">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/repeated"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="repeatedOnClick"
-                    android:textSize="20dp"
-                    android:text="Repeated"
-                    android:clickable="true"
-                    android:layout_marginLeft="20dp"
-                    android:textColor="@color/grey"
-                    >
-
-                </TextView>
-
-
-            </LinearLayout>
 
 
             <TextView
@@ -118,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:gravity="start"
                 android:text="VALUES"
                 android:textSize="20dp"
@@ -143,14 +107,14 @@
                     android:background="@drawable/background">
                     <TextView
                         android:layout_width="90dp"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_margin="3dp"
 
                         android:background="@drawable/background_bmi"
-                        android:text="Initial\nInvestment"
+                        android:text="Price"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="12dp"></TextView>
+                        android:textSize="15dp"></TextView>
                     <EditText
                         android:id="@+id/A_value"
                         android:layout_width="wrap_content"
@@ -179,87 +143,30 @@
 
                     <TextView
                         android:layout_width="90dp"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_margin="3dp"
                         android:background="@drawable/background_bmi"
-                        android:text="Interest"
+                        android:text="Qty"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="12dp"></TextView>
+                        android:textSize="15dp"></TextView>
 
                     <EditText
                         android:id="@+id/B_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
                         android:background="@android:color/transparent"
                         android:hint="00"
-                        android:inputType="numberDecimal"
+                        android:inputType="number"
                         android:maxLength="6"
                         android:textSize="30sp">
 
                     </EditText>
-                    <TextView
-                        android:id="@+id/yuzde"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="%"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginRight="2dp"
-                        android:textSize="30sp">
-
-                    </TextView>
                 </LinearLayout>
 
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/periodLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal"
-                    android:background="@drawable/background">
-                    <TextView
-                        android:layout_width="90dp"
-                        android:layout_height="30dp"
-                        android:layout_margin="3dp"
-                        android:background="@drawable/background_bmi"
-                        android:text="Period"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="12dp"></TextView>
-                    <TextView
-                        android:id="@+id/periodText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3 Year , 2 Month"
-                        android:textSize="15sp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="30dp">
-
-                    </TextView>
-                    <ImageView
-                        android:layout_margin="3dp"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/baseline_arrow_drop_down_24"
-                        app:tint="@color/grey">
-
-                    </ImageView>
-                </LinearLayout>
 
 
             </LinearLayout>

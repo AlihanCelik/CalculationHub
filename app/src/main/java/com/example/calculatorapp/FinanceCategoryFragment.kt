@@ -38,6 +38,14 @@ class FinanceCategoryFragment : Fragment() {
             val intent=Intent(requireActivity(),SalesTaxCalculateActivity::class.java)
             startActivity(intent)
         }
+        unitprice_calculate.setOnClickListener {
+            val intent=Intent(requireActivity(),UnitPriceCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+        tip_calculate.setOnClickListener {
+            val intent=Intent(requireActivity(),TipCalculateActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
