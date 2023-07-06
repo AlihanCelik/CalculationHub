@@ -71,16 +71,12 @@ class MainActivity : AppCompatActivity() {
         }else{
             val buttonText = (view as Button).text
             val currentText = process.text.toString()
-
-            // Sayıdan önce girilen noktanın engellenmesi
             if (currentText.isEmpty() && buttonText == ".") {
                 process.text = "0."
                 lastDot = true
                 lastNumeric = true
                 return
             }
-
-            // İki noktanın ardışık olarak eklenmesinin engellenmesi
             if (buttonText == "." && (lastDot || !lastNumeric)) {
                 return
             }
