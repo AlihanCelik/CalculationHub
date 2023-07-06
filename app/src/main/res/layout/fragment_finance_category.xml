@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="35dp">
+        android:layout_marginTop="55dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                     android:text="Investment"></TextView>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/bmi_calculate"
+                android:id="@+id/credit_calculate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -95,30 +95,7 @@
             android:gravity="center">
 
             <LinearLayout
-                android:id="@+id/cyrpto_calculate"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/cyrpto"
-                    app:tint="@color/grey">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="12sp"
-                    android:text="Crypto"></TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/saletax_calculate"
+                android:id="@+id/salestax_calculate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -167,16 +144,6 @@
 
                 </TextView>
             </LinearLayout>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
             <LinearLayout
                 android:id="@+id/tip_calculate"
                 android:layout_width="0dp"
@@ -200,8 +167,8 @@
                     android:text="Tip"></TextView>
             </LinearLayout>
 
-
         </LinearLayout>
+
 
     </LinearLayout>
 </FrameLayout>

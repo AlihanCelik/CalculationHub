@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="340dp"
+        android:layout_width="348dp"
         android:layout_height="270dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
@@ -23,12 +23,12 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="199dp"
-            android:layout_marginTop="40dp">
+            android:layout_height="242dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -48,13 +48,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="140dp"
+                            android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
-                            android:text="Total Investment"
+                            android:text="Monthly Paymnet"
                             android:textSize="15dp"></TextView>
 
                         <TextView
@@ -73,16 +73,15 @@
 
 
                 <TextView
-                    android:id="@+id/year_month"
+                    android:id="@+id/year_monthText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/font2"
                     android:gravity="center"
-
                     android:text="3 Year , 2 Month"
                     android:textSize="20dp">
 

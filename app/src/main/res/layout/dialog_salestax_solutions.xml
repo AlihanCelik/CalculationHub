@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="340dp"
-        android:layout_height="270dp"
+        android:layout_width="348dp"
+        android:layout_height="287dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -23,12 +23,12 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="199dp"
-            android:layout_marginTop="40dp">
+            android:layout_height="256dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -48,13 +48,13 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="140dp"
+                            android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/background"
                             android:gravity="center"
-                            android:text="Total Investment"
+                            android:text="Final Price"
                             android:textSize="15dp"></TextView>
 
                         <TextView
@@ -71,22 +71,45 @@
 
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/year_month"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="50dp"
-                    android:fontFamily="@font/font2"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
+                    android:orientation="horizontal">
 
-                    android:text="3 Year , 2 Month"
-                    android:textSize="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/background_bmi"
+                        android:orientation="horizontal">
 
-                </TextView>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/background"
+                            android:gravity="center"
+                            android:text="Tax Amount"
+                            android:textSize="15dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/answer_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="20dp"
+                            android:text="100"
+                            android:textColor="@color/yellow"
+                            android:textSize="30dp"></TextView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
 
             </LinearLayout>

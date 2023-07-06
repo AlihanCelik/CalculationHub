@@ -30,6 +30,14 @@ class FinanceCategoryFragment : Fragment() {
             val intent=Intent(requireActivity(),InvestmentCalculateActivity::class.java)
             startActivity(intent)
         }
+        credit_calculate.setOnClickListener {
+            val intent=Intent(requireActivity(),creditCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+        salestax_calculate.setOnClickListener {
+            val intent=Intent(requireActivity(),SalesTaxCalculateActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
