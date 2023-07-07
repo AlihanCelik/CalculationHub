@@ -46,6 +46,10 @@ class FinanceCategoryFragment : Fragment() {
             val intent=Intent(requireActivity(),TipCalculateActivity::class.java)
             startActivity(intent)
         }
+        currency_calculate.setOnClickListener {
+            val intent=Intent(requireActivity(),CurrencyCalculatorActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

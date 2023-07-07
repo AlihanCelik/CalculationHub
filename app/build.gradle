@@ -37,7 +37,9 @@ android {
 }
 
 dependencies {
-
+    def rxJavaVersion = '2.2.8'
+    def rxAndroidVersion = '2.1.1'
+    def retrofitVersion = '2.8.1'
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
@@ -49,5 +51,17 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.4.0"
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'net.objecthunter:exp4j:0.4.8'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+
+
 
 }

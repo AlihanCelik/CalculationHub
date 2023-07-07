@@ -18,6 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/tutucuText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </TextView>
+
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="30dp"
@@ -79,32 +90,17 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:orientation="horizontal">
+            <Spinner
 
-            <LinearLayout
-                android:id="@+id/curSelect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:id="@+id/secondSpinner"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                >
 
-                <TextView
-                    android:id="@+id/textCur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="USD"
-                    android:textColor="@color/yellow"
-                    android:textSize="25sp">
+            </Spinner>
 
-                </TextView>
 
-                <ImageView
 
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_arrow_drop_down_24">
-
-                </ImageView>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,14 +120,7 @@
 
                 </TextView>
 
-                <TextView
-                    android:id="@+id/curNameText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="Dolar">
 
-                </TextView>
             </LinearLayout>
         </LinearLayout>
 
@@ -143,31 +132,14 @@
             android:layout_marginRight="20dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/cur2Select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+            <Spinner
 
-                <TextView
-                    android:id="@+id/text2Cur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="USD"
-                    android:textColor="@color/yellow"
-                    android:textSize="25sp">
+                android:id="@+id/thirdSpinner"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                >
 
-                </TextView>
-
-                <ImageView
-
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_arrow_drop_down_24">
-
-                </ImageView>
-            </LinearLayout>
+            </Spinner>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,14 +157,6 @@
 
                 </TextView>
 
-                <TextView
-                    android:id="@+id/cur2NameText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="Dolar">
-
-                </TextView>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -473,4 +437,15 @@
 
 
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

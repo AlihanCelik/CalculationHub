@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="351dp"
-        android:layout_height="604dp"
+        android:layout_width="348dp"
+        android:layout_height="524dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -22,7 +22,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="566dp">
+            android:layout_height="505dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -375,7 +375,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/roman_calculate"
+                        android:id="@+id/volumetric_flow_calculate"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
@@ -385,7 +385,7 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/roman"
+                            android:src="@drawable/volumetricflow"
                             app:tint="@color/grey">
 
                         </ImageView>
@@ -394,12 +394,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Roman Numerals"
+                            android:text="Volumetric Flow"
                             android:textSize="12sp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/shoeSize_calculate"
+                        android:id="@+id/mass_Calculate"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
@@ -409,7 +409,7 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/shoe"
+                            android:src="@drawable/mass"
                             app:tint="@color/grey">
 
                         </ImageView>
@@ -418,7 +418,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Shoe Size"
+                            android:text="Mass"
                             android:textSize="12sp"></TextView>
                     </LinearLayout>
 
@@ -559,55 +559,6 @@
                     android:layout_marginTop="30dp"
                     android:gravity="center"
                     android:orientation="horizontal">
-
-
-                    <LinearLayout
-                        android:id="@+id/volumetric_flow_calculate"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/volumetricflow"
-                            app:tint="@color/grey">
-
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Volumetric Flow"
-                            android:textSize="12sp"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/mass_Calculate"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/mass"
-                            app:tint="@color/grey">
-
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Mass"
-                            android:textSize="12sp"></TextView>
-                    </LinearLayout>
 
 
                 </LinearLayout>
