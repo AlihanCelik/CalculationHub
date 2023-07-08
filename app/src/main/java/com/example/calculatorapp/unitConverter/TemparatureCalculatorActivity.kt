@@ -224,19 +224,35 @@ class TemparatureCalculatorActivity : AppCompatActivity() {
 
 
     }
+    var pone1="po"
+    var pone2="po"
     fun onDigitPoNe(view:View){
         if (temptext) {
             if (tempText.text.toString().isNotEmpty()) {
-                val currentValue = tempText.text.toString().toDouble()
-                val newValue = -currentValue
-                tempText.text = newValue.toString()
+                if (pone1 == "po") {
+                    val currentValue = tempText.text.toString()
+                    tempText.text = "-$currentValue"
+                    pone1 = "ne"
+                } else {
+                    val currentValue = tempText.text.toString().removePrefix("-")
+                    tempText.text = currentValue
+                    pone1 = "po"
+                }
             }
+
         } else {
             if (temp2Text.text.toString().isNotEmpty()) {
-                val currentValue = temp2Text.text.toString().toDouble()
-                val newValue = -currentValue
-                temp2Text.text = newValue.toString()
+                if (pone2 == "po") {
+                    val currentValue = temp2Text.text.toString()
+                    temp2Text.text = "-$currentValue"
+                    pone2 = "ne"
+                } else {
+                    val currentValue = temp2Text.text.toString().removePrefix("-")
+                    temp2Text.text = currentValue
+                    pone2 = "po"
+                }
             }
+
         }
     }
     fun onClearClick(view: View){
