@@ -224,6 +224,21 @@ class TemparatureCalculatorActivity : AppCompatActivity() {
 
 
     }
+    fun onDigitPoNe(view:View){
+        if (temptext) {
+            if (tempText.text.toString().isNotEmpty()) {
+                val currentValue = tempText.text.toString().toDouble()
+                val newValue = -currentValue
+                tempText.text = newValue.toString()
+            }
+        } else {
+            if (temp2Text.text.toString().isNotEmpty()) {
+                val currentValue = temp2Text.text.toString().toDouble()
+                val newValue = -currentValue
+                temp2Text.text = newValue.toString()
+            }
+        }
+    }
     fun onClearClick(view: View){
         if(temptext){
             if (tempText.text.toString().isNotEmpty()) {
