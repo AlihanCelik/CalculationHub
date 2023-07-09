@@ -121,9 +121,8 @@ class InvestmentCalculateActivity : AppCompatActivity() {
         if (option) {
             investmentValue *= Math.pow(1 + monthlyInterestRate, totalMonths.toDouble())
         } else{
-            for (i in 1..totalMonths) {
-                investmentValue *= (1 + monthlyInterestRate)
-            }
+            val monthlyRate = rate / 12 / 100
+            investmentValue = principal * (Math.pow((1 + monthlyRate), totalMonths.toDouble()) - 1) / monthlyRate
         }
 
         return investmentValue
