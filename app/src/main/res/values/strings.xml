@@ -186,4 +186,6 @@
 
 
     </string-array>
+    <string name="enter_number">Enter a number first</string>
+    <string name="invalid_input">Invalid input</string>
 </resources>
