@@ -23,10 +23,11 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tvSecondarySC"
+                android:id="@+id/tvInputCalculation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
                 android:text=""
                 android:textAlignment="textEnd"
                 android:textColor="@color/white"
@@ -36,7 +37,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/tvPrimarySC"
+                android:id="@+id/tvEqualCalculation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
@@ -71,12 +72,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btBracketOpenSC"
+                android:id="@+id/btnParenthesisStart"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="("
                 android:textColor="@color/white"
                 android:textSize="10sp"
@@ -85,17 +87,53 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btBracketCloseSC"
+                android:id="@+id/btnParenthesisClose"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text=")"
                 android:textColor="@color/white"
                 android:textSize="10dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnDegree"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="deg"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnSecond"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="2nd"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
+
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:id="@+id/btSquare"
@@ -104,31 +142,21 @@
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="x²"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btCube"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:backgroundTint="@color/AdvGrey"
-                android:text="x³"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btACSC"
+                android:id="@+id/btnAllClear"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -137,7 +165,7 @@
                 android:layout_marginBottom="0.2dp"
                 android:layout_marginLeft="10dp"
                 android:backgroundTint="@color/grey"
-                android:onClick="onAllClearClick"
+                android:onClick="onClickMethod"
                 android:text="AC"
                 android:textAllCaps="false"
                 android:textSize="5dp"
@@ -148,13 +176,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btDeleteSC"
+                android:id="@+id/btnBackClear"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/grey"
-                android:onClick="onBackClick"
+                android:onClick="onClickMethod"
                 app:cornerRadius="25dp"
                 app:icon="@drawable/baseline_backspace_24"
                 app:iconGravity="top"
@@ -165,6 +193,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnPercentage"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -172,19 +201,19 @@
                 android:backgroundTint="@color/grey"
                 app:cornerRadius="25dp"
                 app:icon="@drawable/baseline_percent_24"
-                android:onClick="onOperatorClick"
+                android:onClick="onClickMethod"
                 app:iconGravity="top"
                 app:iconSize="15dp"
                 app:iconTint="@color/black"></com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btDivisionSC"
+                android:id="@+id/btnDivision"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/yellow"
-                android:onClick="onOperatorClick"
+                android:onClick="onClickMethod"
                 android:text="/"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -197,14 +226,33 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btCube"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="x³"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnPower"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="xʸ"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -219,6 +267,7 @@
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="eˣ"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -234,6 +283,7 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="2ˣ"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -251,6 +301,7 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="10ˣ"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -262,7 +313,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt9SC"
+                android:id="@+id/btnNine"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -271,7 +322,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginLeft="8dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="9"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -282,13 +333,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt8SC"
+                android:id="@+id/btnEight"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="8"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -299,13 +350,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt7SC"
+                android:id="@+id/btnSeven"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="7"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -314,13 +365,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btMultiplicationSC"
+                android:id="@+id/btnMultiplication"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/yellow"
-                android:onClick="onOperatorClick"
+                android:onClick="onClickMethod"
                 android:text="*"
                 android:textColor="@color/white"
                 android:textSize="15dp"
@@ -336,12 +387,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btInverted"
+                android:id="@+id/btnMultiplicativeInverse"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="1/x"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -351,12 +403,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btSqrt"
+                android:id="@+id/btnSquareRoot"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="√x"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -371,6 +424,7 @@
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="∛x"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -385,7 +439,23 @@
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="m+"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnNaturalLog"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="ln"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
@@ -395,7 +465,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt6SC"
+                android:id="@+id/btnSix"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -404,6 +474,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginLeft="11dp"
                 android:backgroundTint="@color/darkGrey"
+                android:onClick="onClickMethod"
                 android:text="6"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -414,13 +485,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt5SC"
+                android:id="@+id/btnFive"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="5"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -431,13 +502,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt4SC"
+                android:id="@+id/btnFour"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="4"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -446,13 +517,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btAdditionSC"
+                android:id="@+id/btnAddition"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/yellow"
-                android:onClick="onOperatorClick"
+                android:onClick="onClickMethod"
                 android:text="+"
                 android:textColor="@color/white"
                 android:textSize="15dp"
@@ -466,32 +537,20 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btLn"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:backgroundTint="@color/AdvGrey"
-                android:text="ln"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+
 
 
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btLog"
+                android:id="@+id/btnLog"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="log"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -509,6 +568,7 @@
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="x!"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -518,14 +578,46 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btSin"
+                android:id="@+id/btnSin"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
                 android:text="sin"
-                android:onClick="onDigitClick"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnCos"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="cos"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnTan"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:onClick="onClickMethod"
+                android:text="tan"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -537,7 +629,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt3SC"
+                android:id="@+id/btnThree"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -546,7 +638,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginLeft="8dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="3"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -557,13 +649,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt2SC"
+                android:id="@+id/btnTwo"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="2"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -574,13 +666,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt1SC"
+                android:id="@+id/btnOne"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="1"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -589,13 +681,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btSubtractionSC"
+                android:id="@+id/btnSubtraction"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/yellow"
-                android:onClick="onOperatorClick"
+                android:onClick="onClickMethod"
                 android:text="-"
                 android:textColor="@color/white"
                 android:textSize="15dp"
@@ -611,14 +703,14 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btCos"
+                android:id="@+id/btSinh"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
-                android:text="cos"
-                android:onClick="onDigitClick"
+                android:text="sinh"
+                android:onClick="onClickMethod"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -627,14 +719,14 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btTan"
+                android:id="@+id/btCosh"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
-                android:text="tan"
-                android:onClick="onDigitClick"
+                android:text="cosh"
+                android:onClick="onClickMethod"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -643,6 +735,25 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btTanh"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/AdvGrey"
+                android:text="tanh"
+                android:onClick="onClickMethod"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnExponent"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -650,6 +761,7 @@
                 android:backgroundTint="@color/AdvGrey"
                 android:text="e"
                 android:textAllCaps="false"
+                android:onClick="onClickMethod"
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
@@ -657,13 +769,14 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btPi"
+                android:id="@+id/btnPi"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
                 android:text="π"
+                android:onClick="onClickMethod"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -692,13 +805,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/bt0SC"
+                android:id="@+id/btnZero"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -709,13 +822,13 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btDotSC"
+                android:id="@+id/btnDot"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/darkGrey"
-                android:onClick="onDigitClick"
+                android:onClick="onClickMethod"
                 android:text="."
                 android:textColor="@color/white"
                 android:textSize="10dp"
@@ -724,7 +837,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btEqualSC"
+                android:id="@+id/btnEqual"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"

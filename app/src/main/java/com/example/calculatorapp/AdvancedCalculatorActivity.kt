@@ -1,310 +1,337 @@
 package com.example.calculatorapp
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.VibrationEffect
-import android.os.Vibrator
-import android.widget.Button
-import android.widget.TextView
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
-import java.lang.Math.pow
+import java.math.BigDecimal
+import java.text.DecimalFormat
 import kotlin.math.*
 
+import javax.script.ScriptEngine
+import javax.script.ScriptEngineManager
+
+
+
 class AdvancedCalculatorActivity : AppCompatActivity() {
-    companion object {
-        var addedSC = false
-    }
+    private var isSecondEnable = true
+    private var isDegreeEnable = true
+    private var scriptEngine: ScriptEngine? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advanced_calculator)
+        scriptEngine = ScriptEngineManager().getEngineByName("rhino")
         change_screen.setOnClickListener {
-            val intent=Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
-        addNumberValueToText(this, bt0SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt1SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt2SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt3SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt4SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt5SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt6SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt7SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt8SC, tvPrimarySC, 1)
-        addNumberValueToText(this, bt9SC, tvPrimarySC, 1)
-        addNumberValueToText(this, btSin, tvPrimarySC, 1)
-        addNumberValueToText(this, btCos, tvPrimarySC, 1)
-        addNumberValueToText(this, btTan, tvPrimarySC, 1)
-        addNumberValueToText(this, btLog, tvPrimarySC, 1)
-        addNumberValueToText(this, btLn, tvPrimarySC, 1)
-        addNumberValueToText(this, btBracketOpenSC, tvPrimarySC, 1)
-        addNumberValueToText(this, btBracketCloseSC, tvPrimarySC, 1)
-
-        addOperatorValueToText(this, btAdditionSC, tvPrimarySC, "+", 1)
-        addOperatorValueToText(this, btSubtractionSC, tvPrimarySC, "-", 1)
-        addOperatorValueToText(this, btMultiplicationSC, tvPrimarySC, "*", 1)
-        addOperatorValueToText(this, btDivisionSC, tvPrimarySC, "/", 1)
-
-        btDotSC.setOnClickListener {
-            vibratePhone(this)
-            if (!tvPrimarySC.text.contains(".")) tvPrimarySC.text = tvPrimarySC.text.toString() + "."
-        }
-
-        btPi.setOnClickListener {
-            vibratePhone(this)
-
-            tvPrimarySC.text = tvPrimarySC.text.toString() + "3.142"
-            tvSecondarySC.text = btPi.text.toString()
-        }
-
-        btFactorial.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isEmpty()) enterNumberToast(this)
-                else {
-                    val input = tvPrimarySC.text.toString()
-                    var factorial = 1.0
-                    for (i in 1..input.toLong()) {
-                        factorial *= i
-                    }
-                    tvPrimarySC.text = trimResult(factorial.toString())
-                    tvSecondarySC.text = "$input!"
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-
-        btSquare.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isEmpty()) enterNumberToast(this)
-                else {
-                    val input = tvPrimarySC.text.toString()
-                    val result = (input.toFloat() * input.toFloat()).toString()
-                    tvPrimarySC.text = trimResult(result)
-                    tvSecondarySC.text = "$input²"
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-
-        btInverted.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isEmpty()) enterNumberToast(this)
-                else {
-                    val input = tvPrimarySC.text.toString()
-                    val result = (1 / input.toFloat()).toString()
-                    tvPrimarySC.text = trimResult(result)
-                    tvSecondarySC.text = "1/$input"
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-
-        btSqrt.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isEmpty()) enterNumberToast(this)
-                else {
-                    val input = tvPrimarySC.text.toString()
-                    val result = (sqrt(input.toFloat())).toString()
-                    tvPrimarySC.text = trimResult(result)
-                    tvSecondarySC.text = "√$input"
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-        btCube.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isEmpty()) enterNumberToast(this)
-                else {
-                    val input = tvPrimarySC.text.toString()
-                    val result = (input.toFloat() * input.toFloat()* input.toFloat()).toString()
-                    tvPrimarySC.text = trimResult(result)
-                    tvSecondarySC.text = "$input³"
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-
-        btACSC.setOnClickListener {
-            vibratePhone(this)
-
-            tvPrimarySC.text = ""
-            tvSecondarySC.text = ""
-            addedSC = false
-        }
-
-        btDeleteSC.setOnClickListener {
-            vibratePhone(this)
-
-            if (tvPrimarySC.text.contains("+") ||
-                tvPrimarySC.text.contains("-") ||
-                tvPrimarySC.text.contains("*") ||
-                tvPrimarySC.text.contains("/")
-            ) addedSC = false
-
-            if (tvPrimarySC.text.isNotEmpty()) tvPrimarySC.text = tvPrimarySC.text.subSequence(0, tvPrimarySC.length() - 1)
-        }
-
-        btEqualSC.setOnClickListener {
-            vibratePhone(this)
-
-            try {
-                if (tvPrimarySC.text.isNotEmpty()) {
-                    val input = tvPrimarySC.text.toString()
-                    val result = evaluate(input).toString()
-                    tvPrimarySC.text = trimResult(result)
-                    tvSecondarySC.text = input
-                    addedSC = false
-                }
-            } catch (e: Exception) {
-                invalidInputToast(this)
-            }
-        }
-    }
-    fun addNumberValueToText(context: Context, buttonId: Button, textViewId: TextView, id: Int?) {
-        buttonId.setOnClickListener {
-            vibratePhone(context)
-            textViewId.text = "${textViewId.text}${buttonId.text}"
-            when (id) {
-                1 -> addedSC = false
-            }
-        }
     }
 
-    fun addOperatorValueToText(context: Context, buttonId: Button, textViewId: TextView, text: String, id: Int) {
-        buttonId.setOnClickListener {
-            vibratePhone(context)
+        fun onClickMethod(view: View) {
+            when (view.id) {
 
-            when (id) {
-                1 -> {
-                    if (addedSC) textViewId.text = textViewId.text.subSequence(0, textViewId.length() - 1)
-                    textViewId.text = textViewId.text.toString() + text
-                    addedSC = true
-                }
-            }
-        }
-    }
-
-    fun vibratePhone(context: Context) {
-        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        if (Build.VERSION.SDK_INT >= 29) vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
-        else vibrator.vibrate(10)
-    }
-
-    fun enterNumberToast(context: Context) {
-        Toast.makeText(context, context.getString(R.string.enter_number), Toast.LENGTH_SHORT).show()
-    }
-
-    fun invalidInputToast(context: Context) {
-        Toast.makeText(context, context.getString(R.string.invalid_input), Toast.LENGTH_SHORT).show()
-    }
-
-    fun evaluate(input: String): Float {
-        return object : Any() {
-            var position = -1
-            var char = 0
-            var x = 0F
-
-            fun moveToNextChar() {
-                char = if (++position < input.length) input[position].code else -1
-            }
-
-            fun checkAndRemove(charToRemove: Int): Boolean {
-                while (char == ' '.code) moveToNextChar()
-
-                if (char == charToRemove) {
-                    moveToNextChar()
-                    return true
-                }
-                return false
-            }
-
-            fun parse(): Float {
-                moveToNextChar()
-                x = parseAddSub()
-
-                if (position < input.length) throw RuntimeException("Unexpected: " + char.toChar())
-                return x
-            }
-
-            fun parseAddSub(): Float {
-                x = parseMulDiv()
-
-                while (true) {
-                    when {
-                        checkAndRemove('+'.code) -> x += parseMulDiv()
-                        checkAndRemove('-'.code) -> x -= parseMulDiv()
-                        else -> return x
+                // Numbers
+                R.id.btnDot -> {
+                    if (!tvInputCalculation.text.toString().contains(".")) {
+                        addTextCalculate(".")
                     }
                 }
+                R.id.btnZero -> addTextCalculate("0")
+                R.id.btnOne -> addTextCalculate("1")
+                R.id.btnTwo -> addTextCalculate("2")
+                R.id.btnThree -> addTextCalculate("3")
+                R.id.btnFour -> addTextCalculate("4")
+                R.id.btnFive -> addTextCalculate("5")
+                R.id.btnSix -> addTextCalculate("6")
+                R.id.btnSeven -> addTextCalculate("7")
+                R.id.btnEight -> addTextCalculate("8")
+                R.id.btnNine -> addTextCalculate("9")
+
+                // Scientific
+                R.id.btnSecond -> {
+                    changingSecond()
+                }
+                R.id.btnDegree -> {
+                    changingDegree()
+                }
+                R.id.btnSin -> {
+                    if (isSecondEnable) {
+                        addTextCalculate("sin(")
+                    } else {
+                        addTextCalculate("arcsin(")
+                    }
+
+                }
+                R.id.btnCos -> {
+                    if (isSecondEnable) {
+                        addTextCalculate("cos(")
+                    } else {
+                        addTextCalculate("arccos(")
+                    }
+
+                }
+                R.id.btnTan -> {
+                    if (isSecondEnable) {
+                        addTextCalculate("tan(")
+                    } else {
+                        addTextCalculate("arctan(")
+                    }
+
+                }
+
+                R.id.btnPower -> {
+                    addTextCalculate("^(")
+                }
+                R.id.btnLog -> {
+                    addTextCalculate("lg(")
+                }
+                R.id.btnNaturalLog -> {
+                    addTextCalculate("ln(")
+                }
+                R.id.btnSquareRoot -> {
+                    addTextCalculate("\u221a(")
+                }
+
+                R.id.btnExponent ->{
+                    addTextCalculate("e")
+                }
+                R.id.btnMultiplicativeInverse -> {
+                    addTextCalculate("^(-1)")
+                }
+                R.id.btnPi -> {
+                    addTextCalculate("\u03c0")
+                }
+                R.id.btnParenthesisStart -> {
+                    addTextCalculate("(")
+                }
+                R.id.btnParenthesisClose -> {
+                    addTextCalculate(")")
+                }
+
+                // Operations
+
+                R.id.btnAllClear -> clearTextAll()
+                R.id.btnBackClear -> cleatTextLast()
+
+
+                R.id.btnEqual -> equalClicked()
+                R.id.btnPercentage -> {
+                    if (tvInputCalculation.text.toString().isNotEmpty())
+                        calculate(tvInputCalculation.text.toString() + "%")
+                }
+                R.id.btnDivision -> {
+                    addOperands("÷")
+                }
+                R.id.btnMultiplication -> {
+                    addOperands("x")
+                }
+                R.id.btnSubtraction -> {
+                    addOperands("-")
+                }
+                R.id.btnAddition -> {
+                    addOperands("+")
+                }
+
+            }
+        }
+
+
+
+        @SuppressLint("SetTextI18n")
+        private fun addOperands(operands: String) {
+            val mText = tvInputCalculation.text.toString()
+            if (mText.isEmpty()) {
+                addTextCalculate("0${operands}")
+            } else {
+                if (isOperands(mText.last().toString())) {
+                    tvInputCalculation.text = "${mText.dropLast(1)}$operands"
+                } else {
+                    addTextCalculate(operands)
+                }
+
             }
 
-            fun parseMulDiv(): Float {
-                x = parseOther()
 
-                while (true) {
-                    when {
-                        checkAndRemove('*'.code) -> x *= parseOther()
-                        checkAndRemove('/'.code) -> x /= parseOther()
-                        else -> return x
+        }
+
+        private fun isOperands(operands: String): Boolean {
+            return operands == "+" || operands == "-" || operands == "x" || operands == "÷"
+        }
+
+        @SuppressLint("SetTextI18n")
+        private fun addTextCalculate(mData: String) {
+            val mText = tvInputCalculation.text.toString()
+            tvInputCalculation.text = "$mText$mData"
+
+        }
+
+        private fun clearTextAll() {
+            tvInputCalculation.text = ""
+            tvEqualCalculation.text = ""
+        }
+
+        private fun cleatTextLast() {
+            val mText = tvInputCalculation.text.toString()
+            if (mText.isNotEmpty()) {
+                tvInputCalculation.text = mText.dropLast(1)
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        private fun equalClicked() {
+            if (tvInputCalculation.text.toString().isNotEmpty()) {
+                calculate(tvInputCalculation.text.toString())
+            }
+
+        }
+
+
+
+
+    @SuppressLint("SetTextI18n")
+    private fun calculate(input: String) {
+
+        val indexesList: List<Int>
+        var tempData = ""
+        val originalList = "1*($input)"
+
+        var temp: String
+        var result: String
+        try {
+            temp = originalList
+
+            indexesList = originalList.indexesOf("^", false)
+
+
+            for (index in indexesList.indices) {
+                for (i in indexesList[index] - 1 downTo 0) {
+                    if (!isDigit(originalList[i])) {
+                        Log.i("information", "Start index: $i")
+                        Log.i("information", "End index: ${indexesList[index]}")
+                        Log.i("information", originalList.substring(i + 1, indexesList[index] + 2))
+
+                        tempData = originalList.substring(i + 1, indexesList[index])
+                        temp = temp.replace(
+                            "${tempData}\\^\\(".toRegex(),
+                            "Math.pow(${originalList.substring(i + 1, indexesList[index])},"
+                        )
+
+                        break
                     }
                 }
+
             }
 
-            fun parseOther(): Float {
-                if (checkAndRemove('+'.code)) return parseOther()
-                if (checkAndRemove('-'.code)) return -parseOther()
+            result = scriptEngine?.eval(
+                temp.replace("%".toRegex(), "/100")
+                    .replace("x".toRegex(), "*")
+                    .replace("÷".toRegex(), "/")
+                    .replace("sin\\(".toRegex(), "Math.sin(")
+                    .replace("cos\\(".toRegex(), "")
+                    .replace("tan\\(".toRegex(), "Math.Math.cos(tan(")
+                    .replace("arcsin\\(".toRegex(), "Math.sin(")
+                    .replace("arccos\\(".toRegex(), "Math.cos(")
+                    .replace("arctan\\(".toRegex(), "Math.tan(")
+                    .replace("abs\\(".toRegex(), "Math.abs(")
+                    .replace("lg\\(".toRegex(), "Math.log10(")
+                    .replace("ln\\(".toRegex(), "Math.log(")
+                    .replace("\\u221a\\(".toRegex(), "Math.sqrt(")
+                    .replace("\\u03c0".toRegex(), "Math.PI")
+                    .replace("e".toRegex(), "Math.E")
+            ).toString()
 
-                val startPosition = position
 
-                if (checkAndRemove('('.code)) {
-                    x = parseAddSub()
-                    checkAndRemove(')'.code)
-                } else if (char >= '0'.code && char <= '9'.code || char == '.'.code) {
-                    while (char >= '0'.code && char <= '9'.code || char == '.'.code) moveToNextChar()
-                    x = input.substring(startPosition, position).toFloat()
-                } else if (char >= 'a'.code && char <= 'z'.code) {
-                    while (char >= 'a'.code && char <= 'z'.code) moveToNextChar()
-                    val function = input.substring(startPosition, position)
-                    x = parseOther()
-                    x = when (function) {
-                        "sin" -> sin(Math.toRadians(x.toDouble())).toFloat()
-                        "cos" -> cos(Math.toRadians(x.toDouble())).toFloat()
-                        "tan" -> tan(Math.toRadians(x.toDouble())).toFloat()
-                        "log" -> log10(x)
-                        "ln" -> ln(x)
-                        else -> throw RuntimeException("Unknown function: $function")
+            Log.i("information", "Result: $result")
+            val decimal = BigDecimal(result)
+            result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            tvEqualCalculation.text = "= Wrong Format"
+            Log.i("information", e.toString())
+            return
+        }
+        if (result == "Infinity") {
+            tvEqualCalculation.text = "= Can't divide by zero"
+
+        } else if (result.contains(".")) {
+            result = result.replace("\\.?0*$".toRegex(), "")
+            if (result.length > 18) {
+                result = handlingLengthyResult(result)
+                tvEqualCalculation.text = "= $result"
+            } else {
+                tvEqualCalculation.text = "= $result"
+            }
+
+        }
+    }
+
+        private fun handlingLengthyResult(number: String): String {
+            val d = BigDecimal(number)
+            val df = DecimalFormat("0.###########E0")
+            return df.format(d)
+        }
+
+        private fun changingSecond() {
+            if (isSecondEnable) {
+                isSecondEnable = false
+                btnSin.text = resources.getText(R.string.arcsin)
+                btnCos.text = resources.getText(R.string.arccos)
+                btnTan.text = resources.getText(R.string.arctan)
+                btnDegree.isEnabled = false
+
+            } else {
+                isSecondEnable = true
+                btnSin.text = resources.getText(R.string.sin)
+                btnCos.text = resources.getText(R.string.cos)
+                btnTan.text = resources.getText(R.string.tan)
+                btnDegree.isEnabled = true
+
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        private fun changingDegree() {
+            if (isDegreeEnable) {
+                isDegreeEnable = false
+                btnSecond.isEnabled = false
+                btnDegree.text = "rad"
+
+            } else {
+                isDegreeEnable = true
+                btnDegree.text = "deg"
+                btnSecond.isEnabled = true
+            }
+        }
+
+        private fun String?.indexesOf(substr: String, ignoreCase: Boolean = false): List<Int> {
+            return this?.let {
+                val indexes = mutableListOf<Int>()
+                var startIndex = 0
+                while (startIndex in 0 until length) {
+                    val index = this.indexOf(substr, startIndex, ignoreCase)
+                    startIndex = if (index != -1) {
+                        indexes.add(index)
+                        index + substr.length
+                    } else {
+                        index
                     }
-                } else throw RuntimeException("Unexpected: " + char.toChar())
-                if (checkAndRemove('^'.code)) x = x.pow(parseOther())
-                return x
-            }
-        }.parse()
-    }
+                }
+                return indexes
+            } ?: emptyList()
+        }
 
-    fun trimResult(result: String?): String? {
-        return if (!result.isNullOrEmpty()) {
-            if (result.indexOf(".") < 0) result
-            else result.replace("0*$".toRegex(), "").replace("\\.$".toRegex(), "")
-        } else result
-    }
+        private fun isDigit(ch: Char): Boolean {
+            return Character.isDigit(ch)
+        }
+
+        fun showMessage(message: String) {
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        }
+
 
 }

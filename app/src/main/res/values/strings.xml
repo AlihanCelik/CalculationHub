@@ -186,6 +186,10 @@
 
 
     </string-array>
-    <string name="enter_number">Enter a number first</string>
-    <string name="invalid_input">Invalid input</string>
+    <string name="arcsin">sin<sup><small>-1</small></sup></string>
+    <string name="arccos">cos<sup><small>-1</small></sup></string>
+    <string name="arctan">tan<sup><small>-1</small></sup></string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
 </resources>
