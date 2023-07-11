@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import java.math.BigDecimal
-import java.math.BigInteger
 import java.text.DecimalFormat
 import kotlin.math.*
 

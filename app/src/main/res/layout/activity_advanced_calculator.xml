@@ -83,7 +83,9 @@
                 android:textColor="@color/white"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -98,7 +100,9 @@
                 android:textColor="@color/white"
                 android:textSize="10dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:id="@+id/btnDegree"
@@ -172,7 +176,9 @@
                 android:onClick="onClickMethod"
                 app:iconGravity="top"
                 app:iconSize="15dp"
-                app:iconTint="@color/black"></com.google.android.material.button.MaterialButton>
+                app:iconTint="@color/black">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -211,7 +217,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -227,7 +235,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:id="@+id/btnMultiplicativeInverse"
@@ -242,7 +252,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -294,7 +306,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -334,7 +348,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -350,7 +366,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:id="@+id/btnLog"
@@ -424,7 +442,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -481,7 +501,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -497,7 +519,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
 
 
@@ -552,7 +576,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -590,7 +616,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -606,7 +634,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -622,7 +652,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
 
             <com.google.android.material.button.MaterialButton
@@ -675,7 +707,9 @@
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="25dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
