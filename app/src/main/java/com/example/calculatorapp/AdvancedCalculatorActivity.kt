@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import java.math.BigDecimal
+import java.math.BigInteger
 import java.text.DecimalFormat
 import kotlin.math.*
 
@@ -109,9 +110,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnCube -> {
                     addTextCalculate("^(3)")
                 }
-                R.id.btn2x -> {
-                    addTextCalculate("(2)^(")
-                }
+
                 R.id.btnMod ->{
                     addTextCalculate("abs(")
                 }
@@ -148,6 +147,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnAddition -> {
                     addOperands("+")
                 }
+
+
 
             }
         }
@@ -232,8 +233,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                         tempData = originalList.substring(i + 1, indexesList[index])
                         temp = temp.replace(
                             "${tempData}\\^\\(".toRegex(),
-                            "Math.pow(${originalList.substring(i + 1, indexesList[index])},"
-                        )
+                            "Math.pow(${originalList.substring(i + 1, indexesList[index])},")
 
                         break
                     }
@@ -282,6 +282,9 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             }
 
         }
+
+
+        tvEqualCalculation.text = "= $result"
     }
 
         private fun handlingLengthyResult(number: String): String {
@@ -346,6 +349,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         fun showMessage(message: String) {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
+
+
 
 
 }
