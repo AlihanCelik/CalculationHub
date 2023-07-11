@@ -22,6 +22,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
     private var isSecondEnable = true
     private var isDegreeEnable = true
     private var scriptEngine: ScriptEngine? = null
+    var answer=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advanced_calculator)
@@ -42,105 +43,149 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                         addTextCalculate(".")
                     }
                 }
-                R.id.btnZero -> addTextCalculate("0")
-                R.id.btnOne -> addTextCalculate("1")
-                R.id.btnTwo -> addTextCalculate("2")
-                R.id.btnThree -> addTextCalculate("3")
-                R.id.btnFour -> addTextCalculate("4")
-                R.id.btnFive -> addTextCalculate("5")
-                R.id.btnSix -> addTextCalculate("6")
-                R.id.btnSeven -> addTextCalculate("7")
-                R.id.btnEight -> addTextCalculate("8")
-                R.id.btnNine -> addTextCalculate("9")
+                R.id.btnZero -> {addTextCalculate("0")
+                    equalClicked()}
+                R.id.btnOne -> {addTextCalculate("1")
+                    equalClicked()}
+                R.id.btnTwo -> {addTextCalculate("2")
+                    equalClicked()
+                }
+                R.id.btnThree -> {addTextCalculate("3")
+                    equalClicked()
+                }
+                R.id.btnFour -> {addTextCalculate("4")
+                    equalClicked()}
+                R.id.btnFive -> {
+                    addTextCalculate("5")
+                    equalClicked()
+                }
+                R.id.btnSix -> {
+                    addTextCalculate("6")
+                    equalClicked()}
+                R.id.btnSeven -> {addTextCalculate("7")
+                    equalClicked()}
+                R.id.btnEight -> {addTextCalculate("8")
+                    equalClicked()}
+                R.id.btnNine -> {addTextCalculate("9")
+                    equalClicked()}
 
                 // Scientific
                 R.id.btnSecond -> {
                     changingSecond()
+                    equalClicked()
                 }
                 R.id.btnDegree -> {
                     changingDegree()
+                    equalClicked()
                 }
                 R.id.btnSin -> {
                     if (isSecondEnable) {
                         addTextCalculate("sin(")
+                        equalClicked()
                     } else {
                         addTextCalculate("arcsin(")
+                        equalClicked()
                     }
 
                 }
                 R.id.btnCos -> {
                     if (isSecondEnable) {
                         addTextCalculate("cos(")
+                        equalClicked()
                     } else {
                         addTextCalculate("arccos(")
+                        equalClicked()
                     }
 
                 }
                 R.id.btnTan -> {
                     if (isSecondEnable) {
                         addTextCalculate("tan(")
+                        equalClicked()
                     } else {
                         addTextCalculate("arctan(")
+                        equalClicked()
                     }
 
                 }
 
                 R.id.btnPower -> {
                     addTextCalculate("^(")
+                    equalClicked()
                 }
                 R.id.btnLog -> {
                     addTextCalculate("lg(")
+                    equalClicked()
                 }
                 R.id.btnNaturalLog -> {
                     addTextCalculate("ln(")
+                    equalClicked()
                 }
                 R.id.btnSquareRoot -> {
                     addTextCalculate("\u221a(")
+                    equalClicked()
                 }
 
                 R.id.btnExponent ->{
                     addTextCalculate("e")
+                    equalClicked()
                 }
                 R.id.btnMultiplicativeInverse -> {
                     addTextCalculate("^(-1)")
+                    equalClicked()
                 }
 
 
                 R.id.btnMod ->{
                     addTextCalculate("abs(")
+                    equalClicked()
                 }
 
                 R.id.btnPi -> {
                     addTextCalculate("\u03c0")
+                    equalClicked()
                 }
                 R.id.btnParenthesisStart -> {
                     addTextCalculate("(")
+                    equalClicked()
                 }
                 R.id.btnParenthesisClose -> {
                     addTextCalculate(")")
+                    equalClicked()
                 }
 
                 // Operations
 
-                R.id.btnAllClear -> clearTextAll()
-                R.id.btnBackClear -> cleatTextLast()
+                R.id.btnAllClear -> {
+                    clearTextAll()
+                    equalClicked()
+                }
+                R.id.btnBackClear -> {
+                    cleatTextLast()
+                    equalClicked()
+                }
 
 
                 R.id.btnPercentage -> {
                     if (tvInputCalculation.text.toString().isNotEmpty())
                         calculate(tvInputCalculation.text.toString() + "%")
+                    equalClicked()
                 }
                 R.id.btnDivision -> {
                     addOperands("÷")
+                    equalClicked()
                 }
                 R.id.btnMultiplication -> {
                     addOperands("x")
+                    equalClicked()
                 }
                 R.id.btnSubtraction -> {
                     addOperands("-")
+                    equalClicked()
                 }
                 R.id.btnAddition -> {
                     addOperands("+")
+                    equalClicked()
                 }
 
 
@@ -200,12 +245,25 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
     fun onEqualClick(view: View) {
         equalClicked()
+        tvInputCalculation.text = answer
     }
 
 
     @SuppressLint("SetTextI18n")
     private fun calculate(input: String) {
+        val trimmedInput = input.trim()
+        if (trimmedInput.isNotEmpty()) {
+            if (isOperands(trimmedInput.last().toString())) {
+                // Remove the trailing operator
+                val processedInput = trimmedInput.dropLast(1)
+                performCalculation(processedInput)
+            } else {
+                performCalculation(trimmedInput)
+            }
+        }
+    }
 
+    private fun performCalculation(input: String) {
         val indexesList: List<Int>
         var tempData = ""
         val originalList = "1*($input)"
@@ -217,7 +275,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
             indexesList = originalList.indexesOf("^", false)
 
-
             for (index in indexesList.indices) {
                 for (i in indexesList[index] - 1 downTo 0) {
                     if (!isDigit(originalList[i])) {
@@ -228,12 +285,12 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                         tempData = originalList.substring(i + 1, indexesList[index])
                         temp = temp.replace(
                             "${tempData}\\^\\(".toRegex(),
-                            "Math.pow(${originalList.substring(i + 1, indexesList[index])},")
+                            "Math.pow(${originalList.substring(i + 1, indexesList[index])},"
+                        )
 
                         break
                     }
                 }
-
             }
 
             result = scriptEngine?.eval(
@@ -254,7 +311,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                     .replace("e".toRegex(), "Math.E")
             ).toString()
 
-
             Log.i("information", "Result: $result")
             val decimal = BigDecimal(result)
             result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString()
@@ -266,7 +322,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         }
         if (result == "Infinity") {
             tvEqualCalculation.text = "= Can't divide by zero"
-
         } else if (result.contains(".")) {
             result = result.replace("\\.?0*$".toRegex(), "")
             if (result.length > 18) {
@@ -275,10 +330,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             } else {
                 tvEqualCalculation.text = "= $result"
             }
-
         }
-
-
+        answer = result
         tvEqualCalculation.text = "= $result"
     }
 
