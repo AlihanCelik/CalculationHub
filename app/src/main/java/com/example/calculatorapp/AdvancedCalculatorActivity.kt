@@ -103,6 +103,19 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnMultiplicativeInverse -> {
                     addTextCalculate("^(-1)")
                 }
+                R.id.btnSquare -> {
+                    addTextCalculate("^(2)")
+                }
+                R.id.btnCube -> {
+                    addTextCalculate("^(3)")
+                }
+                R.id.btn2x -> {
+                    addTextCalculate("(2)^(")
+                }
+                R.id.btnMod ->{
+                    addTextCalculate("abs(")
+                }
+
                 R.id.btnPi -> {
                     addTextCalculate("\u03c0")
                 }
@@ -119,7 +132,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnBackClear -> cleatTextLast()
 
 
-                R.id.btnEqual -> equalClicked()
                 R.id.btnPercentage -> {
                     if (tvInputCalculation.text.toString().isNotEmpty())
                         calculate(tvInputCalculation.text.toString() + "%")
@@ -190,7 +202,9 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
         }
 
-
+    fun onEqualClick(view: View) {
+        equalClicked()
+    }
 
 
     @SuppressLint("SetTextI18n")
@@ -232,12 +246,12 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                     .replace("x".toRegex(), "*")
                     .replace("÷".toRegex(), "/")
                     .replace("sin\\(".toRegex(), "Math.sin(")
-                    .replace("cos\\(".toRegex(), "")
+                    .replace("cos\\(".toRegex(), "Math.cos(")
+                    .replace("abs\\(".toRegex(), "Math.abs(")
                     .replace("tan\\(".toRegex(), "Math.Math.cos(tan(")
                     .replace("arcsin\\(".toRegex(), "Math.sin(")
                     .replace("arccos\\(".toRegex(), "Math.cos(")
                     .replace("arctan\\(".toRegex(), "Math.tan(")
-                    .replace("abs\\(".toRegex(), "Math.abs(")
                     .replace("lg\\(".toRegex(), "Math.log10(")
                     .replace("ln\\(".toRegex(), "Math.log(")
                     .replace("\\u221a\\(".toRegex(), "Math.sqrt(")

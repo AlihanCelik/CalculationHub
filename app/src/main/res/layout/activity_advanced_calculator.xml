@@ -136,7 +136,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btSquare"
+                android:id="@+id/btnSquare"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -228,7 +228,7 @@
             android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:id="@+id/btCube"
+                android:id="@+id/btnCube"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -262,13 +262,14 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btnMod"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
                 android:onClick="onClickMethod"
-                android:text="eˣ"
+                android:text="|x|"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -277,6 +278,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/btn2x"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
