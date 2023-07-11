@@ -62,4 +62,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
 
+    implementation 'io.apisense:rhino-android:1.1.1'
+
 }
