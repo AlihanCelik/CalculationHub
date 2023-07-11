@@ -104,12 +104,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnMultiplicativeInverse -> {
                     addTextCalculate("^(-1)")
                 }
-                R.id.btnSquare -> {
-                    addTextCalculate("^(2)")
-                }
-                R.id.btnCube -> {
-                    addTextCalculate("^(3)")
-                }
+
 
                 R.id.btnMod ->{
                     addTextCalculate("abs(")
