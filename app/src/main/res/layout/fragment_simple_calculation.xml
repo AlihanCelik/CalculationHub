@@ -344,7 +344,7 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 app:cornerRadius="40dp"
                 android:backgroundTint="@color/darkGrey"
-                app:icon="@drawable/baseline_change_circle_24"
+                app:icon="@drawable/scientificcal"
                 android:id="@+id/change_screen"
                 app:iconSize="35sp"
                 app:iconTint="@color/white">

@@ -136,7 +136,7 @@
                 android:onClick="onClickMethod"
                 android:text="AC"
                 android:textAllCaps="false"
-                android:textSize="5dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -184,7 +184,7 @@
                 android:onClick="onClickMethod"
                 android:text="/"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="15dp"
                 app:cornerRadius="40dp" />
 
         </LinearLayout>
@@ -258,7 +258,7 @@
                 android:onClick="onClickMethod"
                 android:text="9"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -275,7 +275,7 @@
                 android:onClick="onClickMethod"
                 android:text="8"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -292,7 +292,7 @@
                 android:onClick="onClickMethod"
                 android:text="7"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
 
@@ -388,7 +388,7 @@
                 android:onClick="onClickMethod"
                 android:text="6"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -405,7 +405,7 @@
                 android:onClick="onClickMethod"
                 android:text="5"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -422,7 +422,7 @@
                 android:onClick="onClickMethod"
                 android:text="4"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
 
@@ -516,7 +516,7 @@
                 android:onClick="onClickMethod"
                 android:text="3"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -533,7 +533,7 @@
                 android:onClick="onClickMethod"
                 android:text="2"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -550,7 +550,7 @@
                 android:onClick="onClickMethod"
                 android:text="1"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
 
@@ -638,7 +638,7 @@
                 android:backgroundTint="@color/darkGrey"
                 app:iconGravity="top"
                 app:cornerRadius="25dp"
-                app:icon="@drawable/baseline_change_circle_24"
+                app:icon="@drawable/simplecal"
 
                 app:iconSize="25dp"
                 app:iconTint="@color/white">
@@ -656,7 +656,7 @@
                 android:onClick="onClickMethod"
                 android:text="0"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp">
 
@@ -673,7 +673,7 @@
                 android:onClick="onClickMethod"
                 android:text="."
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
 
