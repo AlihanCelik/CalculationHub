@@ -223,12 +223,12 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             return operands == "+" || operands == "-" || operands == "x" || operands == "÷"
         }
 
-        @SuppressLint("SetTextI18n")
-        private fun addTextCalculate(mData: String) {
-            val mText = tvInputCalculation.text.toString()
-            val newText = if (mText == "0") mData else "$mText$mData"
-            tvInputCalculation.text = newText
-        }
+    @SuppressLint("SetTextI18n")
+    private fun addTextCalculate(mData: String) {
+        val mText = tvInputCalculation.text.toString()
+        val newText = if (mText == "0" && mData != "0") mData else "$mText$mData"
+        tvInputCalculation.text = newText
+    }
 
         private fun clearTextAll() {
             tvInputCalculation.text = ""
