@@ -231,11 +231,10 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             val mText = tvInputCalculation.text.toString()
             if (mText.isNotEmpty()) {
                 tvInputCalculation.text = mText.dropLast(1)
-                if (mText.isEmpty()){
+                if (tvInputCalculation.text.toString().isEmpty()){
                     tvEqualCalculation.text=""
                 }
             }
-
         }
 
         @SuppressLint("SetTextI18n")
