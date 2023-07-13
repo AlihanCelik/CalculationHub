@@ -42,22 +42,17 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                         addTextCalculate(".")
                     }
                 }
-                R.id.btnZero -> {
-                    addTextCalculate("0")
+                R.id.btnZero -> {addTextCalculate("0")
                     equalClicked()}
-                R.id.btnOne -> {
-                    addTextCalculate("1")
+                R.id.btnOne -> {addTextCalculate("1")
                     equalClicked()}
-                R.id.btnTwo -> {
-                    addTextCalculate("2")
+                R.id.btnTwo -> {addTextCalculate("2")
                     equalClicked()
                 }
-                R.id.btnThree -> {
-                    addTextCalculate("3")
+                R.id.btnThree -> {addTextCalculate("3")
                     equalClicked()
                 }
-                R.id.btnFour -> {
-                    addTextCalculate("4")
+                R.id.btnFour -> {addTextCalculate("4")
                     equalClicked()}
                 R.id.btnFive -> {
                     addTextCalculate("5")
@@ -66,14 +61,11 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 R.id.btnSix -> {
                     addTextCalculate("6")
                     equalClicked()}
-                R.id.btnSeven -> {
-                    addTextCalculate("7")
+                R.id.btnSeven -> {addTextCalculate("7")
                     equalClicked()}
-                R.id.btnEight -> {
-                    addTextCalculate("8")
+                R.id.btnEight -> {addTextCalculate("8")
                     equalClicked()}
-                R.id.btnNine -> {
-                    addTextCalculate("9")
+                R.id.btnNine -> {addTextCalculate("9")
                     equalClicked()}
 
                 // Scientific
@@ -226,8 +218,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         @SuppressLint("SetTextI18n")
         private fun addTextCalculate(mData: String) {
             val mText = tvInputCalculation.text.toString()
-            val newText = if (mText == "0") mData else "$mText$mData"
-            tvInputCalculation.text = newText
+            tvInputCalculation.text = "$mText$mData"
+
         }
 
         private fun clearTextAll() {
@@ -239,7 +231,9 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             val mText = tvInputCalculation.text.toString()
             if (mText.isNotEmpty()) {
                 tvInputCalculation.text = mText.dropLast(1)
+
             }
+
         }
 
         @SuppressLint("SetTextI18n")
@@ -401,9 +395,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             return Character.isDigit(ch)
         }
 
-        fun showMessage(message: String) {
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        }
 
 
 
