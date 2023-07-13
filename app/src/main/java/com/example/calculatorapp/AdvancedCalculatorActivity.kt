@@ -231,7 +231,9 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             val mText = tvInputCalculation.text.toString()
             if (mText.isNotEmpty()) {
                 tvInputCalculation.text = mText.dropLast(1)
-
+                if (mText.isEmpty()){
+                    tvEqualCalculation.text=""
+                }
             }
 
         }
@@ -265,9 +267,10 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
     }
 
     private fun performCalculation(input: String) {
+        val modifiedInput = input.replace("\\b0+(?!$)".toRegex(), "")
         val indexesList: List<Int>
         var tempData = ""
-        val originalList = "1*($input)"
+        val originalList = "1*($modifiedInput)"
 
         var temp: String
         var result: String
@@ -298,8 +301,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 temp.replace("%".toRegex(), "/100")
                     .replace("x".toRegex(), "*")
                     .replace("÷".toRegex(), "/")
-                    .replace("sin\\(".toRegex(), "Math.sin(")
-                    .replace("cos\\(".toRegex(), "Math.cos(")
+                    .replace("sin\\(".toRegex(), if (isDegreeEnable) "Math.sin(Math.toRadians(" else "Math.sin(")
+                    .replace("cos\\(".toRegex(), if (isDegreeEnable) "Math.cos(Math.toRadians(" else "Math.cos(")
                     .replace("abs\\(".toRegex(), "Math.abs(")
                     .replace("tan\\(".toRegex(), "Math.Math.cos(tan(")
                     .replace("arcsin\\(".toRegex(), "Math.sin(")
@@ -316,12 +319,14 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             val decimal = BigDecimal(result)
             result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString()
         } catch (e: Exception) {
+            answer=""
             e.printStackTrace()
             tvEqualCalculation.text = "= Wrong Format"
             Log.i("information", e.toString())
             return
         }
         if (result == "Infinity") {
+            answer=""
             tvEqualCalculation.text = "= Can't divide by zero"
         } else if (result.contains(".")) {
             result = result.replace("\\.?0*$".toRegex(), "")
