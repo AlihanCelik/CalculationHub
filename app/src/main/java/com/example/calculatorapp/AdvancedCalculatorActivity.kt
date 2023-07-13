@@ -316,6 +316,11 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             Log.i("information", "Result: $result")
             val decimal = BigDecimal(result)
             result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString()
+            if (isDegreeEnable) {
+                val radiansResult = result.toDouble()
+                val degreesResult = Math.toDegrees(radiansResult)
+                result = BigDecimal(degreesResult).setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString()
+            }
         } catch (e: Exception) {
             answer=""
             e.printStackTrace()
