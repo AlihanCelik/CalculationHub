@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import java.math.BigDecimal
 import java.text.DecimalFormat
@@ -300,13 +299,13 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 temp.replace("%".toRegex(), "/100")
                     .replace("x".toRegex(), "*")
                     .replace("÷".toRegex(), "/")
-                    .replace("sin\\(".toRegex(), if (isDegreeEnable) "Math.sin(Math.toRadians(" else "Math.sin(")
-                    .replace("cos\\(".toRegex(), if (isDegreeEnable) "Math.cos(Math.toRadians(" else "Math.cos(")
+                    .replace("sin\\(".toRegex(), "Math.sin(")
+                    .replace("cos\\(".toRegex(), "Math.cos(")
                     .replace("abs\\(".toRegex(), "Math.abs(")
-                    .replace("tan\\(".toRegex(), "Math.Math.cos(tan(")
-                    .replace("arcsin\\(".toRegex(), "Math.sin(")
-                    .replace("arccos\\(".toRegex(), "Math.cos(")
-                    .replace("arctan\\(".toRegex(), "Math.tan(")
+                    .replace("tan\\(".toRegex(), "Math.tan(")
+                    .replace("arcsin\\(".toRegex(), "Math.asin(")
+                    .replace("arccos\\(".toRegex(), "Math.acos(")
+                    .replace("arctan\\(".toRegex(), "Math.atan(")
                     .replace("lg\\(".toRegex(), "Math.log10(")
                     .replace("ln\\(".toRegex(), "Math.log(")
                     .replace("\\u221a\\(".toRegex(), "Math.sqrt(")
