@@ -248,29 +248,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         equalClicked()
         tvInputCalculation.text = answer
     }
-    private fun customSin(value: Double): Double {
-        return if (isDegreeEnable) {
-            Math.sin(Math.toRadians(value))
-        } else {
-            Math.sin(value)
-        }
-    }
-
-    private fun customCos(value: Double): Double {
-        return if (isDegreeEnable) {
-            Math.cos(Math.toRadians(value))
-        } else {
-            Math.cos(value)
-        }
-    }
-
-    private fun customTan(value: Double): Double {
-        return if (isDegreeEnable) {
-            Math.tan(Math.toRadians(value))
-        } else {
-            Math.tan(value)
-        }
-    }
 
 
     @SuppressLint("SetTextI18n")
@@ -322,10 +299,10 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 temp.replace("%".toRegex(), "/100")
                     .replace("x".toRegex(), "*")
                     .replace("÷".toRegex(), "/")
-                    .replace("sin\\(".toRegex(), "customSin(")
-                    .replace("cos\\(".toRegex(), "customCos(")
+                    .replace("sin\\(".toRegex(), "Math.sin(")
+                    .replace("cos\\(".toRegex(), "Math.cos(")
                     .replace("abs\\(".toRegex(), "Math.abs(")
-                    .replace("tan\\(".toRegex(), "customTan(")
+                    .replace("tan\\(".toRegex(), "Math.tan(")
                     .replace("arcsin\\(".toRegex(), "Math.asin(")
                     .replace("arccos\\(".toRegex(), "Math.acos(")
                     .replace("arctan\\(".toRegex(), "Math.atan(")
