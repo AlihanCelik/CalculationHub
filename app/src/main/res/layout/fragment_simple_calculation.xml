@@ -55,7 +55,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="textEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/grey"
                 android:textSize="50sp"
                 app:layout_constraintBaseline_toTopOf="@+id/linearLayout"
                 app:layout_constraintBottom_toBottomOf="parent">
