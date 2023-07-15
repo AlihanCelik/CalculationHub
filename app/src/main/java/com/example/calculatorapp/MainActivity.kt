@@ -5,21 +5,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.calculatorapp.databinding.FragmentSimpleCalculationBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_simple_calculation.*
 import net.objecthunter.exp4j.Expression
 import net.objecthunter.exp4j.ExpressionBuilder
-import java.security.cert.Extension
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var viewPagerAdapter: VpAdapter
-    private lateinit var binding: FragmentSimpleCalculationBinding
     private lateinit var expression:Expression
     var lastNumeric=false
     var stateEror=false
