@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.objecthunter.exp4j.Expression
 import java.math.BigDecimal
 import java.math.RoundingMode
 import java.text.DecimalFormatSymbols

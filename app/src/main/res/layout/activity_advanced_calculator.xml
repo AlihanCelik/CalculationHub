@@ -350,7 +350,7 @@
                 android:layout_margin="2dp"
                 android:backgroundTint="@color/AdvGrey"
                 android:onClick="squareButton"
-                android:text="√x"
+                android:text="√"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12dp"

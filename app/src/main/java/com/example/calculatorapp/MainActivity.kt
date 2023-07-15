@@ -1,24 +1,41 @@
 package com.example.calculatorapp
 
+import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.view.HapticFeedbackConstants
 import android.view.View
+import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.fragment_simple_calculation.*
+import kotlinx.android.synthetic.main.fragment_simple_calculation.backspaceButton
+import kotlinx.android.synthetic.main.fragment_simple_calculation.input
+import kotlinx.android.synthetic.main.fragment_simple_calculation.resultDisplay
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import net.objecthunter.exp4j.Expression
-import net.objecthunter.exp4j.ExpressionBuilder
+import java.math.BigDecimal
+import java.math.RoundingMode
+import java.text.DecimalFormatSymbols
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var viewPagerAdapter: VpAdapter
-    private lateinit var expression:Expression
-    var lastNumeric=false
-    var stateEror=false
-    var lastDot=false
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -58,88 +75,10 @@ class MainActivity : AppCompatActivity() {
 
         // İlk olarak seçili fragment'i belirtin
         viewPager.currentItem = 0
-    }
-    fun onDigitClick(view: View) {
-        if(stateEror){
-            process.text=(view as Button).text
-            stateEror=false
-        }else{
-            val buttonText = (view as Button).text
-            val currentText = process.text.toString()
-            if (currentText.isEmpty() && buttonText == ".") {
-                process.text = "0."
-                lastDot = true
-                lastNumeric = true
-                return
-            }
-            if (buttonText == "." && (lastDot || !lastNumeric)) {
-                return
-            }
 
-            process.append(buttonText)
-            if (buttonText == ".") {
-                lastDot = true
-            }
 
-        }
-        lastNumeric=true
+    }
 
-        onEqual()
-    }
-    fun onOperatorClick(view: View) {
-        if(!stateEror&&lastNumeric){
-            process.append((view as Button).text)
-            lastDot=false
-            lastNumeric=false
-            onEqual()
-        }
-    }
-    fun onBackClick(view: View) {
-        process.text=process.text.toString().dropLast(1)
-        try {
-            val lastChar=process.text.toString().last()
-            if(lastChar.isDigit()){
-                onEqual()
-                buttonA.text="C"
-            }
-        }catch (e:Exception){
-            result.text=""
-            result.visibility=View.GONE
-            Log.e("last char error",e.toString())
-            buttonA.text="AC"
-        }
-    }
-    fun onAllClearClick(view: View) {
-        process.text=""
-        result.text=""
-        stateEror=false
-        lastDot=false
-        lastNumeric=false
-        buttonA.text="AC"
-        result.visibility=View.GONE
-    }
-    fun onEqualClick(view: View) {
-        onEqual()
-        process.text=result.text.toString().drop(1)
-    }
-    fun onEqual(){
-        if(lastNumeric&&!stateEror){
-            val txt=process.text.toString()
-            expression= ExpressionBuilder(txt).build()
-            try {
-                val result2=expression.evaluate()
-                result.visibility=View.VISIBLE
-                result.text="= "+result2.toString()
-                buttonA.text="C"
-            }catch (ex:ArithmeticException){
-                Log.e("evaluate error",ex.toString())
-                result.text="Error"
-                stateEror=true
-                lastNumeric=false
-
-            }
-        }
-    }
 
 
 }

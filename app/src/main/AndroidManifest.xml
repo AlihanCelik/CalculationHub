@@ -171,7 +171,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".LoginScreen"
             android:exported="true"
