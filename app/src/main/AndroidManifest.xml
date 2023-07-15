@@ -166,7 +166,8 @@
         <activity
             android:name=".AdvancedCalculatorActivity"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"
