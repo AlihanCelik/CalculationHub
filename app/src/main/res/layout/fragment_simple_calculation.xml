@@ -41,7 +41,7 @@
                 android:text=""
                 android:textAlignment="textEnd"
                 android:textColor="@color/white"
-                android:textSize="28sp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toTopOf="@+id/result"
                 tools:ignore="RtlCompat">
 
@@ -52,10 +52,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="textEnd"
                 android:textColor="@color/white"
-                android:textSize="35sp"
+                android:textSize="50sp"
                 app:layout_constraintBaseline_toTopOf="@+id/linearLayout"
                 app:layout_constraintBottom_toBottomOf="parent">
 

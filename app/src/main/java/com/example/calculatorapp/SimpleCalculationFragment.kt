@@ -20,8 +20,12 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 
 import com.example.calculatorapp.databinding.FragmentSimpleCalculationBinding
+import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import kotlinx.android.synthetic.main.fragment_simple_calculation.*
 import kotlinx.android.synthetic.main.fragment_simple_calculation.backspaceButton
+import kotlinx.android.synthetic.main.fragment_simple_calculation.btnAddition
+import kotlinx.android.synthetic.main.fragment_simple_calculation.btnPercentage
+import kotlinx.android.synthetic.main.fragment_simple_calculation.btnSubtraction
 import kotlinx.android.synthetic.main.fragment_simple_calculation.change_screen
 import kotlinx.android.synthetic.main.fragment_simple_calculation.input
 import kotlinx.android.synthetic.main.fragment_simple_calculation.resultDisplay
@@ -123,6 +127,9 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
         }
         btnPercentage.setOnClickListener {
             percent(it)
+        }
+        backspaceButton.setOnClickListener {
+            backspaceButton(it)
         }
 
         backspaceButton.setOnLongClickListener {
@@ -502,6 +509,7 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
         addSymbol(view, "÷")
     }
 
+
     fun multiplyButton(view: View) {
         addSymbol(view, "×")
     }
@@ -601,6 +609,43 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
     }
     fun percent(view: View) {
         addSymbol(view, "%")
+    }
+    fun backspaceButton(view: View) {
+        keyVibration(view)
+
+        var cursorPosition = input.selectionStart
+        val textLength = input.text.length
+        var newValue = ""
+        var isFunction = false
+        var functionLength = 0
+
+        if (isEqualLastAction) {
+            cursorPosition = textLength
+        }
+
+        if (cursorPosition != 0 && textLength != 0) {
+
+            // Else
+            if (!isFunction) {
+                // remove the grouping separator
+                val leftPart = input.text.subSequence(0, cursorPosition).toString()
+                val leftPartWithoutSpaces = leftPart.replace(groupingSeparatorSymbol, "")
+                functionLength = leftPart.length - leftPartWithoutSpaces.length
+
+                newValue = leftPartWithoutSpaces.subSequence(0, leftPartWithoutSpaces.length - 1)
+                    .toString() +
+                        input.text.subSequence(cursorPosition, textLength).toString()
+            }
+
+            val newValueFormatted =
+                NumberFormatter.format(newValue, decimalSeparatorSymbol, groupingSeparatorSymbol)
+            var cursorOffset = newValueFormatted.length - newValue.length
+            if (cursorOffset < 0) cursorOffset = 0
+
+            input.setText(newValueFormatted)
+            input.setSelection((cursorPosition - 1 + cursorOffset - functionLength).takeIf { it > 0 }
+                ?: 0)
+        }
     }
 
 
