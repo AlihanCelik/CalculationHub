@@ -1,12 +1,14 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.finance
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.NumberPicker
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.calculatorapp.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_credit_calculator.A_value
 import kotlinx.android.synthetic.main.activity_credit_calculator.B_value
@@ -28,6 +30,7 @@ class creditCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credit_calculator)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

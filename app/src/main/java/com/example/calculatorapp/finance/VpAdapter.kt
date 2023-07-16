@@ -1,4 +1,4 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.finance
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

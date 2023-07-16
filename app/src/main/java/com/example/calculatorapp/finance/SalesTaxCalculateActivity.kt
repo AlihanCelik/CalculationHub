@@ -1,9 +1,11 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.finance
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.calculatorapp.R
 import kotlinx.android.synthetic.main.activity_sales_tax_calculate.*
 import kotlinx.android.synthetic.main.activity_sales_tax_calculate.backButton
 import kotlinx.android.synthetic.main.dialog_salestax_solutions.view.*
@@ -17,6 +19,7 @@ class SalesTaxCalculateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sales_tax_calculate)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

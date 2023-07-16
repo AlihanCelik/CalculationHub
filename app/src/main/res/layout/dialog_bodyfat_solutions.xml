@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/ll"
-        android:layout_width="352dp"
-        android:layout_height="183dp"
+        android:layout_width="337dp"
+        android:layout_height="186dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/bg_linear_layout"
@@ -60,6 +60,7 @@
                         android:textStyle="bold">
 
                     </TextView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

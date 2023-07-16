@@ -1,6 +1,7 @@
 package com.example.calculatorapp.algebraCalculator
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -44,6 +45,7 @@ class EqiationsCalculatorActivity : AppCompatActivity() {
         val colorGrey=resources.getColor(R.color.grey)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eqiations_calculator)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

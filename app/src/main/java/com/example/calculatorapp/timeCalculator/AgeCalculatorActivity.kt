@@ -2,6 +2,7 @@ package com.example.calculatorapp.timeCalculator
 
 
 import android.app.AlertDialog
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,7 +27,7 @@ class AgeCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_age_calculator)
-
+        window.navigationBarColor = Color.BLACK
         val c = Calendar.getInstance()
         val cDay = c.get(Calendar.DAY_OF_MONTH)
         val cMonth = c.get(Calendar.MONTH) + 1

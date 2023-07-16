@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.calculatorapp.finance.*
 import kotlinx.android.synthetic.main.fragment_finance_category.*
 
 
@@ -27,27 +28,27 @@ class FinanceCategoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         invest_Calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),InvestmentCalculateActivity::class.java)
+            val intent=Intent(requireActivity(), InvestmentCalculateActivity::class.java)
             startActivity(intent)
         }
         credit_calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),creditCalculatorActivity::class.java)
+            val intent=Intent(requireActivity(), creditCalculatorActivity::class.java)
             startActivity(intent)
         }
         salestax_calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),SalesTaxCalculateActivity::class.java)
+            val intent=Intent(requireActivity(), SalesTaxCalculateActivity::class.java)
             startActivity(intent)
         }
         unitprice_calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),UnitPriceCalculatorActivity::class.java)
+            val intent=Intent(requireActivity(), UnitPriceCalculatorActivity::class.java)
             startActivity(intent)
         }
         tip_calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),TipCalculateActivity::class.java)
+            val intent=Intent(requireActivity(), TipCalculateActivity::class.java)
             startActivity(intent)
         }
         currency_calculate.setOnClickListener {
-            val intent=Intent(requireActivity(),CurrencyCalculatorActivity::class.java)
+            val intent=Intent(requireActivity(), CurrencyCalculatorActivity::class.java)
             startActivity(intent)
         }
     }

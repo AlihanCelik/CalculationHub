@@ -108,7 +108,7 @@
 
                 </ImageView>
                 <LinearLayout
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
 
@@ -135,10 +135,16 @@
 
                 </LinearLayout>
 
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
                 <ImageView
 
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginRight="30dp"
                     android:layout_gravity="center"
                     android:src="@drawable/baseline_arrow_drop_down_24"
                     app:tint="@color/grey">

@@ -1,5 +1,6 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.finance
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.calculatorapp.R
 import com.example.calculatorapp.viewmodel.CurrencyViewModel
 import kotlinx.android.synthetic.main.activity_currency_calculator.*
 import kotlinx.android.synthetic.main.activity_currency_calculator.backButton
@@ -30,8 +32,9 @@ class CurrencyCalculatorActivity : AppCompatActivity() {
         val colorGrey=resources.getColor(R.color.grey)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_currency_calculator)
+        window.navigationBarColor = Color.BLACK
         viewModel= ViewModelProvider(this).get(CurrencyViewModel::class.java)
-        val adapter= ArrayAdapter.createFromResource(this,R.array.currency_list,android.R.layout.simple_spinner_item)
+        val adapter= ArrayAdapter.createFromResource(this, R.array.currency_list,android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
         secondSpinner.adapter=adapter
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)

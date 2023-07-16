@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -16,23 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculatorAPP"
         tools:targetApi="31">
+
         <activity
-            android:name=".CurrencyCalculatorActivity"
+            android:name=".finance.CurrencyCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".TipCalculateActivity"
+            android:name=".finance.TipCalculateActivity"
             android:exported="false" />
         <activity
-            android:name=".UnitPriceCalculatorActivity"
+            android:name=".finance.UnitPriceCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".SalesTaxCalculateActivity"
+            android:name=".finance.SalesTaxCalculateActivity"
             android:exported="false" />
         <activity
-            android:name=".creditCalculatorActivity"
+            android:name=".finance.creditCalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".InvestmentCalculateActivity"
+            android:name=".finance.InvestmentCalculateActivity"
             android:exported="false" />
         <activity
             android:name=".timeCalculator.TimetimeCalculatorActivity"
@@ -167,12 +167,12 @@
             android:name=".AdvancedCalculatorActivity"
             android:exported="false"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".LoginScreen"
             android:exported="true"

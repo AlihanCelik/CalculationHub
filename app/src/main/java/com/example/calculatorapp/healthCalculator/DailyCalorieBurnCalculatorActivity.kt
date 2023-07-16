@@ -1,6 +1,7 @@
 package com.example.calculatorapp.healthCalculator
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -42,6 +43,7 @@ class DailyCalorieBurnCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily_calorie_burn_calculator)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

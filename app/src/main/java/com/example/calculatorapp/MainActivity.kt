@@ -1,35 +1,12 @@
 package com.example.calculatorapp
 
-import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.os.Build
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
-import android.view.HapticFeedbackConstants
 import android.view.View
-import android.view.accessibility.AccessibilityEvent
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
+import com.example.calculatorapp.finance.VpAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.fragment_simple_calculation.*
-import kotlinx.android.synthetic.main.fragment_simple_calculation.backspaceButton
-import kotlinx.android.synthetic.main.fragment_simple_calculation.input
-import kotlinx.android.synthetic.main.fragment_simple_calculation.resultDisplay
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import net.objecthunter.exp4j.Expression
-import java.math.BigDecimal
-import java.math.RoundingMode
-import java.text.DecimalFormatSymbols
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
@@ -40,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        window.navigationBarColor = Color.BLACK
         viewPager = findViewById(R.id.viewpager)
         bottomNavigation = findViewById(R.id.bottomNav)
 

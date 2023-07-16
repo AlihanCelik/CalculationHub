@@ -1,6 +1,7 @@
 package com.example.calculatorapp.algebraCalculator
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,6 +25,7 @@ class AverageCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_average_calculator)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

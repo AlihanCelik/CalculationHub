@@ -1,6 +1,7 @@
 package com.example.calculatorapp.algebraCalculator
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,6 +24,7 @@ class PercentageCalculateActivity : AppCompatActivity() {
         var vis=true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_percentage_calculate)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

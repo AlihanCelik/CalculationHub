@@ -1,12 +1,14 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.finance
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.NumberPicker
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.calculatorapp.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_investment_calculate.*
 import kotlinx.android.synthetic.main.activity_investment_calculate.A_value
@@ -27,6 +29,7 @@ class InvestmentCalculateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_investment_calculate)
+        window.navigationBarColor = Color.BLACK
         backButton.setOnClickListener {
             finish()
         }

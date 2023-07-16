@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -41,7 +42,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advanced_calculator)
-
+        window.navigationBarColor = Color.BLACK
         change_screen.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
