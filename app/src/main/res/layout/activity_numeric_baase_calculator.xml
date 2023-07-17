@@ -509,13 +509,13 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_AC"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="70dp"
+                android:layout_width="60dp"
                 android:layout_height="80dp"
                 android:backgroundTint="@color/yellow"
                 android:onClick="onAcClick"
                 android:text="AC"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 app:cornerRadius="40dp">
 
             </com.google.android.material.button.MaterialButton>
@@ -523,7 +523,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="70dp"
+                android:layout_width="60dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/yellow"
@@ -538,7 +538,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_go"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="70dp"
+                android:layout_width="60dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/red"
