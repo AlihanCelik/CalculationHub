@@ -203,6 +203,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="15dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -211,7 +212,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+
             android:orientation="vertical">
 
             <LinearLayout
@@ -498,21 +499,23 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_AC"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:backgroundTint="@color/yellow"
                 android:onClick="onAcClick"
                 android:text="AC"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 app:cornerRadius="40dp">
 
             </com.google.android.material.button.MaterialButton>
@@ -520,7 +523,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/yellow"
@@ -535,7 +538,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_go"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/red"
