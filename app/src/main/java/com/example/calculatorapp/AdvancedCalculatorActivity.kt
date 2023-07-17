@@ -14,15 +14,16 @@ import android.view.View
 import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
 import android.widget.EditText
+import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import kotlinx.android.synthetic.main.activity_advanced_calculator.backspaceButton
 import kotlinx.android.synthetic.main.activity_advanced_calculator.change_screen
+import kotlinx.android.synthetic.main.activity_advanced_calculator.horizontalScrolV
 import kotlinx.android.synthetic.main.activity_advanced_calculator.input
 import kotlinx.android.synthetic.main.activity_advanced_calculator.resultDisplay
-import kotlinx.android.synthetic.main.fragment_simple_calculation.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -132,6 +133,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 input.setText("")
             } else {
                 input.setSelection(input.text.length)
+                horizontalScrolV.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
             }
             isEqualLastAction = false
         }
@@ -237,6 +239,10 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
                 val cursorOffset = newValueFormatted.length - newValue.length
                 input.setSelection(cursorPosition + value.length + cursorOffset)
+                horizontalScrolV.postDelayed({
+                    val width = horizontalScrolV.getChildAt(0).width
+                    horizontalScrolV.smoothScrollTo(width, 0)
+                }, 100)
             }
         }
     }

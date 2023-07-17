@@ -249,9 +249,10 @@
                 android:layout_marginStart="10dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 app:cornerRadius="40dp"
+                android:textStyle="bold"
                 android:backgroundTint="@color/yellow"
                 android:text="x"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textColor="@color/white">
 
             </com.google.android.material.button.MaterialButton>
