@@ -9,13 +9,11 @@ import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.HapticFeedbackConstants
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 
@@ -140,6 +138,9 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
         input.requestFocus()
 
 
+
+
+
         input.accessibilityDelegate = object : View.AccessibilityDelegate() {
             override fun sendAccessibilityEvent(host: View, eventType: Int) {
                 super.sendAccessibilityEvent(host, eventType)
@@ -240,7 +241,6 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
                     )
 
                 if (!(division_by_0 || domain_error || syntax_error || is_infinity)) {
-
                     calculationResult = roundResult(calculationResult)
                     var formattedResult = NumberFormatter.format(
                         calculationResult.toString().replace(".", decimalSeparatorSymbol),
@@ -248,9 +248,8 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
                         groupingSeparatorSymbol
                     )
 
-                    if (!MyPreferences(requireActivity()).numberIntoScientificNotation || !(calculationResult >= BigDecimal(
-                            9999
-                        ) || calculationResult <= BigDecimal(0.1))
+                    if (!MyPreferences(requireActivity()).numberIntoScientificNotation ||
+                        !(calculationResult >= BigDecimal(9999) || calculationResult <= BigDecimal(0.1))
                     ) {
                         val resultSplited = calculationResult.toString().split('.')
                         if (resultSplited.size > 1) {
@@ -261,14 +260,23 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
                                     resultSplited[0] + "." + resultPartAfterDecimalSeparator
                             }
                             formattedResult = NumberFormatter.format(
-                                resultWithoutZeros.replace(
-                                    ".",
-                                    decimalSeparatorSymbol
-                                ), decimalSeparatorSymbol, groupingSeparatorSymbol
+                                resultWithoutZeros.replace(".", decimalSeparatorSymbol),
+                                decimalSeparatorSymbol,
+                                groupingSeparatorSymbol
                             )
                         }
                     }
 
+                    // Check if the result is too large for standard notation
+                    val scientificNotationThreshold = BigDecimal(1e12)
+                    if (calculationResult.abs() >= scientificNotationThreshold) {
+                        val scientificString = String.format(Locale.US, "%.9E", calculationResult)
+                        formattedResult = NumberFormatter.format(
+                            scientificString.replace(".", decimalSeparatorSymbol),
+                            decimalSeparatorSymbol,
+                            groupingSeparatorSymbol
+                        )
+                    }
 
                     withContext(Dispatchers.Main) {
                         if (formattedResult != calculation) {

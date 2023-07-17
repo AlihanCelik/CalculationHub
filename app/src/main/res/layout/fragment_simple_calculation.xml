@@ -15,54 +15,68 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <EditText
-                android:id="@+id/input"
-                android:singleLine="true"
+            android:layout_gravity="center"
+            >
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrolV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="right"
-                android:autofillHints="false"
-                android:inputType="textNoSuggestions"
-                android:background="@android:color/transparent"
-                android:text=""
-                android:textAlignment="textEnd"
-                android:textColor="@color/white"
-                android:textSize="35sp"
-                app:layout_constraintBottom_toTopOf="@+id/result"
-                tools:ignore="RtlCompat">
+                android:overScrollMode="never"
+                android:scrollbars="none">
+                <EditText
+                    android:id="@+id/input"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="right"
+                    android:maxLength="10000"
+                    android:scrollHorizontally="false"
+                    android:autofillHints="false"
+                    android:inputType="textNoSuggestions"
+                    android:background="@android:color/transparent"
+                    android:text=""
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    app:layout_constraintBottom_toTopOf="@+id/result"
+                    tools:ignore="RtlCompat">
 
-            </EditText>
+                </EditText>
+            </HorizontalScrollView>
+
+
 
             <TextView
                 android:id="@+id/resultDisplay"
                 android:layout_width="match_parent"
+                android:scrollHorizontally="true"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
+                android:textIsSelectable="true"
                 android:text=""
                 android:textAlignment="textEnd"
                 android:textColor="@color/grey"
-                android:textSize="50sp"
+                android:textSize="40sp"
                 app:layout_constraintBaseline_toTopOf="@+id/linearLayout"
                 app:layout_constraintBottom_toBottomOf="parent">
 
             </TextView>
 
+
+
         </LinearLayout>
+
     </ScrollView>
 
 
@@ -79,6 +93,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/history"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+
+                app:tint="@color/yellow"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                ></TextView>
+        </LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2794959A"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@id/appCompatTextView"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -203,8 +250,8 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 app:cornerRadius="40dp"
                 android:backgroundTint="@color/yellow"
-                android:text="*"
-                android:textSize="35sp"
+                android:text="x"
+                android:textSize="25sp"
                 android:textColor="@color/white">
 
             </com.google.android.material.button.MaterialButton>

@@ -18,6 +18,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
+import kotlinx.android.synthetic.main.activity_advanced_calculator.backspaceButton
+import kotlinx.android.synthetic.main.activity_advanced_calculator.change_screen
+import kotlinx.android.synthetic.main.activity_advanced_calculator.input
+import kotlinx.android.synthetic.main.activity_advanced_calculator.resultDisplay
+import kotlinx.android.synthetic.main.fragment_simple_calculation.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -294,7 +299,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                     )
 
                 if (!(division_by_0 || domain_error || syntax_error || is_infinity)) {
-
                     calculationResult = roundResult(calculationResult)
                     var formattedResult = NumberFormatter.format(
                         calculationResult.toString().replace(".", decimalSeparatorSymbol),
@@ -302,9 +306,8 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                         groupingSeparatorSymbol
                     )
 
-                    if (!MyPreferences(this@AdvancedCalculatorActivity).numberIntoScientificNotation || !(calculationResult >= BigDecimal(
-                            9999
-                        ) || calculationResult <= BigDecimal(0.1))
+                    if (!MyPreferences(this@AdvancedCalculatorActivity).numberIntoScientificNotation ||
+                        !(calculationResult >= BigDecimal(9999) || calculationResult <= BigDecimal(0.1))
                     ) {
                         val resultSplited = calculationResult.toString().split('.')
                         if (resultSplited.size > 1) {
@@ -315,14 +318,23 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                                     resultSplited[0] + "." + resultPartAfterDecimalSeparator
                             }
                             formattedResult = NumberFormatter.format(
-                                resultWithoutZeros.replace(
-                                    ".",
-                                    decimalSeparatorSymbol
-                                ), decimalSeparatorSymbol, groupingSeparatorSymbol
+                                resultWithoutZeros.replace(".", decimalSeparatorSymbol),
+                                decimalSeparatorSymbol,
+                                groupingSeparatorSymbol
                             )
                         }
                     }
 
+                    // Check if the result is too large for standard notation
+                    val scientificNotationThreshold = BigDecimal(1e12)
+                    if (calculationResult.abs() >= scientificNotationThreshold) {
+                        val scientificString = String.format(Locale.US, "%.9E", calculationResult)
+                        formattedResult = NumberFormatter.format(
+                            scientificString.replace(".", decimalSeparatorSymbol),
+                            decimalSeparatorSymbol,
+                            groupingSeparatorSymbol
+                        )
+                    }
 
                     withContext(Dispatchers.Main) {
                         if (formattedResult != calculation) {
