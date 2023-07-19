@@ -83,6 +83,12 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
             val intent=Intent(requireActivity(),AdvancedCalculatorActivity::class.java)
             startActivity(intent)
         }
+        lifecycleScope.launchWhenStarted {
+            val calculationList = database.historyDatabaseDao.getHistory()
+            calculationList.collect { list ->
+                id = list.size + 1
+            }
+        }
         historybutton.setOnClickListener {
             val intent= Intent(requireActivity(), HistoryActivity::class.java)
             startActivity(intent)

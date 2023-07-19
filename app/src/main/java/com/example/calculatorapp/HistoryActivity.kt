@@ -3,6 +3,7 @@ package com.example.calculatorapp
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 
 import androidx.appcompat.app.AppCompatActivity
 
@@ -30,6 +31,15 @@ class HistoryActivity : AppCompatActivity() {
         viewModel.historyList.observe(this) { history ->
             history?.let {
                 adapter.submitList(history)
+                if(history.isNotEmpty()){
+                    rv.smoothScrollToPosition(history.size - 1)
+                    noHistory.visibility=View.GONE
+                    rv.visibility=View.VISIBLE
+                }else{
+                    noHistory.visibility=View.VISIBLE
+                    rv.visibility=View.GONE
+                }
+
             }
             Log.d(TAG, "history: $history")
         }

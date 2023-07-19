@@ -3,6 +3,7 @@ package com.example.calculatorapp
 import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -21,6 +22,7 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.android.synthetic.main.activity_advanced_calculator.*
 import kotlinx.android.synthetic.main.activity_advanced_calculator.backspaceButton
 import kotlinx.android.synthetic.main.activity_advanced_calculator.change_screen
+import kotlinx.android.synthetic.main.activity_advanced_calculator.historybutton
 import kotlinx.android.synthetic.main.activity_advanced_calculator.horizontalScrolV
 import kotlinx.android.synthetic.main.activity_advanced_calculator.input
 import kotlinx.android.synthetic.main.activity_advanced_calculator.resultDisplay
@@ -33,9 +35,14 @@ import java.text.DecimalFormatSymbols
 import java.util.*
 
 
-
 class AdvancedCalculatorActivity : AppCompatActivity() {
-    private val decimalSeparatorSymbol =
+    private lateinit var database: HistoryDatabase
+    private val historyRepository: HistoryRepository by lazy {HistoryRepository(database)}
+
+    private var id: Int = 1
+
+
+            private val decimalSeparatorSymbol =
         DecimalFormatSymbols.getInstance().decimalSeparator.toString()
     private val groupingSeparatorSymbol =
         DecimalFormatSymbols.getInstance().groupingSeparator.toString()
@@ -49,11 +56,19 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advanced_calculator)
         window.navigationBarColor = Color.BLACK
+        database = HistoryDatabase.getInstance(this)
         change_screen.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
+        lifecycleScope.launchWhenStarted {
+            val calculationList = database.historyDatabaseDao.getHistory()
+            calculationList.collect { list ->
+                id = list.size + 1
+            }
+        }
+
         if (MyPreferences(this).useRadiansByDefault) {
             toggleDegreeMode()
         }
@@ -61,6 +76,10 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
             input.setText("")
             resultDisplay.text = ""
             true
+        }
+        historybutton.setOnClickListener {
+            val intent= Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -122,6 +141,16 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         input.showSoftInputOnFocus = false
 
     }
+    private fun appendCalculation() {
+        lifecycleScope.launch {
+            historyRepository.addCalculation(
+                id++,
+                input.text.toString(),
+                resultDisplay.text.toString()
+            )
+        }
+    }
+
 
     private fun updateDisplay(view: View, value: String) {
         // Reset input with current number if following "equal"
@@ -598,6 +627,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun equalsButton(view: View) {
+        appendCalculation()
         lifecycleScope.launch(Dispatchers.Default) {
             keyVibration(view)
 
@@ -680,13 +710,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
 
 
-    fun leftParenthesisButton(view: View) {
-        updateDisplay(view, "(")
-    }
 
-    fun rightParenthesisButton(view: View) {
-        updateDisplay(view, ")")
-    }
 
     fun parenthesesButton(view: View) {
         val cursorPosition = input.selectionStart

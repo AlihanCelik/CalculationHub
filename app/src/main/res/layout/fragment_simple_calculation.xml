@@ -48,7 +48,6 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/white"
                     android:textSize="35sp"
-                    app:layout_constraintBottom_toTopOf="@+id/result"
                     tools:ignore="RtlCompat">
 
                 </EditText>
