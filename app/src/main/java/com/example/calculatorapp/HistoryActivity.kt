@@ -1,6 +1,7 @@
 package com.example.calculatorapp
 
 import android.content.ContentValues.TAG
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -19,6 +20,7 @@ class HistoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
+        window.navigationBarColor = Color.BLACK
         val application = requireNotNull(this).application
         val dataSource = HistoryDatabase.getInstance(application)
         val viewModelFactory = HistoryViewModelFactory(dataSource, application)

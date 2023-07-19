@@ -98,7 +98,7 @@ class FractionsCalculatorActivity : AppCompatActivity() {
                 denominator /= gcd
 
                 answer=numerator.toString()
-                answer_=numerator.toString()
+                answer_=denominator.toString()
 
 
             }
