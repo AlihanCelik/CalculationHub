@@ -18,11 +18,8 @@
         android:textIsSelectable="true"
         android:textSize="25dp"
         android:layout_marginRight="15dp"
-        android:singleLine="true"
-        android:background="@null"
         android:focusable="false"
         android:gravity="end"
-        android:scrollHorizontally="true"
         />
 
     <TextView

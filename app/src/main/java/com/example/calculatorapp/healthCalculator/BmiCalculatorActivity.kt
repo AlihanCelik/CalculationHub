@@ -211,6 +211,7 @@ class BmiCalculatorActivity : AppCompatActivity() {
                         view.genderImage.setImageResource(R.drawable.man)
                         view.genderImage.setColorFilter(resources.getColor(R.color.light_blue))
 
+
                     } else {
                         view.genderText.text = "Female"
                         view.genderImage.setColorFilter(resources.getColor(R.color.pink))
