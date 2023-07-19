@@ -16,7 +16,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.HorizontalScrollView
 import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
+import com.example.calculatorapp.algebraCalculator.PercentageCalculateActivity
 
 import com.example.calculatorapp.databinding.FragmentSimpleCalculationBinding
 import kotlinx.android.synthetic.main.fragment_simple_calculation.*
@@ -37,6 +40,17 @@ import java.util.*
 
 
 class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation) {
+    private lateinit var database: HistoryDatabase
+    private val historyRepository: HistoryRepository by lazy { HistoryRepository(database) }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        database = HistoryDatabase.getInstance(context)
+    }
+
+    private var id: Int = 0
+
+
     private val decimalSeparatorSymbol =
         DecimalFormatSymbols.getInstance().decimalSeparator.toString()
     private val groupingSeparatorSymbol =
@@ -67,6 +81,10 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
         super.onViewCreated(view, savedInstanceState)
         change_screen.setOnClickListener{
             val intent=Intent(requireActivity(),AdvancedCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+        historybutton.setOnClickListener {
+            val intent= Intent(requireActivity(), HistoryActivity::class.java)
             startActivity(intent)
         }
         btn_0.setOnClickListener {
@@ -535,6 +553,7 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
     }
     @SuppressLint("SetTextI18n")
     fun equalsButton(view: View) {
+        appendCalculation()
         lifecycleScope.launch(Dispatchers.Default) {
             keyVibration(view)
 
@@ -660,6 +679,16 @@ class SimpleCalculationFragment : Fragment(R.layout.fragment_simple_calculation)
             input.setText(newValueFormatted)
             input.setSelection((cursorPosition - 1 + cursorOffset - functionLength).takeIf { it > 0 }
                 ?: 0)
+        }
+    }
+
+    private fun appendCalculation() {
+        lifecycleScope.launch {
+            historyRepository.addCalculation(
+                id++,
+                input.text.toString(),
+                resultDisplay.text.toString()
+            )
         }
     }
 

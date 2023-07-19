@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -64,5 +65,11 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation 'androidx.preference:preference:1.2.0'
 
+    def roomVersion = "2.5.1"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
 
 }
