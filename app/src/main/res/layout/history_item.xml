@@ -31,11 +31,9 @@
         android:textSize="30dp"
         android:singleLine="true"
         android:layout_marginRight="15dp"
-        android:background="@null"
         android:focusable="false"
         android:textColor="@color/yellow"
         android:gravity="end"
-        android:scrollHorizontally="true"
          />
 
     <View
