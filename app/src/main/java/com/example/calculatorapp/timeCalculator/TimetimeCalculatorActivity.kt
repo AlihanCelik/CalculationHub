@@ -38,7 +38,7 @@ class TimetimeCalculatorActivity : AppCompatActivity() {
     var add=true
     var sub=false
     var hours_type="24h"
-    var hours_type2="24H"
+    var hours_type2="24h"
     var select="hours"
 
     var answer=true

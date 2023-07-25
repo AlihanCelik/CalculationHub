@@ -41,7 +41,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="14dp"
         android:id="@+id/scrollView"
         android:layout_width="412dp"
         android:layout_height="197dp"
